@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> The Gutenberg - Internet analogy </h1>
+
+<p> Based on a <a href="https://news.ycombinator.com/item?id=19727167">HN comment</a>. </p>
+
+<p>The idea is that there is an analogy between the historical events after the <a href="https://en.wikipedia.org/wiki/Printing_press#Gutenberg's_press">invention of the printing press</a> and the recent events after the <a href="https://en.wikipedia.org/wiki/ARPANET">ARPANET</a>.</p>
+
+<p>Based on empirical observations, we propose the hypothesis:</p> 
+
+ <h2>(&#916; t-historic) = (&#916; t-today)^(log 5/ log 2) </h2>
+
+<p> where the  &#916; t-historic is the time in decades from the invention of the printing press and &#916; t-today is the time in decades from the opening of the ARPANET. </p>
+
+<p id="arpa"></p>
+
+<input id="numb">
+
+<button type="button" onclick="historic()">Submit</button>
+
+<p id="demo"> &nbsp;</p>
+
+
+<p id="gut"></p>
+
+<input id="numb2">
+
+<button type="button" onclick="nowtime()">Submit</button>
+
+<p id="demo2">&nbsp;</p>
+
+
+<p> Here is a list of interesting correspondences:</p>
+
+<ul>
+<li> <a href="https://en.wikipedia.org/wiki/Printing_press#Gutenberg's_press">Gutenberg press</a> (1436) - - - <a href="https://en.wikipedia.org/wiki/ARPANET">ARPANET</a> (1969)</li>
+
+<li> <a href="https://en.wikipedia.org/wiki/Ninety-five_Theses">The Ninety-five Theses by Martin Luther</a> (1517) - - - <a href="https://en.wikipedia.org/wiki/World_Wide_Web">The WWW spreads</a> (1994)</li>
+
+<li> <a href="https://en.wikipedia.org/wiki/East_India_Company">East India Company</a> (1600) - - - <a href="https://en.wikipedia.org/wiki/Google">Google moves to Mountain View</a> (2003)</li>
+
+<li> <a href="https://en.wikipedia.org/wiki/East_India_Company#Expansion">East India Company had 23 factories</a> (1647) - - - <a href="https://en.wikipedia.org/wiki/Google">Google buys Youtube</a> (2006)</li>
+
+<li> <a href="https://en.wikipedia.org/wiki/Company_rule_in_India">East India Company rule in India</a> (1757) - - - <a href="https://en.wikipedia.org/wiki/Google#2012_onward">Google buys Waze and DeepMind Technologies</a> (2013-2014)</li>
+
+
+<li> <a href="https://en.wikipedia.org/wiki/Lloyd%27s_Coffee_House">Lloyd's Coffee House</a> (1686) - - - <a href="https://en.wikipedia.org/wiki/Bitcoin">Bitcoin</a> (2009) </li>
+
+
+<li> <a href="https://en.wikipedia.org/wiki/Lloyd%27s_Coffee_House">Leibniz-Newton calculus controversy</a> (1686) - - - <a href="https://en.wikipedia.org/wiki/Open_access">Open Access fashion</a> (2009) </li>
+
+</ul>
+
+<p> Predictions: if there is anything serious about this analogy then we should observe some other analogies </p>
+
+<ul>
+<li> <a href="https://en.wikipedia.org/wiki/East_India_Stock_Dividend_Redemption_Act_1873">East India Stock Dividend Redemption Act</a> (1873) - - - Google declines (2020)</li>
+<li> <a href="https://en.wikipedia.org/wiki/Annus_Mirabilis_papers">Einstein' Annus Mirabilis</a> (1905) - - - First great scientific advance after the dark period of baby-boomers  (2021)</li>
+<li> <a href="https://en.wikipedia.org/wiki/Printing_press#Gutenberg's_press">ARPANET</a> (1969) - - - the Net takes a new direction, freed from the bad influence of the old generation influencers (2024)</li>
+
+</ul>
+
+
+<script>
+
+var t_gutenberg=1436;
+
+var t_arpanet=1969;
+
+var c_low = Math.log(2) / Math.log(5);
+
+var c_high = Math.log(5) / Math.log(2);
+
+
+document.getElementById("arpa").innerHTML = "Please input a year after " + t_arpanet + ":";
+
+document.getElementById("gut").innerHTML = "Please input a year after " + t_gutenberg + ":";
+
+function historic() {
+  var t, u, text;
+  t = document.getElementById("numb").value;
+  if (isNaN(t) || t < t_arpanet) {
+  text = "Input not valid";
+  } else {
+  u = t_gutenberg + 10*(((t - t_arpanet)/10)**(c_high));
+  u = Math.round(u);
+  text = u + "";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+function nowtime() {
+  var t, u, text;
+  t = document.getElementById("numb2").value;
+  if (isNaN(t) || t < t_gutenberg) {
+  text = "Input not valid";
+  } else {
+  u = t_arpanet + 10*(((t - t_gutenberg)/10)**(c_low));
+  u = Math.round(u);
+  text = u + "";
+  }
+  document.getElementById("demo2").innerHTML = text;
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
