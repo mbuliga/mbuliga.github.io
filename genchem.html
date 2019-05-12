@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+a:active, a:link, a:visited		{color: #0066ff;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Big text */
+.bigtext {
+  color: #000000;
+  font-size: 36px;
+  padding: 20px 5%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Separator text */
+.septext {
+  color: #000000;
+  font-size: 36px;
+  padding: 10px 10px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Other text */
+.othertext {
+  color: #000000;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Story text */
+.storytext {
+  color: #000000;
+  font-size: 24px;
+  padding: 20px 10%;
+  width: 100%;
+  text-align: left;
+}
+
+
+/* List text */
+.listtext {
+  color: #000000;
+  font-size: 22px;
+  padding: 10px 10%;
+  width: 100%;
+  text-align: left;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 18px;
+  padding: 8px  30px;
+  position: absolute;
+  top: 0;
+}
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+.link line {
+  stroke: #696969;
+}
+
+.link line.separator {
+  stroke: #95A5A6;
+  stroke-width: 2px;
+}
+
+.node circle {
+  stroke: #000000;
+  stroke-width: 1.5px;
+}
+
+        .textClass {
+            stroke: #fff;
+            font-family:     'Helvetica Neue', Helvetica, sans-serif; 
+            font-weight: normal;
+            stroke-width: 1.;
+            font-size: 14px;
+        }
+
+.demo-info { 
+	padding: 14px 26px;
+	font-size: 14px;
+	line-height: 100%;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.1s ease-in-out;
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	-ms-transition: background 0.1s ease-in-out;
+	-o-transition: background 0.1s ease-in-out;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+.demo-info:active {
+	padding-top: 15px;
+}
+.demo-info, .demo-info:hover, .demo-info:active {
+	outline: 0 none;
+	text-decoration: none;
+        color: #fff;
+}
+.demo-info-1 {
+	background-color: #222;
+	box-shadow: 0px 3px 0px 0px #000;
+
+</style>
+</head>
+<body style="background-color: rgb(250,250,250); color: rgb(250, 250, 250);"
+ alink="#ff0000" link="#ff0000" vlink="#551a8b" onkeydown="plusSlides(1)"  >
+
+<div class="slideshow-container">
+
+
+<!-- slide 1 -->
+
+
+
+
+<div class="mySlides fade">
+
+<div class="numbertext">
+<a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  
+<a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;">  (2019) </span> &nbsp; <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY-4-0</a>
+</div> 
+
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+
+<div class="bigtext">
+
+<p style="width:90%"><span
+ style="color: #000000;">Artificial Physics for Artificial Chemistries </span> </p> 
+ 
+
+<div class="storytext">
+<span style="color: #000000;">(1) artificial chemistries</span>
+</div> 
+
+  
+
+<div class="storytext"><span style="color: #000000;">(2) chemlambda </span>
+</div> 
+
+ 
+
+<div class="storytext"><span style="color: #000000;">(3) information content of the deviation from hamiltonian evolution </span>
+</div> 
+
+ 
+
+<div class="storytext"><span style="color: #000000;">(4) chemlambda + physics </span>
+</div> 
+
+
+</div>
+
+</div>
+
+
+<!-- slide 2 -->
+
+
+
+<div class="mySlides fade">
+
+<div class="numbertext">
+<a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  
+<a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/11712956" target="_blank">[Dittrich, P., Ziegler, J., Banzhaf, W. (2001)]</a> - an artificial chemistry is a triple (S,R,A): 
+</div>
+
+<div class="listtext"> 
+S - a class of <span style="color: #0066ff;">molecule types</span> for example  A, B
+</div> 
+
+
+<div class="listtext">
+R - a class of <span style="color: #ff0000;">chemical reactions</span>  for example 
+<p> <img src="final/artchem.png" style="width:250px"> </p>
+</div>
+
+<div class="listtext"> 
+ A - an algorithm for the application of the <span style="color: #ff0000;">chemical reactions</span> to <span style="color: #0066ff;">a multiset of molecules</span>, for example random application of a reaction to a random selection of molecules of the right type
+<p> <img src="final/artchem2.png" style="width:400px"> </p>
+</div>
+
+
+
+</div> 
+
+
+
+
+<!-- slide 3 -->
+
+
+
+<div class="mySlides fade">
+  
+<div class="numbertext">
+<a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+
+
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+<div class="listtext"> 
+<a href="https://link.springer.com/chapter/10.1007/978-3-642-01284-6_14" target="_blank">[K. Tomita, H. Kurokawa, S. Murata (2009)]
+</a> - a graph-rewrite automaton is a triple (S,R,A): 
+</div>
+
+<div class="listtext"> 
+ S - a class of <span style="color: #0066ff;">graphs</span> for example trivalent graphs with colored nodes
+</div>
+
+<div class="listtext">  R - a class of <span style="color: #ff0000;">graph-rewrites</span> for example 
+<br> <img src="final/tomita.png" style="width:400px">
+</div>
+
+<div class="listtext">  A - an algorithm for the application of the <span style="color: #ff0000;">graph-rewrites</span> to <span style="color: #0066ff;">one graph</span> 
+<br><img src="final/tomita2.png" style="width:400px">
+</div>
+
+</div>
+
+
+
+
+<!-- slide 4 -->
+
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+<div class="listtext">
+ an asynchronous graph-rewrite automaton is a triple (S,R,A): 
+</div>
+
+
+<div class="listtext">  
+S - a class of <span style="color: #0066ff;">"molecules" (i.e. of graphs)</span>
+</div>
+
+<div class="listtext">
+R - a class of <span style="color: #ff0000;">"chemical reactions" (i.e. graph-rewrite rules)</span>
+</div>
+
+<div class="listtext">
+A -  an algorithm for the application of <span style="color: #ff0000;">graph-rewrites</span> to <span style="color: #0066ff;">one graph</span>,  which is <span style="color: #ff00ff;">random and local</span>
+</div>
+
+<div class="storytext"> 
+<p><img src="final/tape_long_4653_2.gif" style="width:400px"></p> 
+</div>
+
+</div> 
+
+
+
+
+<!-- slide 5 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+<div class="listtext"> 
+&lambda; calculus <a href="https://www.jstor.org/stable/2371045" target="_blank">[A. Church (1936)]</a>   <span style="color: #ff0000;">string rewrite system</span>
+</div>
+
+
+<div class="listtext"> 
+<ul>
+<li> variable: x, y, z, ... </li>
+<br> 
+<li> term:   variable &nbsp; &#124; &nbsp; AB where A, B terms &nbsp; &#124; &nbsp; &lambda;x.A where x var, A term</li>
+<br> 
+<li> &beta;-reduction:   (&lambda;x.A)B   &#8594; A[x=B] </li>
+</ul>
+</div>
+
+<div class="listtext">
+ [C.P. Wadsworth (1971)], <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.90.2386&rep=rep1&type=pdf" target="_blank">[J. Lamping (1990)]</a>  <span style="color: #ff0000;">graph rewrite system</span>
+<br> <br>
+<br> <img src="final/lamping.jpg" style="width:400px">
+</div> 
+
+
+</div>
+
+
+
+
+
+
+<!-- slide 6 -->
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+<div class="listtext">
+<a href="https://www.pnas.org/content/pnas/91/2/757.full.pdf" target="_blank">[W. Fontana, L. W. Buss (1994)]</a> - <span style="color: #ff0000;">ALCHEMY</span> = ALgorithmic Chemistry: 
+</div>
+
+<div class="listtext">
+S - a class of <span style="color: #0066ff;"> &lambda;- terms in normal form</span>
+</div>
+
+<div class="listtext">
+R - a class of <span style="color: #ff0000;">reductions</span> 
+<p> A + B &#8594; A + B + normal form of AB</p>
+</div>
+
+<div class="listtext">
+A - algorithm of random application of a reaction to a random selection of terms
+</div>
+
+
+ <div class="listtext">
+ <a href="https://www.sciencedirect.com/science/article/pii/030439759290185I" target="_blank">[G. Berry, G. Boudol (1992)]</a> - <span style="color: #ff0000;">CHAM</span> = Chemical Abstract Machine: a <span style="color: #0066ff;">programming language</span> which uses molecules, solutions and transformation rules
+</div> 
+
+
+
+</div>
+
+
+
+
+<!-- slide 7 -->
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext"> <a href="https://www.sciencedirect.com/science/article/pii/S0890540197926432"  target="_blank">[Y. Lafont (1997)]</a> <span style="color: #ff0000;">Interaction combinators</span>
+</div>
+
+
+<div class="listtext">
+S - a class of <span style="color: #0066ff;">trivalent fatgraphs</span>
+</div>
+
+<div class="listtext">
+R - a class of <span style="color: #ff0000;">graph rewrite rules</span>
+<p> <img src="final/lafont.png" style="width:100%"></p>
+</div>
+
+
+<div class="listtext">
+A -  any reasonable algorithm will do, because the graph-rewrites are strong confluent </li>
+</div> 
+
+
+</div>
+
+
+
+
+
+<!-- slide 8 -->
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+<div class="bigtext"> contradictions 
+<br> </br>
+
+<p><img src="final/versus.jpg" style="width:80%">
+</div> 
+
+
+</div>
+
+
+
+
+
+<!-- slide 9 -->
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (1) artificial chemistry </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+<div class="listtext"> The Matrix: <span style="color: #0066ff;">what does it mean?</span>
+<p style="width:90%">"still he'd see <span
+ style="color: #000000;">the matrix</span> in his sleep, bright lattices  <span
+ style="color: #000000;">of logic unfolding</span> across that colorless void"</p> 
+<p style="width:90%">(William Gibson, Neuromancer)</p>
+</div>
+
+<div class="listtext"> <span style="color: #ff0000;">versus</span>
+</div>
+
+<div class="listtext"> Blade Runner: <span style="color: #0066ff;">is this alive?</span>
+<p> <img src="final/blade_runner_1.jpg" style="width:80%"></p>
+</div>
+
+
+</div>
+
+
+
+
+<!-- slide 10 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (2) chemlambda </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+<div class="listtext">
+<center> Turing machines and &lambda;-terms </center></div>
+
+
+<div class="bigtext">
+<video width="100%"  controls>
+  <source src="final/test-105.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+</div>
+
+
+
+</div>
+
+
+
+<!-- slide 11 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (2) chemlambda </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">  <a href="https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md" target="_blank">[repository]</a> <a href="http://imar.ro/~mbuliga/chemlambda-v2.html" target="_blank">[v2]</a> Chemlambda:
+</div>
+
+
+
+<div class="listtext">
+ S - a class of <span style="color: #0066ff;">trivalent fatgraphs
+<p> <img src="final/nodes.png" style="width:80%"></p>
+</div>
+
+
+
+</div>
+
+
+
+<!-- slide 12 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (2) chemlambda </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">  Chemlambda:
+</div>
+
+
+
+<div class="listtext">
+R - <span style="color: #ff0000;">two main families of graph rewrite rules</span>
+<p> <img src="final/beta-fi-foe.jpg" style="width:300px"> &nbsp; &nbsp;<img src="final/deltadelta.png" style="width:200px"> &nbsp; &nbsp;
+<a href="http://chorasimilarity.github.io/chemlambda-gui/dynamic/expo_beta.html" target="_blank">beta rewrite</a>
+</p>
+<p> <img src="final/fi-fo-foe.jpg" style="width:300px"> &nbsp;&nbsp; <img src="final/gammadelta.png" style="width:200px">&nbsp; &nbsp;
+<a href="http://chorasimilarity.github.io/chemlambda-gui/dynamic/expo_fofoe.html" target="_blank">a DIST rewrite</a>
+</p>
+</div>
+
+
+</div>
+
+
+
+
+<!-- slide 13 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (2) chemlambda </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">  Chemlambda:
+</div>
+
+
+
+<div class="listtext">
+R -  <span style="color: #ff0000;">a COMB graph rewrite cycle</span> to eliminate the Arrow elements and loops
+<p> <img src="final/comb.jpg" style="width:40%">&nbsp;&nbsp; 
+<a href="http://chorasimilarity.github.io/chemlambda-gui/dynamic/expo_arrow_cycle.html" target="_blank">COMB cycle
+</a></p>
+</div> 
+
+
+</div>
+
+
+
+
+
+<!-- slide 14 -->
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (2) chemlambda </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+
+<div class="listtext">  Chemlambda:
+</div>
+
+
+<div class="listtext">
+A -  an algorithm for the application of <span style="color: #ff0000;">graph-rewrites</span> to <span style="color: #0066ff;">one graph</span>,  which is <span style="color: #ff00ff;">random and local</span>
+</div>
+
+<div class="listtext">
+<ul>
+   <li> start with a graph and pre-defined probabilities for each rewrite</li>
+<br> 
+   <li> randomly pick an edge</li>
+<br> 
+   <li> if the edge is part of a pattern for a graph-rewrite then flip a coin to perform the rewrite</li>
+<br> 
+   <li> do as many COMB rewrites as possible</li>
+<br> 
+   <li> (record the states and the transitions of the graph for further examination)</li>
+<br> 
+   <li> repeat until (no more rewrite possible OR too many nodes OR too many rewrites) </li>
+<br> 
+   <li> embed the record into a force graph simulation.</li>
+</ul>
+</div>
+
+
+
+<div class="listtext">
+There is a deterministic algorithm which  uses a list of priorities of rewrites (because they are not strongly confluent)
+</div> 
+
+
+
+</div>
+
+
+<!-- slide 15 -->
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;">  (2) chemlambda  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+  <div class="bigtext" style="width:100%" >
+       
+       
+       <img src="final/dodecahedron.gif"  style="width:500px">
+</div>
+       
+<div class="storytext">
+<center>Dodecahedron multiplication</center>
+</div>
+       
+
+</div>
+
+
+
+
+<!-- slide 16 -->
+
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;">  (2) chemlambda  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+  <div class="bigtext" style="width:100%">
+<img src="final/spiral_boole_short.gif"  style="width:500px">
+</div>
+
+ <div class="storytext">
+<center>tube pattern  duplication</center>
+</div>
+
+
+</div>
+
+
+
+<!-- slide 17 -->
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;">  (2) chemlambda  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+<div class="bigtext" style="width:100%">
+<img src="final/spiral_boole_bb_short.gif"  style="width:500px">
+</div>
+
+<div class="storytext">
+<center>tube pattern with Turing Machines, builts itself</center>
+</div>
+
+
+</div>
+
+
+<!-- slide 18 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;">  (2) chemlambda  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+  <div class="bigtext" style="width:100%">
+<img src="final/tubefact.gif"   style="width:500px">
+</div>
+
+<div class="storytext">
+<center> the factorial of 5: (a,b) to (a+1, ab)</center>
+</div>
+
+
+</div>
+
+
+
+
+<!-- slide 19 -->
+
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (2) chemlambda </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+
+ <div class="listtext"> Properties: 
+</div>
+
+
+<div class="listtext"> Turing universal: we can represent &lambda;-terms and rewrites, or TM.  
+<br>
+<a href="http://chorasimilarity.github.io/chemlambda-gui/dynamic/expo_ackermann_2_2.html" target="_blank">[Ackermann(2,2) simulation]</a>  &nbsp; &nbsp; <a href="http://chorasimilarity.github.io/chemlambda-gui/dynamic/demos.html" 
+target="_blank">[Demos]</a> &nbsp; &nbsp;<a href="http://chorasimilarity.github.io/chemlambda-gui/dynamic/molecular.html" target="_blank">[Molecular computers (2015)]</a>   &nbsp; &nbsp; 
+<a href="https://arxiv.org/abs/1811.04960" target="_blank">arXiv:1811.04960</a>
+</div>
+
+
+<div class="listtext">
+gives many interesting graphs  modified outside &lambda;-calculus 
+<br> <img src="final/pred.gif" style="width:350px">&nbsp; &nbsp;<img src="final/bigpred_train-opt.gif" style="width:350px">
+</div>
+
+<div class="listtext">
+artificial life: a chemlambda quine is a graph  deterministically periodic, evolving under the random algorithm. 
+<br><a href="https://github.com/chorasimilarity/chemlambda-gui/tree/gh-pages/dynamic/mol" target="_blank">[Library of molecules]</a> &nbsp; &nbsp; <a href="https://doi.org/10.6084/m9.figshare.4747390.v1" target="_blank">[Collection of simulations]</a>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- slide 21 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (3) information content  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">The information content of the deviation from hamiltonian evolution, an extension of Hamiltonian mechanics.  
+<a href="https://arxiv.org/abs/0810.1419"target="_blank">[Buliga (2009)]</a> &nbsp; 
+<a href="https://arxiv.org/abs/1807.10480"target="_blank">[(2018)]</a> &nbsp; 
+<a href="https://arxiv.org/abs/1902.04598"target="_blank">[(2019)]</a> &nbsp; 
+<a href="http://dx.doi.org/10.1177/1081286516629532"target="_blank">[Buliga, de Saxce (2017)]</a>
+</div>
+
+<div class="listtext"> aka "Hamiltonian inclusions with convex dissipation" or "symplectic Brezis-Ekeland-Nayroles principle"
+</div>
+
+<div class="listtext">
+define the deviation from hamiltonian evolution vector &eta;
+<p> <img src="final/dif-ham.png" style="width:300px"></p>
+<p> <img src="final/eta-z.png" style="width:350px"></p>
+</div>
+
+
+<div class="listtext"> impose that the evolution minimizes the information content
+<p> <img src="final/principle.png" style="width:350px"></p>
+</div> 
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- slide 22 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (3) information content  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+
+<div class="listtext"> allows dissipation (a generalized Liouville theorem)
+
+<p> <img src="final/disip-2.png" style="width:80%"></p>
+</div>
+
+
+</div>
+
+
+
+<!-- slide 23 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (3) information content  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">applies to: viscosity, plasticity, damage, fracture
+</div>
+
+<div class="listtext"> also to unilateral contact (and friction)
+</div>
+
+<div class="listtext"> <a href="https://doi.org/10.1007%2FBF01857727" target="_blank">[E. Fredkin, T. Toffoli (1982)]</a> billiard ball computer
+<p> <img src="final/Toffoli_BilliardBall.gif" style="width:80%"></p>
+</div>
+
+
+<div class="listtext"> Let M be the space (billiard), then the information content function is 
+<p> <img src="final/disip-3.png" style="width:80%"></p>
+</div> 
+
+</div>
+
+
+
+<!-- slide 24 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (3) information content  </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">stochastic version
+</div>
+
+
+<div class="listtext"> 
+<p> <img src="final/disip-4.png" style="width:80%"></p>
+</div>
+
+
+</div>
+
+
+<!-- slide 25 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (4) chemlambda+physics </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">chemlambda+physics
+</div>
+
+
+<div class="listtext">A <a href="https://doi.org/10.6084/m9.figshare.5751318.v1" target="_blank">version of chemlambda</a> is a billiard ball computer (with the physics as in the principle of minimal information content), with some of the state variables over a pair of 
+<a href="https://en.wikipedia.org/wiki/Permutohedron" target="_blank">permutohedra</a>
+</div>
+
+
+<div class="listtext"> 
+<center> <img src="final/permutohedron.png" style="width:350px"></center>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- slide 26 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (4) chemlambda+physics </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">chemlambda+physics
+</div>
+
+
+<div class="listtext">anatomy of nodes and edges: 
+</div>
+
+
+<div class="listtext"> 
+<center> <img src="final/node-ana.jpg" style="width:90%"></center>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<!-- slide 27 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (4) chemlambda+physics </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">chemlambda+physics
+</div>
+
+
+<div class="listtext">initial graph: 
+</div>
+
+
+<div class="listtext"> 
+<center> <img src="final/diagram1.jpg" style="width:90%"></center>
+</div>
+
+
+
+
+
+</div>
+
+
+<!-- slide 28 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (4) chemlambda+physics </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">chemlambda+physics
+</div>
+
+
+<div class="listtext">a rewrite is a pair of permutations: 
+</div>
+
+
+<div class="listtext"> 
+<center> <img src="final/diagram2.jpg" style="width:90%"></center>
+</div>
+
+
+
+<div class="listtext"> 
+<p> <a href="http://imar.ro/~mbuliga/beta.html" target="_blank">do the &beta; like a boss</a>  &nbsp; &nbsp; <p> <a href="http://imar.ro/~mbuliga/betaboss2.html" target="_blank">same with colored edges</a></p>
+</div>
+
+
+
+</div>
+
+
+<!-- slide 29 -->
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;"> (4) chemlambda+physics </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+
+
+
+<div class="listtext">chemlambda+physics
+</div>
+
+
+<div class="listtext">we modify the hamiltonian of the force graph by using the state of the graph
+</div>
+
+
+<div class="listtext"> 
+we modify the information content and we use the stochastic version
+</div>
+
+
+
+<div class="listtext"> 
+... and it works (announcement).
+</div>
+
+<div class="bigtext"> 
+CONCLUSION: is a game with a pair of permutohedron dices.
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- slide final -->
+
+
+
+<div class="mySlides fade">
+  <div class="numbertext">
+  <a class="prev" onclick="plusSlides(-1)"><img src="final/arr-l.png" style="width:20px"></a> &nbsp; &nbsp;<a class="next" onclick="plusSlides(1)"><img src="final/arr-r.png" style="width:20px"></a>&nbsp; &nbsp;  <a href="http://imar.ro/~mbuliga/index.html" target="_blank">M. Buliga</a> &nbsp; <span style="color: #ff0000;">  (2019) </span> &nbsp; &nbsp;
+
+</div> 
+<div class="septext"> <p><hr color="#6699cc" size="6"><p></div>
+  <div class="bigtext">
+
+
+<p style="width:90%"><span
+ style="color: #000000;">Continue to my <a href="http://imar.ro/~mbuliga/" target="_blank">homepage</a></span> </p> 
+
+
+ 
+
+<p style="width:90%"><span
+ style="color: #000000;"></span> </p> 
+ 
+   
+
+<p style="width:90%"><span
+ style="color: #551a8b;"></span> </p> 
+</div>
+
+</div>
+
+
+
+</div>
+<br>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+</body>
+</html> 
+
