@@ -89,22 +89,24 @@ function historic() {
   if (isNaN(t) || t < t_arpanet) {
   text = "Input not valid";
   } else {
-  u = t_gutenberg + 10*(((t - t_arpanet)/10)**(c_high));
-  u = Math.round(u);
+  u = t_gutenberg + 10 * Math.pow((t - t_arpanet)/10 , c_high);
+  u = Math.floor(u);
   text = u + "";
   }
   document.getElementById("demo").innerHTML = text;
 }
 
 function nowtime() {
-  var t, u, text;
+  var t, u, v, text;
   t = document.getElementById("numb2").value;
   if (isNaN(t) || t < t_gutenberg) {
   text = "Input not valid";
   } else {
-  u = t_arpanet + 10*(((t - t_gutenberg)/10)**(c_low));
-  u = Math.round(u);
-  text = u + "";
+  u = t_arpanet + 10 * Math.pow((t - t_gutenberg)/10 , c_low);
+  v = u - Math.floor(u);
+  v = Math.floor(v * 12);
+  u = Math.floor(u);
+  text = "year " + u + " month " + v;
   }
   document.getElementById("demo2").innerHTML = text;
 }
