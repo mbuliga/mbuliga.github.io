@@ -104,7 +104,7 @@ function nowtime() {
   } else {
   u = t_arpanet + 10 * Math.pow((t - t_gutenberg)/10 , c_low);
   v = u - Math.floor(u);
-  v = Math.floor(v * 12);
+  v = 1 + Math.floor(v * 12);
   u = Math.floor(u);
   text = "year " + u + " month " + v;
   }
