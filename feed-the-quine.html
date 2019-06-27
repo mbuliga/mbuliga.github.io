@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- small modification of https://jsfiddle.net/ishanpm/0k98ceha/show -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>feed the quine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+a:active, a:link, a:visited		{color: #f00;}
+        span {
+            color: white; 
+        }
+        span2 {
+            color: #ff5;
+        }
+        .link {
+            stroke: white;
+            stroke-width: 2px;
+        }
+
+        .node {
+        }
+        .textClass {
+            stroke: #323232;
+            fill: white;
+            font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            stroke-width: .5;
+            font-size: 14px;
+        }
+        body {
+            background-color: black;
+        }
+        #svgdiv .svg {
+          border: 2px solid #888
+        }
+    </style>
+</head>
+<body>
+<script src="d3.v5.9.4.min.js"></script>
+<script src="jquery.min.js"></script>
+<!-- 
+<script src="d3-force.min.js"></script>
+<script src="d3-selection.min.js"></script>
+<script src="d3-scale.min.js"></script>
+
+<span>Edit:</span>
+<button onclick="setMode('transform')">Transform</button>
+<button onclick="setMode('link')">Link</button>
+<button onclick="setMode('delete')">Delete</button>
+<span>Add:</span>
+<button onclick="setMode('add','L')">L</button>
+<button onclick="setMode('add','A')">A</button>
+<button onclick="setMode('add','FI')">FI</button>
+<button onclick="setMode('add','FO')">FO</button>
+<button onclick="setMode('add','FOE')">FOE</button>
+<button onclick="setMode('add','T')">T</button>
+<span></span>
+<button onclick="transformList=transformListOrig">Use original moveset</button>
+<button onclick="transformList=transformListAlt">Use alternate moveset</button>
+
+
+-->
+<div style="padding: 14px 26px;">
+<a href="https://chorasimilarity.github.io/chemlambda-gui/dynamic/cfp.html"  target="_blank"><img alt="chemlambda" src="spira.gif"/>  </a> <span>mod of the
+</span> <a href="http://imar.ro/~mbuliga/chemlambda-v2.html"  target="_blank">chemlambda</a><span> javascript version </span> <a href="https://jsfiddle.net/ishanpm/0k98ceha/show"  target="_blank">writen by ishanpm</a> <span> uses d3.js </span> 
+</div>
+
+
+
+<div style="padding: 14px 26px;">
+<br>
+<span>choose: </span>
+<select id="listofmols" onchange="molSelect()">
+  <option value="9_quine">9_quine mortal
+  <option value="10_quine_bubbles">10_quine mortal
+  <option value="3_3_FI_FO_A_L">16_quine egg
+  <option value="16_quine_A_L_FI_FO">16_quine mature
+  <option value="16_quine_A_L_FI_FO_duplicate">16_quine duplicate
+  <option value="20_quine">20_quine immortal
+  <option value="28_quine">28_quine
+  <option value="bigpred_train">ouroboros (long 28_quine)
+  <option value="20_20_hybrid">20_20_hybrid
+</select>
+<button onclick="removeAllNodes()">Clear</button>
+<button onclick="molSelect()">Reload</button>
+<span>&nbsp; &nbsp;</span> <span2>mouse: zoom/drag/hover over nodes</span2>  <span>&nbsp; &nbsp; auto: </span>
+<button onclick="setSpeed(1)">></button>
+<button onclick="setSpeed(10)">>></button>
+<button onclick="setSpeed(0)">||</button>
+
+
+</div>
+
+<div id="svgdiv"></div>
+<!--
+<textarea id="molFileArea"></textarea>
+<div>
+  <button onclick="doImport(molFileArea)">Import .mol</button>
+  <button onclick="doClearImport(molFileArea)">Clear and import .mol</button>
+  <button onclick="doExport(molFileArea)">Export .mol</button>
+</div>
+-->
+
+<script src="molLib.js"></script>
+<script src="feed-the-quine.js"></script>
+
+</body>
+</html>
