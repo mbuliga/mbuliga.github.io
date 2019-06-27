@@ -805,6 +805,7 @@ function doClearImportFromLib(molname) {
 }
 
 function molSelect() {
+  setSpeed(0);
   var molN = document.getElementById("listofmols").value;
   doClearImportFromLib(molN);
 }
