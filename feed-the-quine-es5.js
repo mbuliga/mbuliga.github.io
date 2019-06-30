@@ -1,4 +1,4 @@
-/ small modification of https://jsfiddle.net/ishanpm/0k98ceha/show ,  https://github.com/ishanpm/chemlambda-editor
+// small modification of https://jsfiddle.net/ishanpm/0k98ceha/show ,  https://github.com/ishanpm/chemlambda-editor
 // this is a js version of chemlambda v2 http://imar.ro/~mbuliga/chemlambda-v2.html , https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md
 
 var graph;
