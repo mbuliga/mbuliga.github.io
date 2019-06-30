@@ -64,9 +64,9 @@ a:active, a:link, a:visited		{color: #f00;}
 -->
 <div style="padding: 14px 26px;">
 <a href="https://chorasimilarity.github.io/chemlambda-gui/dynamic/cfp.html"  target="_blank"><img alt="chemlambda" src="spira.gif"/>  </a> <span>mod of the
-</span> <a href="http://imar.ro/~mbuliga/chemlambda-v2.html"  target="_blank">chemlambda</a><span> javascript version </span> <a href="https://ishanpm.github.io/chemlambda-editor/"  target="_blank">writen by ishanpm</a> <span> uses d3.js </span> 
+</span> <a href="http://imar.ro/~mbuliga/chemlambda-v2.html"  target="_blank">chemlambda</a><span> javascript version </span> <a href="https://jsfiddle.net/ishanpm/0k98ceha/show"  target="_blank">writen by ishanpm</a> <span> uses d3.js </span> 
 </div>
-
+<div><span id="shuffleid"></span></div>
 
 
 <div style="padding: 14px 26px;">
@@ -75,13 +75,31 @@ a:active, a:link, a:visited		{color: #f00;}
 <select id="listofmols" onchange="molSelect()">
   <option value="9_quine">9_quine mortal
   <option value="10_quine_bubbles">10_quine mortal
-  <option value="3_3_FI_FO_A_L">16_quine egg
+  <option value="3_3_FI_FO_A_L">16_quine egg [213540]
   <option value="16_quine_A_L_FI_FO">16_quine mature
   <option value="16_quine_A_L_FI_FO_duplicate">16_quine duplicate
+  <option value="claudia_starmaker">claudia_starmaker 16_quine hybrid (explosive!)
   <option value="20_quine">20_quine immortal
-  <option value="28_quine">28_quine
+  <option value="28_quine">28_quine immortal
   <option value="bigpred_train">ouroboros (long 28_quine)
-  <option value="20_20_hybrid">20_20_hybrid
+  <option value="20_20_hybrid">20_20_hybrid immortal
+  <option value="pwheel_8">permutation quine mortal
+  <option value="random_egg_A_L_FI_FO">random egg
+  <option value="spark_243501">spark egg [243501]
+  <option value="spark_245013">spark egg [245013]
+  <option value="bubble_214503">bubble egg [214503]
+  <option value="spark_spark">[243501]+[245013]
+  <option value="x_214530">x [214530]
+  <option value="seed_021543">FI-FO seed [021543] (explosive!)
+  <option value="x_413520">x [413520]
+  <option value="x_541023">x [541023]
+  <option value="x_541032">x [541032]
+  <option value="x_543120">x [543120]
+  <option value="x_013524">x [013524]
+  <option value="x_401532">x [401532]
+  <option value="x_235014">x [235014]
+  <option value="paradox">Curry paradox (explosive!)
+
 </select>
 <button onclick="removeAllNodes()">Clear</button>
 <button onclick="molSelect()">Reload</button>
@@ -92,6 +110,8 @@ a:active, a:link, a:visited		{color: #f00;}
 
 
 </div>
+
+
 
 <div id="svgdiv"></div>
 <!--

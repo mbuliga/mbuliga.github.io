@@ -21,7 +21,7 @@ switch (molName) {
   break;
 
   case "3_3_FI_FO_A_L":
-  var mol = "FI in 2 1^FO 1 2 con^A con 22 11^L 11 22 in";
+  var mol = "A 0 1 2^L 2 1 3^FI 3 4 5^FO 5 4 0";
   break;
 
   case "9_quine":
@@ -44,8 +44,92 @@ switch (molName) {
   var mol = "FOE 2 12 3a^A 12 22a 1^FOE 3a na1 3o1^A na1 22a1 22a^FOE 3o1 na2 3o2^A na2 22a2 22a1^FOE 3o2 na3 3o3^A na3 22a3 22a2^FOE 3o3 na4 3o4^A na4 22a4 22a3^FOE 3o4 na5 3o5^A na5 22a5 22a4^FOE 3o5 na6 3o6^A na6 22a6 22a5^FOE 3o6 na7 3o7^A na7 22a7 22a6^FOE 3o7 na8 3o8^A na8 22a8 22a7^FOE 3o8 na9 3o9^A na9 22a9 22a8^FOE 3o9 na10 3o10^A na10 22a10 22a9^FOE 3o10 na11 3o11^A na11 22a11 22a10^FOE 3o11 na12 3o12^A na12 22a12 22a11^FOE 3o12 na13 3o13^A na13 22a13 22a12^FOE 3o13 na14 3o14^A na14 22a14 22a13^FOE 3o14 na15 3o15^A na15 22a15 22a14^FOE 3o15 na16 3o16^A na16 22a16 22a15^FOE 3o16 na17 3o17^A na17 22a17 22a16^FOE 3o17 na18 3o18^A na18 22a18 22a17^FOE 3o18 na19 3o19^A na19 22a19 22a18^FOE 3o19 na20 3o20^A na20 22a20 22a19^FOE 3o20 na21 3o21^A na21 22a21 22a20^FOE 3o21 na22 3o22^A na22 22a22 22a21^FOE 3o22 na23 3o23^A na23 22a23 22a22^FOE 3o23 na24 3o24^A na24 22a24 22a23^FOE 3o24 na25 3o25^A na25 22a25 22a24^FOE 3o25 na26 3o26^A na26 22a26 22a25^FOE 3o26 na27 3o27^A na27 22a27 22a26^FOE 3o27 na28 3o28^A na28 22a28 22a27^FOE 3o28 na29 3o29^A na29 22a29 22a28^FOE 3o29 na30 3o30^A na30 22a30 22a29^FOE 3o30 na31 3o31^A na31 22a31 22a30^FOE 3o31 na32 3^A na32 22 22a31^FOE 3 13 4^FOE 4 14 5^FOE 6 16 7^FOE 8 18 9^FOE 10 20 11^FOE 24 29 15^FOE 26 30 17^A 23 13 22^A 41 25 40^A 15 5 6^A 29 14 25^A 30 16 27^A 17 7 8^A 36 1 37^FI 28 42 26^FI 33 32 38^FI 38 39 24^FI 19 31 28^FI 21 35 34^FI 34 37 33^L 40 41 23^L 27 42 39^L 18 31 32^L 9 19 10^L 20 35 36^L 11 21 2";
   break;
 
-}
+  case "pwheel_8":
+  var mol = "A p1 p1b p1a^FOE p1a p1out p1b^A p2 p2b p2a^FOE p2a p2out p2b^A p3 p3b p3a^FOE p3a p3out p3b^A p4 p4b p4a^FOE p4a p4out p4b^A p5 p5b p5a^FOE p5a p5out p5b^A p6 p6b p6a^FOE p6a p6out p6b^A p7 p7b p7a^FOE p7a p7out p7b^A p8 p8b p8a^FOE p8a p8out p8b^L a8 a1 p1^L a1 a2 p2^L a2 a3 p3^L a3 a4 p4^L a4 a5 p5^L a5 a6 p6^L a6 a7 p7^L a7 a8 p8";
+  break;
 
+  case "claudia_starmaker":
+  var mol = "FI dcba3 dcba1 dcba15^FOE dcba15 dcba4 dcb2^L dcba4 dcba1 dcba5^L dcba2 dcba3 dcba12^FOE dcba5 dcba6 dcba8^FOE dcba12 dcba7 dcba9^A dcba6 dcba7 dcba14^A dcba8 dcba9 dcba11^FO dcba10 dcba17 dcba20^FO dcba16 dcba19 dcba18^FI dcba17 dcba19 dcba16^FI dcba20 dcba18 dcba13^A dcba13 dcba11 dcba10^FI dcb3 dcb1 dcb15^FOE dcb15 dcb4 dc2^L dcb4 dcb1 dcb5^L dcb2 dcb3 dcb12^FOE dcb5 dcb6 dcb8^FOE dcb12 dcb7 dcb9^A dcb6 dcb7 dcb14^A dcb8 dcb9 dcb11^FO dcb10 dcb17 dcb20^FO dcb16 dcb19 dcb18^FI dcb17 dcb19 dcb16^FI dcb20 dcb18 dcb13^A dcb13 dcb11 dcb10^FI dc3 dc1 dc15^FOE dc15 dc4 d2^L dc4 dc1 dc5^L dc2 dc3 dc12^FOE dc5 dc6 dc8^FOE dc12 dc7 dc9^A dc6 dc7 dc14^A dc8 dc9 dc11^FO dc10 dc17 dc20^FO dc16 dc19 dc18^FI dc17 dc19 dc16^FI dc20 dc18 dc13^A dc13 dc11 dc10^FI d3 d1 d15^FOE d15 d4 2^L d4 d1 d5^L d2 d3 d12^FOE d5 d6 d8^FOE d12 d7 d9^A d6 d7 d14^A d8 d9 d11^FO d10 d17 d20^FO d16 d19 d18^FI d17 d19 d16^FI d20 d18 d13^A d13 d11 d10^FI 3 1 15^FOE 15 4 dcba2^L 4 1 5^L 2 3 12^FOE 5 6 8^FOE 12 7 9^A 6 7 14^A 8 9 11^FO 10 17 20^FO 16 19 18^FI 17 19 16^FI 20 18 13^A 13 11 10";
+  break;
+
+
+
+case "random_egg_A_L_FI_FO":
+  var shu = [];
+  for (var i=0; i<6; i++) {
+    shu.push(i);
+  }
+  var mi = 6, tm, ii;
+  // While there remain elements to shuffle
+  while (mi) {
+    // Pick a remaining element
+    ii = Math.floor(Math.random() * mi--);
+    // And swap it with the current element.
+    tm = shu[mi];
+    shu[mi] = shu[ii];
+    shu[ii] = tm;
+  }
+  var mol = "A 0 1 " + shu[0] + "^L 2 " + shu[1] + " " + shu[2] + "^FI 3 4 " + shu[3] + "^FO 5 " + shu[4] + " " + shu[5];
+  break;
+
+  case "spark_243501":
+  var mol = "A 0 1 2^L 2 4 3^FI 3 4 5^FO 5 0 1";
+  break;
+
+  case "spark_245013":
+  var mol = "A 0 1 2^L 2 4 5^FI 3 4 0^FO 5 1 3";
+  break;
+
+  case "bubble_214503":
+  var mol = "A 0 1 2^L 2 1 4^FI 3 4 5^FO 5 0 3";
+  break;
+
+  case "spark_spark":
+  var mol = "A 0s 1s 2s^L 2s 4s 5s^FI 3s 4s 0s^FO 5s 1s 3s^A 0 1 2^L 2 4 3^FI 3 4 5^FO 5 0 1";
+  break;
+
+
+  case "x_214530":
+  var mol = "A 0 1 2^L 2 1 4^FI 3 4 5^FO 5 3 0";
+  break;
+
+  case "seed_021543":
+  var mol = "FI 3 4 5^FO 5 4 3";
+  break;
+
+  case "x_413520":
+  var mol = "A 0 1 4^L 2 1 3^FI 3 4 5^FO 5 2 0";
+  break;
+
+  case "x_541023":
+  var mol = "A 0 1 5^L 2 4 1^FI 3 4 0^FO 5 2 3";
+  break;
+
+  case "x_541032":
+  var mol = "A 0 1 5^L 2 4 1^FI 3 4 0^FO 5 3 2";
+  break;
+
+  case "x_543120":
+  var mol = "A 0 1 5^L 2 4 3^FI 3 4 1^FO 5 2 0";
+  break;
+
+  case "x_013524":
+  var mol = "A 0 1 0^L 2 1 3^FI 3 4 5^FO 5 2 4";
+  break;
+
+  case "x_401532":
+  var mol = "A 0 1 4^L 2 0 1^FI 3 4 5^FO 5 3 2";
+  break;
+
+  case "x_235014":
+  var mol = "A 0 1 2^L 2 3 5^FI 3 4 0^FO 5 1 4";
+  break;
+
+  case "paradox":
+  var mol = "A 1 outa out^A 1a out outa^L 2 3 1^A 4 7 2^A 6 5 4^FO 8 6 7^FO 3 9 10^A 9 10 8^L 2a 3a 1a^A 4a 7a 2a^A 6a 5a 4a^FO 8a 6a 7a^FO 3a 9a 10a^A 9a 10a 8a";
+  break;
+
+}
 return mol;
 }
 
