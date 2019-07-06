@@ -16,6 +16,14 @@ switch (molName) {
   var mol = "FOE 6 16 7^A 15 2 6^L 20 35 36^A 36 1 37^FOE 8 18 9^A 17 7 8^FI 28 42 26^FOE 26 30 17^FI 38 39 24^FOE 24 1 15^L 9 19 10^FOE 10 20 11^A 30 16 27^FI 33 32 38^FI 19 31 28^FI 21 35 34^FI 34 37 33^L 27 42 39^L 18 31 32^L 11 21 2";
   break;
 
+  case "A":
+  var mol = "A 1 2 3";
+  break;
+
+  case "L":
+  var mol = "L 1 2 3";
+  break;
+
   case "28_quine":
   var mol = "FOE 2 12 3^FOE 3 13 4^FOE 4 14 5^FOE 6 16 7^FOE 8 18 9^FOE 10 20 11^FOE 24 29 15^FOE 26 30 17^A 12 22 1^A 23 13 22^A 41 25 40^A 15 5 6^A 29 14 25^A 30 16 27^A 17 7 8^A 36 1 37^FI 28 42 26^FI 33 32 38^FI 38 39 24^FI 19 31 28^FI 21 35 34^FI 34 37 33^L 40 41 23^L 27 42 39^L 18 31 32^L 9 19 10^L 20 35 36^L 11 21 2";
   break;
@@ -60,8 +68,34 @@ switch (molName) {
   var mol = "A p1 p1b p1a^FOE p1a p1out p1b^A p2 p2b p2a^FOE p2a p2out p2b^A p3 p3b p3a^FOE p3a p3out p3b^A p4 p4b p4a^FOE p4a p4out p4b^A p5 p5b p5a^FOE p5a p5out p5b^A p6 p6b p6a^FOE p6a p6out p6b^A p7 p7b p7a^FOE p7a p7out p7b^A p8 p8b p8a^FOE p8a p8out p8b^L a8 a1 p1^L a1 a2 p2^L a2 a3 p3^L a3 a4 p4^L a4 a5 p5^L a5 a6 p6^L a6 a7 p7^L a7 a8 p8";
   break;
 
+  case "omega":
+  var mol = "FO a4 a8 9 ^FO a6 a10 11 ^A a2 a3 a1 ^A a8 a9 a5 ^A a10 a11 a7 ^L a5 a4 a2 ^L a7 a6 a3^FO 4 8 a9 ^FO 6 10 a11 ^A 2 3 1 ^A 8 9 5 ^A 10 11 7 ^L 5 4 2 ^L 7 6 3^A 1 i1 ai1^A a1 ai1 i1";
+  break;
+
+  case "lisfact_2_mod":
+  var mol = "A 1 2c1c1 1out^A 2 3c1c1 2out^L 12c1c1 22c1c1 2c1c1^L 42c1c1 32c1c1 12c1c1^A 22c1c1 32c1c1 42c1c1^L 13c1c1 23c1c1 3c1c1^L 43c1c1 33c1c1 13c1c1^A 23c1c1 33c1c1 43c1c1^FOE 3 1 2^A num 4 3^L 2num 1num num^L 3num xnum 2num^FO 1num m1num l1pnum^A m1num r1pnum 3num^FO l1pnum m1pnum l1num^A m1pnum r1num r1pnum^FO l1num m2num l2num^A m2num r2num r1num^A l2num xnum r2num^FI 6 5 4^L tms v 6^L sp 8 5^FO 8 in1 u^L 1sp 2sp sp^L 4sp 3sp 1sp^FO 2sp 5sp 6sp^A 5sp 7sp 4sp^A 8sp 3sp 7sp^A in1 6sp 8sp^L 1times mtimes times^L 2times ntimes 1times^L 3times ftimes 2times^A mtimes 4times 3times^A ntimes ftimes 4times^A times u utms^A utms v tms^A 2out succ coco^A coco c0 outfin^L 1succ nsucc succ^L 2succ ssucc 1succ^L 3succ zsucc 2succ^A 4succ 6succ 3succ^FO ssucc 4succ 5succ^A 7succ zsucc 6succ^A nsucc 5succ 7succ^L 1c0 2c0 c0^L 3c0 3c0 1c0^T 2c0";
+  break;
+
+
+
   case "claudia_starmaker":
   var mol = "FI dcba3 dcba1 dcba15^FOE dcba15 dcba4 dcb2^L dcba4 dcba1 dcba5^L dcba2 dcba3 dcba12^FOE dcba5 dcba6 dcba8^FOE dcba12 dcba7 dcba9^A dcba6 dcba7 dcba14^A dcba8 dcba9 dcba11^FO dcba10 dcba17 dcba20^FO dcba16 dcba19 dcba18^FI dcba17 dcba19 dcba16^FI dcba20 dcba18 dcba13^A dcba13 dcba11 dcba10^FI dcb3 dcb1 dcb15^FOE dcb15 dcb4 dc2^L dcb4 dcb1 dcb5^L dcb2 dcb3 dcb12^FOE dcb5 dcb6 dcb8^FOE dcb12 dcb7 dcb9^A dcb6 dcb7 dcb14^A dcb8 dcb9 dcb11^FO dcb10 dcb17 dcb20^FO dcb16 dcb19 dcb18^FI dcb17 dcb19 dcb16^FI dcb20 dcb18 dcb13^A dcb13 dcb11 dcb10^FI dc3 dc1 dc15^FOE dc15 dc4 d2^L dc4 dc1 dc5^L dc2 dc3 dc12^FOE dc5 dc6 dc8^FOE dc12 dc7 dc9^A dc6 dc7 dc14^A dc8 dc9 dc11^FO dc10 dc17 dc20^FO dc16 dc19 dc18^FI dc17 dc19 dc16^FI dc20 dc18 dc13^A dc13 dc11 dc10^FI d3 d1 d15^FOE d15 d4 2^L d4 d1 d5^L d2 d3 d12^FOE d5 d6 d8^FOE d12 d7 d9^A d6 d7 d14^A d8 d9 d11^FO d10 d17 d20^FO d16 d19 d18^FI d17 d19 d16^FI d20 d18 d13^A d13 d11 d10^FI 3 1 15^FOE 15 4 dcba2^L 4 1 5^L 2 3 12^FOE 5 6 8^FOE 12 7 9^A 6 7 14^A 8 9 11^FO 10 17 20^FO 16 19 18^FI 17 19 16^FI 20 18 13^A 13 11 10";
+  break;
+
+  case "tape_long_4653_2":
+  var mol = "FOE q13 q6 5^FOE q14 4 q3^A q23 q12 q13^FO q12p qb13 qb12^A qb13 qb12 q12^L q24 q12p q14^A q33 q22 q23^L q34 q22 q24^A q43 q32 q33^FO q32p qb33 qb32^A qb33 qb32 q32^L q44 q32p q34^A q1 q42 q43^L q2 q42 q44^A q23o q12o q1^FO q12po qb13o qb12o^A qb13o qb12o q12o^L q24o q12po q2^A q33o q22o q23o^L q34o q22o q24o^A q43o q32o q33o^FO q32po qb33o qb32o^A qb33o qb32o q32o^L q44o q32po q34o^A qzz13 q42o q43o^L qzz14 q42o q44o^A qzz23 qzz12 qzz13^FO qzz12p qzzb13 qzzb12^A qzzb13 qzzb12 qzz12^L qzz24 qzz12p qzz14^A qzz33 qzz22 qzz23^L qzz34 qzz22 qzz24^A qzz43 qzz32 qzz33^FO qzz32p qzzb33 qzzb32^A qzzb33 qzzb32 qzz32^L qzz44 qzz32p qzz34^A qzz1 qzz42 qzz43^L qzz2 qzz42 qzz44^A qzz23o qzz12o qzz1^FO qzz12po qzzb13o qzzb12o^A qzzb13o qzzb12o qzz12o^L qzz24o qzz12po qzz2^A qzz33o qzz22o qzz23o^L qzz34o qzz22o qzz24o^A qzz43o qzz32o qzz33o^FO qzz32po qzzb33o qzzb32o^A qzzb33o qzzb32o qzz32o^L qzz44o qzz32po qzz34o^A q1o qzz42o qzz43o^L q2o qzz42o qzz44o^Arrow 4 q1a^Arrow q6 q2a^Arrow q5 q1b^Arrow q3 q2b^FI q1a q1b q1o^FI q2a q2b q2o^FOE 13 6 q5^FOE 14 q4 3^A 23 12 13^FO 12p b13 b12^A b13 b12 12^L 24 12p 14^A 33 22 23^L 34 22 24^A 43 32 33^FO 32p b33 b32^A b33 b32 32^L 44 32p 34^A 1 42 43^L 2 42 44^A 23o 12o 1^FO 12po b13o b12o^A b13o b12o 12o^L 24o 12po 2^A 33o 22o 23o^L 34o 22o 24o^A 43o 32o 33o^FO 32po b33o b32o^A b33o b32o 32o^L 44o 32po 34o^A zz13 42o 43o^L zz14 42o 44o^A zz23 zz12 zz13^FO zz12p zzb13 zzb12^A zzb13 zzb12 zz12^L zz24 zz12p zz14^A zz33 zz22 zz23^L zz34 zz22 zz24^A zz43 zz32 zz33^FO zz32p zzb33 zzb32^A zzb33 zzb32 zz32^L zz44 zz32p zz34^A zz1 zz42 zz43^L zz2 zz42 zz44^A zz23o zz12o zz1^FO zz12po zzb13o zzb12o^A zzb13o zzb12o zz12o^L zz24o zz12po zz2^A zz33o zz22o zz23o^L zz34o zz22o zz24o^A zz43o zz32o zz33o^FO zz32po zzb33o zzb32o^A zzb33o zzb32o zz32o^L zz44o zz32po zz34o^A 1o zz42o zz43o^L 2o zz42o zz44o^Arrow q4 1a^Arrow 6 2a^Arrow 5 1b^Arrow 3 2b^FI 1a 1b 1o^FI 2a 2b 2o";
+  break;
+
+  case "bigpred":
+  var mol = "L 3 2 1^T 2^L 6 6 5^L 4 3 7^L 7 8 9^A 10 8 11^A 12 11 13^L 13 12 14^L 14 10 a43^A a42 5 4^A a03 1 a02^FO a13b a11 a03^A a11 a02 a12b^FO a43 a41 a13^A a41 a12 a42^FO a13 u1 u2l^A u1 u2r a12^FO u2l u2 u3l^FO u3l u3 u4l^FO u4l u4 u5l^FO u5l u5 u6l^FO u6l u6 u7l^FO u7l u7 u8l^FO u8l u8 u9l^FO u9l u9 u2ls^A u2 u3r u2r^A u3 u4r u3r^A u4 u5r u4r^A u5 u6r u5r^A u6 u7r u6r^A u7 u8r u7r^A u8 u9r u8r^A u9 u2rs u9r^FO u2ls u2s u3ls^FO u3ls u3s u4ls^FO u4ls u4s u5ls^FO u5ls u5s u6ls^FO u6ls u6s u7ls^FO u7ls u7s u8ls^FO u8ls u8s u9ls^FO u9ls u9s u2ld^A u2s u3rs u2rs^A u3s u4rs u3rs^A u4s u5rs u4rs^A u5s u6rs u5rs^A u6s u7rs u6rs^A u7s u8rs u7rs^A u8s u9rs u8rs^A u9s u2rd u9rs^FO u2ld u2d u3ld^FO u3ld u3d u4ld^FO u4ld u4d u5ld^FO u5ld u5d u6ld^FO u6ld u6d u7ld^FO u7ld u7d u8ld^FO u8ld u8d u9ld^FO u9ld u9d a13b^A u2d u3rd u2rd^A u3d u4rd u3rd^A u4d u5rd u4rd^A u5d u6rd u5rd^A u6d u7rd u6rd^A u7d u8rd u7rd^A u8d u9rd u8rd^A u9d a12b u9rd";
+  break;
+
+  case "bigpred_bif":
+  var mol = "FOE y2 y12 y3a^A y12 y22a y1^FOE y3a yna1 y3o1^A yna1 y22a1 y22a^FOE y3o1 yna2 y3o2^A yna2 y22a2 y22a1^FOE y3o2 yna3 y3o3^A yna3 y22a3 y22a2^FOE y3o3 yna4 y3o4^A yna4 y22a4 y22a3^FOE y3o4 yna5 y3o5^A yna5 y22a5 y22a4^FOE y3o5 yna6 y3o6^A yna6 y22a6 y22a5^FOE y3o6 yna7 y3o7^A yna7 y22a7 y22a6^FOE y3o7 yna8 y3o8^A yna8 y22a8 y22a7^FOE y3o8 yna9 y3o9^A yna9 y22a9 y22a8^FOE y3o9 yna10 y3o10^A yna10 y22a10 y22a9^FOE y3o10 yna11 y3o11^A yna11 y22a11 y22a10^FOE y3o11 yna12 y3o12^A yna12 y22a12 y22a11^FOE y3o12 yna13 y3o13^A yna13 y22a13 y22a12^FOE y3o13 yna14 y3o14^A yna14 y22a14 y22a13^FOE y3o14 yna15 y3o15^A yna15 y22a15 y22a14^FOE y3o15 yna16 y3o16^A yna16 y22a16 y22a15^FOE y3o16 yna17 y3o17^A yna17 y22a17 y22a16^FOE y3o17 yna18 y3o18^A yna18 y22a18 y22a17^FOE y3o18 yna19 y3o19^A yna19 y22a19 y22a18^FOE y3o19 yna20 y3o20^A yna20 y22a20 y22a19^FOE y3o20 yna21 y3o21^A yna21 y22a21 y22a20^FOE y3o21 yna22 y3o22^A yna22 y22a22 y22a21^FOE y3o22 yna23 y3o23^A yna23 y22a23 y22a22^FOE y3o23 yna24 y3o24^A yna24 y22a24 y22a23^FOE y3o24 yna25 y3o25^A yna25 y22a25 y22a24^FOE y3o25 yna26 y3o26^A yna26 y22a26 y22a25^FOE y3o26 yna27 y3o27^A yna27 y22a27 y22a26^FOE y3o27 yna28 y3o28^A yna28 y22a28 y22a27^FOE y3o28 yna29 y3o29^A yna29 y22a29 y22a28^FOE y3o29 yna30 y3o30^A yna30 y22a30 y22a29^FOE y3o30 yna31 y3o31^A yna31 y22a31 y22a30^FOE y3o31 yna32 y3^A yna32 y22 y22a31^FOE y3 y13 y4^FOE y4 y14 y5^FOE y6 y16 y7^FOE y8 y18 y9^FOE y10 y20 y11^FOE y24 y29 y15^FOE y26 y30 y17^A y23 y13 y22^A y41 y25 y40^A y15 y5 y6^A y29 y14 y25^A y30 y16 y27^A y17 y7 y8^A y36 y1 y37^FI y28 y42 26^FI y33 y32 38^FI y38 y39 24^FI y19 y31 28^FI y21 y35 34^FI y34 y37 33^L y40 y41 y23^L y27 y42 y39^L y18 y31 y32^L y9 y19 y10^L y20 y35 y36^L y11 y21 y2^FOE 2 12 3a^A 12 22a 1^FOE 3a na1 3o1^A na1 22a1 22a^FOE 3o1 na2 3o2^A na2 22a2 22a1^FOE 3o2 na3 3o3^A na3 22a3 22a2^FOE 3o3 na4 3o4^A na4 22a4 22a3^FOE 3o4 na5 3o5^A na5 22a5 22a4^FOE 3o5 na6 3o6^A na6 22a6 22a5^FOE 3o6 na7 3o7^A na7 22a7 22a6^FOE 3o7 na8 3o8^A na8 22a8 22a7^FOE 3o8 na9 3o9^A na9 22a9 22a8^FOE 3o9 na10 3o10^A na10 22a10 22a9^FOE 3o10 na11 3o11^A na11 22a11 22a10^FOE 3o11 na12 3o12^A na12 22a12 22a11^FOE 3o12 na13 3o13^A na13 22a13 22a12^FOE 3o13 na14 3o14^A na14 22a14 22a13^FOE 3o14 na15 3o15^A na15 22a15 22a14^FOE 3o15 na16 3o16^A na16 22a16 22a15^FOE 3o16 na17 3o17^A na17 22a17 22a16^FOE 3o17 na18 3o18^A na18 22a18 22a17^FOE 3o18 na19 3o19^A na19 22a19 22a18^FOE 3o19 na20 3o20^A na20 22a20 22a19^FOE 3o20 na21 3o21^A na21 22a21 22a20^FOE 3o21 na22 3o22^A na22 22a22 22a21^FOE 3o22 na23 3o23^A na23 22a23 22a22^FOE 3o23 na24 3o24^A na24 22a24 22a23^FOE 3o24 na25 3o25^A na25 22a25 22a24^FOE 3o25 na26 3o26^A na26 22a26 22a25^FOE 3o26 na27 3o27^A na27 22a27 22a26^FOE 3o27 na28 3o28^A na28 22a28 22a27^FOE 3o28 na29 3o29^A na29 22a29 22a28^FOE 3o29 na30 3o30^A na30 22a30 22a29^FOE 3o30 na31 3o31^A na31 22a31 22a30^FOE 3o31 na32 3^A na32 22 22a31^FOE 3 13 4^FOE 4 14 5^FOE 6 16 7^FOE 8 18 9^FOE 10 20 11^FOE 24 29 15^FOE 26 30 17^A 23 13 22^A 41 25 40^A 15 5 6^A 29 14 25^A 30 16 27^A 17 7 8^A 36 1 37^FI 28 42 y26^FI 33 32 y38^FI 38 39 y24^FI 19 31 y28^FI 21 35 y34^FI 34 37 y33^L 40 41 23^L 27 42 39^L 18 31 32^L 9 19 10^L 20 35 36^L 11 21 2";
+  break;
+
+  case "medium_big":
+  var mol = "A bobin bobr bobo^L bobo bobr 12nordfoe^A danin danr dano^L dano danr 21westfoe^Arrow 12southfoe 22nordfoe^Arrow 12southa 22norda^Arrow 22southfoe 32nordfoe^Arrow 22southa 32norda^Arrow 13southfoe 23nordfoe^Arrow 13southa 23norda^Arrow 23southfoe 33nordfoe^Arrow 23southa 33norda^Arrow 11southfoe 21nordfoe^Arrow 11southa 21norda^Arrow 21southfoe 31nordfoe^Arrow 21southa 31norda^Arrow 21eastfoe 22westfoe^Arrow 21easta 22westa^Arrow 22eastfoe 23westfoe^Arrow 22easta 23westa^Arrow 31eastfoe 32westfoe^Arrow 31easta 32westa^Arrow 32eastfoe 33westfoe^Arrow 32easta 33westa^Arrow 11eastfoe 12westfoe^Arrow 11easta 12westa^Arrow 12eastfoe 13westfoe^Arrow 12easta 13westa^FOE 11nordfoe 11bobm1 11bobf2^A 11bobm1 11norda 11boba2^FOE 11alicef2 11alicem2 11southfoe^A 11alicem2 11alicea2 11southa^FOE 11westfoe 11danm1 11danf2^A 11danm1 11westa 11dana2^FOE 11clairef2 11clairem2 11eastfoe^A 11clairem2 11clairea2 11easta^FOE 11bob 11bob0 11bob1^FOE 11bob0 11bob00 11bob01^FOE 11bob1 11bob10 11bob11^FOE 11bob00 11bob000 11alice^FOE 11dan 11dan0 11dan1^FOE 11dan0 11dan00 11dan01^FOE 11dan01 11claire 11dan011^A 11bob01 11eve1 11eve2^A 11dan1 11eve2 11eve3^A 11bob10 11eve3 11eve4^A 11dan00 11eve4 11eve5^A 11bob11 11eve6 11eve7^A 11dan011 11eve7 11eve8^A 11bob000 11eve8 11eve9^FOE 11bobf2 11bobm2 11bob^A 11bobm2 11boba2 11eve1^FOE 11alice 11alicem1 11alicef2^A 11alicem1 11eve5 11alicea2^FOE 11danf2 11danm2 11dan^A 11danm2 11dana2 11eve6^FOE 11claire 11clairem1 11clairef2^A 11clairem1 11eve9 11clairea2^FOE 12nordfoe 12bobm1 12bobf2^A 12bobm1 12norda 12boba2^FOE 12alicef2 12alicem2 12southfoe^A 12alicem2 12alicea2 12southa^FOE 12westfoe 12danm1 12danf2^A 12danm1 12westa 12dana2^FOE 12clairef2 12clairem2 12eastfoe^A 12clairem2 12clairea2 12easta^FOE 12bob 12bob0 12bob1^FOE 12bob0 12bob00 12bob01^FOE 12bob1 12bob10 12bob11^FOE 12bob00 12bob000 12alice^FOE 12dan 12dan0 12dan1^FOE 12dan0 12dan00 12dan01^FOE 12dan01 12claire 12dan011^A 12bob01 12eve1 12eve2^A 12dan1 12eve2 12eve3^A 12bob10 12eve3 12eve4^A 12dan00 12eve4 12eve5^A 12bob11 12eve6 12eve7^A 12dan011 12eve7 12eve8^A 12bob000 12eve8 12eve9^FOE 12bobf2 12bobm2 12bob^A 12bobm2 12boba2 12eve1^FOE 12alice 12alicem1 12alicef2^A 12alicem1 12eve5 12alicea2^FOE 12danf2 12danm2 12dan^A 12danm2 12dana2 12eve6^FOE 12claire 12clairem1 12clairef2^A 12clairem1 12eve9 12clairea2^FOE 13nordfoe 13bobm1 13bobf2^A 13bobm1 13norda 13boba2^FOE 13alicef2 13alicem2 13southfoe^A 13alicem2 13alicea2 13southa^FOE 13westfoe 13danm1 13danf2^A 13danm1 13westa 13dana2^FOE 13clairef2 13clairem2 13eastfoe^A 13clairem2 13clairea2 13easta^FOE 13bob 13bob0 13bob1^FOE 13bob0 13bob00 13bob01^FOE 13bob1 13bob10 13bob11^FOE 13bob00 13bob000 13alice^FOE 13dan 13dan0 13dan1^FOE 13dan0 13dan00 13dan01^FOE 13dan01 13claire 13dan011^A 13bob01 13eve1 13eve2^A 13dan1 13eve2 13eve3^A 13bob10 13eve3 13eve4^A 13dan00 13eve4 13eve5^A 13bob11 13eve6 13eve7^A 13dan011 13eve7 13eve8^A 13bob000 13eve8 13eve9^FOE 13bobf2 13bobm2 13bob^A 13bobm2 13boba2 13eve1^FOE 13alice 13alicem1 13alicef2^A 13alicem1 13eve5 13alicea2^FOE 13danf2 13danm2 13dan^A 13danm2 13dana2 13eve6^FOE 13claire 13clairem1 13clairef2^A 13clairem1 13eve9 13clairea2^FOE 21nordfoe 21bobm1 21bobf2^A 21bobm1 21norda 21boba2^FOE 21alicef2 21alicem2 21southfoe^A 21alicem2 21alicea2 21southa^FOE 21westfoe 21danm1 21danf2^A 21danm1 21westa 21dana2^FOE 21clairef2 21clairem2 21eastfoe^A 21clairem2 21clairea2 21easta^FOE 21bob 21bob0 21bob1^FOE 21bob0 21bob00 21bob01^FOE 21bob1 21bob10 21bob11^FOE 21bob00 21bob000 21alice^FOE 21dan 21dan0 21dan1^FOE 21dan0 21dan00 21dan01^FOE 21dan01 21claire 21dan011^A 21bob01 21eve1 21eve2^A 21dan1 21eve2 21eve3^A 21bob10 21eve3 21eve4^A 21dan00 21eve4 21eve5^A 21bob11 21eve6 21eve7^A 21dan011 21eve7 21eve8^A 21bob000 21eve8 21eve9^FOE 21bobf2 21bobm2 21bob^A 21bobm2 21boba2 21eve1^FOE 21alice 21alicem1 21alicef2^A 21alicem1 21eve5 21alicea2^FOE 21danf2 21danm2 21dan^A 21danm2 21dana2 21eve6^FOE 21claire 21clairem1 21clairef2^A 21clairem1 21eve9 21clairea2^FOE 22nordfoe 22bobm1 22bobf2^A 22bobm1 22norda 22boba2^FOE 22alicef2 22alicem2 22southfoe^A 22alicem2 22alicea2 22southa^FOE 22westfoe 22danm1 22danf2^A 22danm1 22westa 22dana2^FOE 22clairef2 22clairem2 22eastfoe^A 22clairem2 22clairea2 22easta^FOE 22bob 22bob0 22bob1^FOE 22bob0 22bob00 22bob01^FOE 22bob1 22bob10 22bob11^FOE 22bob00 22bob000 22alice^FOE 22dan 22dan0 22dan1^FOE 22dan0 22dan00 22dan01^FOE 22dan01 22claire 22dan011^A 22bob01 22eve1 22eve2^A 22dan1 22eve2 22eve3^A 22bob10 22eve3 22eve4^A 22dan00 22eve4 22eve5^A 22bob11 22eve6 22eve7^A 22dan011 22eve7 22eve8^A 22bob000 22eve8 22eve9^FOE 22bobf2 22bobm2 22bob^A 22bobm2 22boba2 22eve1^FOE 22alice 22alicem1 22alicef2^A 22alicem1 22eve5 22alicea2^FOE 22danf2 22danm2 22dan^A 22danm2 22dana2 22eve6^FOE 22claire 22clairem1 22clairef2^A 22clairem1 22eve9 22clairea2^FOE 23nordfoe 23bobm1 23bobf2^A 23bobm1 23norda 23boba2^FOE 23alicef2 23alicem2 23southfoe^A 23alicem2 23alicea2 23southa^FOE 23westfoe 23danm1 23danf2^A 23danm1 23westa 23dana2^FOE 23clairef2 23clairem2 23eastfoe^A 23clairem2 23clairea2 23easta^FOE 23bob 23bob0 23bob1^FOE 23bob0 23bob00 23bob01^FOE 23bob1 23bob10 23bob11^FOE 23bob00 23bob000 23alice^FOE 23dan 23dan0 23dan1^FOE 23dan0 23dan00 23dan01^FOE 23dan01 23claire 23dan011^A 23bob01 23eve1 23eve2^A 23dan1 23eve2 23eve3^A 23bob10 23eve3 23eve4^A 23dan00 23eve4 23eve5^A 23bob11 23eve6 23eve7^A 23dan011 23eve7 23eve8^A 23bob000 23eve8 23eve9^FOE 23bobf2 23bobm2 23bob^A 23bobm2 23boba2 23eve1^FOE 23alice 23alicem1 23alicef2^A 23alicem1 23eve5 23alicea2^FOE 23danf2 23danm2 23dan^A 23danm2 23dana2 23eve6^FOE 23claire 23clairem1 23clairef2^A 23clairem1 23eve9 23clairea2^FOE 31nordfoe 31bobm1 31bobf2^A 31bobm1 31norda 31boba2^FOE 31alicef2 31alicem2 31southfoe^A 31alicem2 31alicea2 31southa^FOE 31westfoe 31danm1 31danf2^A 31danm1 31westa 31dana2^FOE 31clairef2 31clairem2 31eastfoe^A 31clairem2 31clairea2 31easta^FOE 31bob 31bob0 31bob1^FOE 31bob0 31bob00 31bob01^FOE 31bob1 31bob10 31bob11^FOE 31bob00 31bob000 31alice^FOE 31dan 31dan0 31dan1^FOE 31dan0 31dan00 31dan01^FOE 31dan01 31claire 31dan011^A 31bob01 31eve1 31eve2^A 31dan1 31eve2 31eve3^A 31bob10 31eve3 31eve4^A 31dan00 31eve4 31eve5^A 31bob11 31eve6 31eve7^A 31dan011 31eve7 31eve8^A 31bob000 31eve8 31eve9^FOE 31bobf2 31bobm2 31bob^A 31bobm2 31boba2 31eve1^FOE 31alice 31alicem1 31alicef2^A 31alicem1 31eve5 31alicea2^FOE 31danf2 31danm2 31dan^A 31danm2 31dana2 31eve6^FOE 31claire 31clairem1 31clairef2^A 31clairem1 31eve9 31clairea2^FOE 32nordfoe 32bobm1 32bobf2^A 32bobm1 32norda 32boba2^FOE 32alicef2 32alicem2 32southfoe^A 32alicem2 32alicea2 32southa^FOE 32westfoe 32danm1 32danf2^A 32danm1 32westa 32dana2^FOE 32clairef2 32clairem2 32eastfoe^A 32clairem2 32clairea2 32easta^FOE 32bob 32bob0 32bob1^FOE 32bob0 32bob00 32bob01^FOE 32bob1 32bob10 32bob11^FOE 32bob00 32bob000 32alice^FOE 32dan 32dan0 32dan1^FOE 32dan0 32dan00 32dan01^FOE 32dan01 32claire 32dan011^A 32bob01 32eve1 32eve2^A 32dan1 32eve2 32eve3^A 32bob10 32eve3 32eve4^A 32dan00 32eve4 32eve5^A 32bob11 32eve6 32eve7^A 32dan011 32eve7 32eve8^A 32bob000 32eve8 32eve9^FOE 32bobf2 32bobm2 32bob^A 32bobm2 32boba2 32eve1^FOE 32alice 32alicem1 32alicef2^A 32alicem1 32eve5 32alicea2^FOE 32danf2 32danm2 32dan^A 32danm2 32dana2 32eve6^FOE 32claire 32clairem1 32clairef2^A 32clairem1 32eve9 32clairea2^FOE 33nordfoe 33bobm1 33bobf2^A 33bobm1 33norda 33boba2^FOE 33alicef2 33alicem2 33southfoe^A 33alicem2 33alicea2 33southa^FOE 33westfoe 33danm1 33danf2^A 33danm1 33westa 33dana2^FOE 33clairef2 33clairem2 33eastfoe^A 33clairem2 33clairea2 33easta^FOE 33bob 33bob0 33bob1^FOE 33bob0 33bob00 33bob01^FOE 33bob1 33bob10 33bob11^FOE 33bob00 33bob000 33alice^FOE 33dan 33dan0 33dan1^FOE 33dan0 33dan00 33dan01^FOE 33dan01 33claire 33dan011^A 33bob01 33eve1 33eve2^A 33dan1 33eve2 33eve3^A 33bob10 33eve3 33eve4^A 33dan00 33eve4 33eve5^A 33bob11 33eve6 33eve7^A 33dan011 33eve7 33eve8^A 33bob000 33eve8 33eve9^FOE 33bobf2 33bobm2 33bob^A 33bobm2 33boba2 33eve1^FOE 33alice 33alicem1 33alicef2^A 33alicem1 33eve5 33alicea2^FOE 33danf2 33danm2 33dan^A 33danm2 33dana2 33eve6^FOE 33claire 33clairem1 33clairef2^A 33clairem1 33eve9 33clairea2";
   break;
 
 
@@ -83,6 +117,75 @@ case "random_egg_A_L_FI_FO":
   }
   var mol = "A 0 1 " + shu[0] + "^L 2 " + shu[1] + " " + shu[2] + "^FI 3 4 " + shu[3] + "^FO 5 " + shu[4] + " " + shu[5];
   break;
+
+
+  case "random_10_quine_bubbles":
+  var shu = [];
+  for (var i=0; i<15; i++) {
+    shu.push(i);
+  }
+  var mi = 15, tm, ii;
+  // While there remain elements to shuffle
+  while (mi) {
+    // Pick a remaining element
+    ii = Math.floor(Math.random() * mi--);
+    // And swap it with the current element.
+    tm = shu[mi];
+    shu[mi] = shu[ii];
+    shu[ii] = tm;
+  }
+  var mol = "L 0 " + shu[1] + " " + shu[3] + "^FI 1 2 " + shu[6]+ "^A 3 4 " + shu[5] + "^FI 5 6 " + shu[8] + "^L 7 " + shu[2] + " " + shu[9] + "^FOE 8 " + shu[0] 
++ " " + shu[7] + "^FOE 9 " + shu[10] + " " + shu[13] + "^A 10 11 " + shu[12] + "^FOE 12 " + shu[11] + " " + shu[14] + "^A 13 14 " + shu[4];
+  break;
+
+
+  case "shuffle_10_5681ECD297AB304":
+  var mol = "L 0 5 6^FI 1 2 8^A 3 4 1^FI 5 6 14^L 7 12 13^FOE 8 2 9^FOE 9 7 10^A 10 11 11^FOE 12 3 0^A 13 14 4";
+  break;
+
+  case "shuffle_10_035B17C469E82AD":
+  var mol = "L 0 0 3^FI 1 2 5^A 3 4 11^FI 5 6 1^L 7 7 12^FOE 8 4 6^FOE 9 9 14^A 10 11 8^FOE 12 2 10^A 13 14 13";
+  break;
+
+  case "shuffle_10_3D25C769B1E804A":
+  var mol = "L 0 3 13^FI 1 2 2^A 3 4 5^FI 5 6 12^L 7 7 6^FOE 8 9 11^FOE 9 1 14^A 10 11 8^FOE 12 0 4^A 13 14 10";
+  break;
+
+  case "shuffle_10_D35C680B7AE2149":
+  var mol = "L 0 13 3^FI 1 2 5^A 3 4 12^FI 5 6 6^L 7 8 0^FOE 8 11 7^FOE 9 10 14^A 10 11 2^FOE 12 1 4^A 13 14 9";
+  break;
+
+  case "shuffle_10_2AC4D156E30789B":
+  var mol = "L 0 2 10^FI 1 2 12^A 3 4 4^FI 5 6 13^L 7 1 5^FOE 8 6 14^FOE 9 3 0^A 10 11 7^FOE 12 8 9^A 13 14 11";
+  break;
+
+
+  case "sensitive1":
+  var mol = "L 0 11 12^FI 1 2 2^A 3 4 8^FI 5 6 7^L 7 1 4^FOE 8 6 10^FOE 9 14 0^A 10 11 5^FOE 12 3 13^A 13 14 9";
+  break;
+
+
+  case "sensitive2":
+  var mol = "L 0 11 9^FI 1 2 13^A 3 4 3^FI 5 6 14^L 7 10 0^FOE 8 7 4^FOE 9 2 6^A 10 11 5^FOE 12 1 8^A 13 14 12";
+  break;
+
+  case "sensitive3":
+  var mol = "L 0 4 8^FI 1 2 11^A 3 4 12^FI 5 6 7^L 7 13 5^FOE 8 9 1^FOE 9 3 10^A 10 11 2^FOE 12 14 0^A 13 14 6";
+  break;
+
+  case "sensitive4":
+  var mol = "L 0 14 3^FI 1 2 11^A 3 4 2^FI 5 6 1^L 7 0 12^FOE 8 5 13^FOE 9 10 7^A 10 11 6^FOE 12 8 4^A 13 14 9";
+  break;
+
+
+  case "cone":
+  var mol = "L 0 14 9^FI 1 2 2^A 3 4 11^FI 5 6 1^L 7 7 8^FOE 8 6 5^FOE 9 0 3^A 10 11 12^FOE 12 13 4^A 13 14 10";
+  break;
+
+  case "candidate":
+  var mol = "L 0 3 7^FI 1 2 6^A 3 4 9^FI 5 6 8^L 7 10 14^FOE 8 4 13^FOE 9 5 0^A 10 11 12^FOE 12 2 1^A 13 14 11 ";
+  break;
+
 
   case "spark_243501":
   var mol = "A 0 1 2^L 2 4 3^FI 3 4 5^FO 5 0 1";
@@ -144,5 +247,6 @@ case "random_egg_A_L_FI_FO":
 }
 return mol;
 }
+
 
 

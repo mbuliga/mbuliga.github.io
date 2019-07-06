@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- forked from https://github.com/ishanpm/chemlambda-editor, which was previously https://jsfiddle.net/ishanpm/0k98ceha/show 
+a js version of chemlambda v2 http://imar.ro/~mbuliga/chemlambda-v2.html , 
+https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md, 
+some small improvements, added a mol library and significant examples
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>find the quine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+a:active, a:link, a:visited		{color: #ff5;}
+        span {
+            color: white; 
+        }
+        span2 {
+            color: #ff5;
+        }
+        .link {
+            stroke: white;
+            stroke-width: 2px;
+        }
+
+        .node {
+        }
+        .textClass {
+            stroke: #323232;
+            fill: white;
+            font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            stroke-width: .5;
+            font-size: 14px;
+        }
+        body {
+            background-color: black;
+        }
+        #svgdiv .svg {
+          border: 2px solid #888
+        }
+    </style>
+</head>
+<body>
+<script src="d3.v5.9.4.min.js"></script>
+<script src="jquery.min.js"></script>
+<!-- 
+<script src="d3-force.min.js"></script>
+<script src="d3-selection.min.js"></script>
+<script src="d3-scale.min.js"></script>
+
+<span>Edit:</span>
+<button onclick="setMode('transform')">Transform</button>
+<button onclick="setMode('link')">Link</button>
+<button onclick="setMode('delete')">Delete</button>
+<span>Add:</span>
+<button onclick="setMode('add','L')">L</button>
+<button onclick="setMode('add','A')">A</button>
+<button onclick="setMode('add','FI')">FI</button>
+<button onclick="setMode('add','FO')">FO</button>
+<button onclick="setMode('add','FOE')">FOE</button>
+<button onclick="setMode('add','T')">T</button>
+<span></span>
+<button onclick="transformList=transformListOrig">Use original moveset</button>
+<button onclick="transformList=transformListAlt">Use alternate moveset</button>
+
+
+-->
+<div style="padding: 14px 26px;">
+ <a href="http://imar.ro/~mbuliga/pages.html"  target="_blank"> <img alt="chemlambda" src="spira.gif"/> play with other pages </a></div>
+<div style="padding: 14px 26px;">
+
+<div style="padding: 8px 26px;">
+<span2> You play by generating a random graph.</span2> <span>Use "start" and "stop" to see  if it looks like a quine. More about 
+</span> <a href="http://imar.ro/~mbuliga/more-quines.html"  target="_blank">chemlambda  quines</a>
+</div>
+
+<div style="padding: 8px 26px;">
+<span2> Think about the graph as if it is alive.</span2> <span> Is it? If it does nothing, then is dead. If it grows fast and that's all, then is not interesting. If it grows only a little, then it keeps more or less the same, or it has some parts which grow and some parts which shrink, so there seems to be a balance between growing and shrinking, then you hit the jackpot.<span> 
+</div>
+
+<div style="padding: 8px 26px;">
+<span2>It is OK if the creature lives a while and then it dies.</span2> <span> After all, the 10_quine is mortal. 5 new creatures were found, see "new quine?". In order to check they are truly alive, load and start several times, until they live long enough.<span> 
+</div>
+
+<div style="padding: 8px 26px;">
+<span2>Attention!</span2> <span> When you hit "load" a "new random graph", each time you get a new one. If you want to reload the same random graph again, then use "reload CODE" button.<span> 
+</div>
+
+
+<div style="padding: 8px 26px;">
+<span2> If you find something</span2> <span> that you think is alive, then copy-paste the "code" of the creature and send a mail to Marius.Buliga@imar.ro. You see the code when you load:<span> 
+</div>
+
+<div style="padding: 8px 26px;"><span2>CODE: </span2><span id="molyoulookat"></span>
+</div>
+
+
+<div style="padding: 8px 26px;">
+<select id="listofmols" onchange="molSelect()">
+  <option value="random_10_quine_bubbles">new random graph
+  <option value="10_quine_bubbles">10_quine
+  <option value="shuffle_10_5681ECD297AB304">new quine? 1
+  <option value="shuffle_10_035B17C469E82AD">new quine? 2
+  <option value="shuffle_10_3D25C769B1E804A">new quine? 3
+  <option value="shuffle_10_D35C680B7AE2149">new quine? 4
+  <option value="shuffle_10_2AC4D156E30789B">new quine? 5
+  <option value="sensitive1">!quine, sensitive 1
+  <option value="sensitive2">!quine, sensitive 2
+  <option value="sensitive3">!quine, sensitive 3
+  <option value="sensitive4">!quine, sensitive 4
+  <option value="cone">!quine, cone
+</select>
+<button onclick="removeAllNodes()">clear</button>
+<button onclick="molSelect()">load</button>
+<button onclick="reloadCode()">reload CODE</button>
+<span>&nbsp; &nbsp;</span> <span2>mouse: zoom/drag/hover</span2>  <span>&nbsp; &nbsp; auto: </span>
+<button onclick="setSpeed(1)">start</button>
+<button onclick="setSpeed(0)">stop</button>
+</div>
+
+<div id="svgdiv"></div>
+<!--
+<textarea id="molFileArea"></textarea>
+<div>
+  <button onclick="doImport(molFileArea)">Import .mol</button>
+  <button onclick="doClearImport(molFileArea)">Clear and import .mol</button>
+  <button onclick="doExport(molFileArea)">Export .mol</button>
+</div>
+-->
+
+<script src="molLib.js"></script>
+<script src="find-the-quine.js"></script>
+
+</body>
+</html>
