@@ -154,8 +154,8 @@ function myGraph(selector) {
   }
 
   // set up the D3 visualisation in the specified element
-  var w = 960,
-      h = 800;
+  var w = 600,
+      h = 350;
 
   var color = d3.scaleOrdinal()
   .domain(["left","right","out","L","A","FI","FOE","FO","T","FRIN","FROUT","Arrow"])
@@ -217,9 +217,9 @@ function myGraph(selector) {
       .style("stroke-opacity",0).style("fill-opacity",0)
       .attr("r", function(d) {
       if (d.type == "left" || d.type == "right" || d.type == "out") {
-        return 12;
+        return 6;
       } else {
-        return 24;
+        return 12;
       }
     })
       .attr("id", function (d) {
@@ -282,14 +282,14 @@ function myGraph(selector) {
       .alpha(.1)
       .alphaDecay(0)
       .velocityDecay(0.1)
-      .force("charge_force", d3.forceManyBody().strength(-50))
+      .force("charge_force", d3.forceManyBody().strength(-20))
       .force("center_x", d3.forceX(w / 2).strength(.05))
       .force("center_y", d3.forceY(h / 2).strength(.05))
       .force("links", d3.forceLink(links).id(function (d) { return d.id; }).distance(function(d) {
         if (d.value == 1) {
-          return 20;
-        } else {
           return 10;
+        } else {
+          return 5;
         }
       }).strength(5))
       .on("tick", function () {

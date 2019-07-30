@@ -1,5 +1,5 @@
 /* 
-mol library, mol files from https://github.com/chorasimilarity/chemlambda-gui/tree/gh-pages/dynamic/mol
+mol library, some mol files from https://github.com/chorasimilarity/chemlambda-gui/tree/gh-pages/dynamic/mol
 */
 
 
@@ -47,6 +47,26 @@ switch (molName) {
   case "16_quine_A_L_FI_FO_duplicate":
   var mol = "FO a1 a2 a3^L a4 a5 a7^FO a6 a8 a9^FOE a10 a11 a12^FI a7 a20 a10^FI a2 a8 a6^FOE a17 a13 a14^FI a33 a9 a16^A a11 a13 a21^A a12 a14 a4^FI a19 a16 a20^FI a5 a22 a17^FOE a21 a18 a23^FI a15 a24 a22^L a18 a24 a1^L a23 a15 a19^FI a3 2 1^FO 1 2 a33";
   break;
+
+  case "random_16_quine_A_L_FI_FO_duplicate":
+  var shu = [];
+  for (var i=0; i<27; i++) {
+    shu.push(i);
+  }
+  var mi = 27, tm, ii;
+  // While there remain elements to shuffle
+  while (mi) {
+    // Pick a remaining element
+    ii = Math.floor(Math.random() * mi--);
+    // And swap it with the current element.
+    tm = shu[mi];
+    shu[mi] = shu[ii];
+    shu[ii] = tm;
+  }
+  var mol = "FO 0 " + shu[6] + " " + shu[24] + "^L 1 " + shu[17] + " " + shu[4] + "^FO 2 " + shu[7] + " " + shu[10] + "^FOE 3 " + shu[11] + " " + shu[13] + "^FI 4 5 " + shu[3] + "^FI 6 7 " + shu[2] + "^FOE 8 " + shu[12] + " " + shu[14] + "^FI 9 10 " + shu[16] + "^A 11 12 " + shu[19] + "^A 13 14 " + shu[1] + "^FI 15 16 " + shu[5] + "^FI 17 18 " + shu[8] + "^FOE 19 " + shu[22] + " " + shu[23] + "^FI 20 21 " + shu[18] + "^L 22 " + shu[21] + " " + shu[0] + "^L 23 " + shu[20] + " " + shu[15] + "^FI 24 25 " + shu[26] + "^FO 26 " + shu[25] + " " + shu[9];
+  break;
+
+
 
   case "bigpred_train":
   var mol = "FOE 2 12 3a^A 12 22a 1^FOE 3a na1 3o1^A na1 22a1 22a^FOE 3o1 na2 3o2^A na2 22a2 22a1^FOE 3o2 na3 3o3^A na3 22a3 22a2^FOE 3o3 na4 3o4^A na4 22a4 22a3^FOE 3o4 na5 3o5^A na5 22a5 22a4^FOE 3o5 na6 3o6^A na6 22a6 22a5^FOE 3o6 na7 3o7^A na7 22a7 22a6^FOE 3o7 na8 3o8^A na8 22a8 22a7^FOE 3o8 na9 3o9^A na9 22a9 22a8^FOE 3o9 na10 3o10^A na10 22a10 22a9^FOE 3o10 na11 3o11^A na11 22a11 22a10^FOE 3o11 na12 3o12^A na12 22a12 22a11^FOE 3o12 na13 3o13^A na13 22a13 22a12^FOE 3o13 na14 3o14^A na14 22a14 22a13^FOE 3o14 na15 3o15^A na15 22a15 22a14^FOE 3o15 na16 3o16^A na16 22a16 22a15^FOE 3o16 na17 3o17^A na17 22a17 22a16^FOE 3o17 na18 3o18^A na18 22a18 22a17^FOE 3o18 na19 3o19^A na19 22a19 22a18^FOE 3o19 na20 3o20^A na20 22a20 22a19^FOE 3o20 na21 3o21^A na21 22a21 22a20^FOE 3o21 na22 3o22^A na22 22a22 22a21^FOE 3o22 na23 3o23^A na23 22a23 22a22^FOE 3o23 na24 3o24^A na24 22a24 22a23^FOE 3o24 na25 3o25^A na25 22a25 22a24^FOE 3o25 na26 3o26^A na26 22a26 22a25^FOE 3o26 na27 3o27^A na27 22a27 22a26^FOE 3o27 na28 3o28^A na28 22a28 22a27^FOE 3o28 na29 3o29^A na29 22a29 22a28^FOE 3o29 na30 3o30^A na30 22a30 22a29^FOE 3o30 na31 3o31^A na31 22a31 22a30^FOE 3o31 na32 3^A na32 22 22a31^FOE 3 13 4^FOE 4 14 5^FOE 6 16 7^FOE 8 18 9^FOE 10 20 11^FOE 24 29 15^FOE 26 30 17^A 23 13 22^A 41 25 40^A 15 5 6^A 29 14 25^A 30 16 27^A 17 7 8^A 36 1 37^FI 28 42 26^FI 33 32 38^FI 38 39 24^FI 19 31 28^FI 21 35 34^FI 34 37 33^L 40 41 23^L 27 42 39^L 18 31 32^L 9 19 10^L 20 35 36^L 11 21 2";
@@ -119,6 +139,24 @@ case "random_egg_A_L_FI_FO":
   break;
 
 
+case "random_egg_A_L_FI_FOE":
+  var shu = [];
+  for (var i=0; i<6; i++) {
+    shu.push(i);
+  }
+  var mi = 6, tm, ii;
+  // While there remain elements to shuffle
+  while (mi) {
+    // Pick a remaining element
+    ii = Math.floor(Math.random() * mi--);
+    // And swap it with the current element.
+    tm = shu[mi];
+    shu[mi] = shu[ii];
+    shu[ii] = tm;
+  }
+  var mol = "A 0 1 " + shu[0] + "^L 2 " + shu[1] + " " + shu[2] + "^FI 3 4 " + shu[3] + "^FOE 5 " + shu[4] + " " + shu[5];
+  break;
+
   case "random_10_quine_bubbles":
   var shu = [];
   for (var i=0; i<15; i++) {
@@ -136,6 +174,26 @@ case "random_egg_A_L_FI_FO":
   }
   var mol = "L 0 " + shu[1] + " " + shu[3] + "^FI 1 2 " + shu[6]+ "^A 3 4 " + shu[5] + "^FI 5 6 " + shu[8] + "^L 7 " + shu[2] + " " + shu[9] + "^FOE 8 " + shu[0] 
 + " " + shu[7] + "^FOE 9 " + shu[10] + " " + shu[13] + "^A 10 11 " + shu[12] + "^FOE 12 " + shu[11] + " " + shu[14] + "^A 13 14 " + shu[4];
+  break;
+
+
+  case "random_10_quine_bubbles_var":
+  var shu = [];
+  for (var i=0; i<15; i++) {
+    shu.push(i);
+  }
+  var mi = 15, tm, ii;
+  // While there remain elements to shuffle
+  while (mi) {
+    // Pick a remaining element
+    ii = Math.floor(Math.random() * mi--);
+    // And swap it with the current element.
+    tm = shu[mi];
+    shu[mi] = shu[ii];
+    shu[ii] = tm;
+  }
+  var mol = "L 0 " + shu[1] + " " + shu[3] + "^A 1 2 " + shu[6]+ "^FI 3 4 " + shu[5] + "^A 5 6 " + shu[8] + "^FO 7 " + shu[2] + " " + shu[9] + "^FOE 8 " + shu[0] 
++ " " + shu[7] + "^L 9 " + shu[10] + " " + shu[13] + "^FI 10 11 " + shu[12] + "^FO 12 " + shu[11] + " " + shu[14] + "^A 13 14 " + shu[4];
   break;
 
 
@@ -160,6 +218,28 @@ case "random_egg_A_L_FI_FO":
   break;
 
 
+  case "shuffle_10_5A49728D0CB361E":
+  var mol = "L 0 5 10^FI 1 2 4^A 3 4 9^FI 5 6 7^L 7 2 8^FOE 8 13 0^FOE 9 12 11^A 10 11 3^FOE 12 6 1^A 13 14 14";
+  break;
+
+  case "shuffle_10_DAB62013EC87459":
+  var mol = "L 0 13 10^FI 1 2 11^A 3 4 6^FI 5 6 2^L 7 0 1^FOE 8 3 14^FOE 9 12 8^A 10 11 7^FOE 12 4 5^A 13 14 9";
+  break;
+
+  case "shuffle_10_0A8E7D9132C56B":
+  var mol = "L 0 0 10^FI 1 2 8^A 3 4 14^FI 5 6 7^L 7 13 9^FOE 8 1 3^FOE 9 2 12^A 10 11 5^FOE 12 4 6^A 13 14 11";
+  break;
+
+  case "shuffle_10_51D3E60BA74C928":
+  var mol = "L 0 5 1^FI 1 2 13^A 3 4 3^FI 5 6 14^L 7 6 0^FOE 8 11 10^FOE 9 7 4^A 10 11 12^FOE 12 9 2^A 13 14 8";
+  break;
+
+  case "shuffle_10_D870619BC345AE2":
+  var mol = "L 0 13 8^FI 1 2 7^A 3 4 0^FI 5 6 6^L 7 1 9^FOE 8 11 12^FOE 9 3 4^A 10 11 5^FOE 12 10 14^A 13 14 2";
+  break;
+
+
+
   case "sensitive1":
   var mol = "L 0 11 12^FI 1 2 2^A 3 4 8^FI 5 6 7^L 7 1 4^FOE 8 6 10^FOE 9 14 0^A 10 11 5^FOE 12 3 13^A 13 14 9";
   break;
@@ -182,14 +262,32 @@ case "random_egg_A_L_FI_FO":
   var mol = "L 0 14 9^FI 1 2 2^A 3 4 11^FI 5 6 1^L 7 7 8^FOE 8 6 5^FOE 9 0 3^A 10 11 12^FOE 12 13 4^A 13 14 10";
   break;
 
-  case "candidate":
-  var mol = "L 0 3 7^FI 1 2 6^A 3 4 9^FI 5 6 8^L 7 10 14^FOE 8 4 13^FOE 9 5 0^A 10 11 12^FOE 12 2 1^A 13 14 11 ";
-  break;
 
 
   case "spark_243501":
   var mol = "A 0 1 2^L 2 4 3^FI 3 4 5^FO 5 0 1";
   break;
+
+  case "spark_234501":
+  var mol = "A 0 1 2^L 2 3 4^FI 3 4 5^FO 5 0 1";
+  break;
+
+  case "spark_301542":
+  var mol = "A 0 1 3^L 2 0 1^FI 3 4 5^FO 5 4 2";
+  break;
+
+  case "spark_401523":
+  var mol = "A 0 1 4^L 2 0 1^FI 3 4 5^FO 5 2 3";
+  break;
+
+  case "spark_214530":
+  var mol = "A 0 1 2^L 2 1 4^FI 3 4 5^FO 5 3 0";
+  break;
+
+  case "spark_213504":
+  var mol = "A 0 1 2^L 2 1 3^FI 3 4 5^FO 5 0 4";
+  break;
+
 
   case "spark_245013":
   var mol = "A 0 1 2^L 2 4 5^FI 3 4 0^FO 5 1 3";
@@ -247,6 +345,7 @@ case "random_egg_A_L_FI_FO":
 }
 return mol;
 }
+
 
 
 
