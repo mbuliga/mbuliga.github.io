@@ -196,13 +196,41 @@ case "random_egg_A_L_FI_FOE":
 + " " + shu[7] + "^L 9 " + shu[10] + " " + shu[13] + "^FI 10 11 " + shu[12] + "^FO 12 " + shu[11] + " " + shu[14] + "^A 13 14 " + shu[4];
   break;
 
+  case "shuffle_10_A3E2974C16B85D0":
+  var mol = "L 0 10 3^FI 1 2 14^A 3 4 2^FI 5 6 9^L 7 7 4^FOE 8 12 1^FOE 9 6 11^A 10 11 8^FOE 12 5 13^A 13 14 0";
+  break;
+
+  case "shuffle_10_0368BCDE2541A97":
+  var mol = "L 0 0 3^FI 1 2 6^A 3 4 8^FI 5 6 11^L 7 12 13^FOE 8 14 2^FOE 9 5 4^A 10 11 1^FOE 12 10 9^A 13 14 7";
+  break;
+
+  case "shuffle_10_04C92C86BE5A317":
+  var mol = "L 0 0 4^FI 1 2 12^A 3 4 9^FI 5 6 2^L 7 13 8^FOE 8 6 11^FOE 9 14 5^A 10 11 10^FOE 12 3 1^A 13 14 7";
+  break;
+
+
+  case "shuffle_10_8639A7BC024DE51":
+  var mol = "L 0 8 6^FI 1 2 3^A 3 4 9^FI 5 6 10^L 7 7 11^FOE 8 12 0^FOE 9 2 4^A 10 11 13^FOE 12 14 5^A 13 14 1";
+  break;
+
+  case "shuffle_10_6AC0379E12D5B48":
+  var mol = "L 0 6 10^FI 1 2 12^A 3 4 0^FI 5 6 3^L 7 7 9^FOE 8 14 1^FOE 9 2 13^A 10 11 5^FOE 12 11 4^A 13 14 8";
+  break;
+
+  case "shuffle_10_8C72046E53B9DA1":
+  var mol = "L 0 8 12^FI 1 2 7^A 3 4 2^FI 5 6 0^L 7 4 6^FOE 8 14 5^FOE 9 3 11^A 10 11 9^FOE 12 13 10^A 13 14 1";
+  break;
+
+  case "shuffle_10_018C23A7B6E49D5":
+  var mol = "L 0 0 1^FI 1 2 8^A 3 4 12^FI 5 6 2^L 7 3 10^FOE 8 7 11^FOE 9 6 14^A 10 11 4^FOE 12 9 13^A 13 14 5";
+  break;
 
   case "shuffle_10_5681ECD297AB304":
   var mol = "L 0 5 6^FI 1 2 8^A 3 4 1^FI 5 6 14^L 7 12 13^FOE 8 2 9^FOE 9 7 10^A 10 11 11^FOE 12 3 0^A 13 14 4";
   break;
 
   case "shuffle_10_035B17C469E82AD":
-  var mol = "L 0 0 3^FI 1 2 5^A 3 4 11^FI 5 6 1^L 7 7 12^FOE 8 4 6^FOE 9 9 14^A 10 11 8^FOE 12 2 10^A 13 14 13";
+  var mol = "L 0 0 3^FI 1 2 5^A 3 4 11^FI 5 6 1^L 7 7 12^FOE 8 4 6^A 10 11 8^FOE 12 2 10";
   break;
 
   case "shuffle_10_3D25C769B1E804A":
@@ -226,7 +254,7 @@ case "random_egg_A_L_FI_FOE":
   var mol = "L 0 13 10^FI 1 2 11^A 3 4 6^FI 5 6 2^L 7 0 1^FOE 8 3 14^FOE 9 12 8^A 10 11 7^FOE 12 4 5^A 13 14 9";
   break;
 
-  case "shuffle_10_0A8E7D9132C56B":
+  case "shuffle_10_0A8E7D9132C546B":
   var mol = "L 0 0 10^FI 1 2 8^A 3 4 14^FI 5 6 7^L 7 13 9^FOE 8 1 3^FOE 9 2 12^A 10 11 5^FOE 12 4 6^A 13 14 11";
   break;
 
@@ -262,7 +290,9 @@ case "random_egg_A_L_FI_FOE":
   var mol = "L 0 14 9^FI 1 2 2^A 3 4 11^FI 5 6 1^L 7 7 8^FOE 8 6 5^FOE 9 0 3^A 10 11 12^FOE 12 13 4^A 13 14 10";
   break;
 
-
+  case "9sparkhybrid":
+  var mol = "A 0 1 2^L 2 4c 3^FI 3 4 5^FO 5 0a 1^A 0a 1a 2a^L 2a 4a 3a^FI 3a 4a 5a^FO 5a 0bc 1a^A 0b 1b 2b^L 2b 4b 3b^FI 3b 4b 5b^FO 5b 0 1b^A 0c 1c 2c^L 2c 4d 3c^FI 3c 4c 5c^FO 5c 0ac 1c^A 0ac 1ac 2ac^L 2ac 4ac 3ac^FI 3ac 4ac 5ac^FO 5ac 0bd 1ac^A 0bc 1bc 2bc^L 2bc 4bc 3bc^FI 3bc 4bc 5bc^FO 5bc 0c 1bc^A 0d 1d 2d^L 2d 4 3d^FI 3d 4d 5d^FO 5d 0ad 1d^A 0ad 1ad 2ad^L 2ad 4ad 3ad^FI 3ad 4ad 5ad^FO 5ad 0b 1ad^A 0bd 1bd 2bd^L 2bd 4bd 3bd^FI 3bd 4bd 5bd^FO 5bd 0d 1bd";
+  break;
 
   case "spark_243501":
   var mol = "A 0 1 2^L 2 4 3^FI 3 4 5^FO 5 0 1";

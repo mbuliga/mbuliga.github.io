@@ -217,9 +217,9 @@ function myGraph(selector) {
       .style("stroke-opacity",0).style("fill-opacity",0)
       .attr("r", function(d) {
       if (d.type == "left" || d.type == "right" || d.type == "out") {
-        return 6;
+        return 3;
       } else {
-        return 12;
+        return 6;
       }
     })
       .attr("id", function (d) {
@@ -282,16 +282,16 @@ function myGraph(selector) {
       .alpha(.1)
       .alphaDecay(0)
       .velocityDecay(0.1)
-      .force("charge_force", d3.forceManyBody().strength(-20))
-      .force("center_x", d3.forceX(w / 2).strength(.05))
-      .force("center_y", d3.forceY(h / 2).strength(.05))
+      .force("charge_force", d3.forceManyBody().strength(-5))
+      .force("center_x", d3.forceX(w / 2).strength(.22))
+      .force("center_y", d3.forceY(h / 2).strength(.22))
       .force("links", d3.forceLink(links).id(function (d) { return d.id; }).distance(function(d) {
         if (d.value == 1) {
-          return 10;
+          return 2;
         } else {
-          return 5;
+          return 1;
         }
-      }).strength(5))
+      }).strength(7))
       .on("tick", function () {
 
       node.attr("transform", function (d) {
@@ -807,7 +807,7 @@ function exportMol() {
         }
       }
       
-      line += "\n";
+      line += "<br>";
       result += line;
     }
   }
@@ -849,6 +849,10 @@ function doExport(textarea) {
   textarea.value = exportMol();
 }
 
+function exportMolToScreen() {
+document.getElementById("molexport").innerHTML = exportMol(); 
+}
+
 function showImportError(e) {
   alert(e);
 }
@@ -856,6 +860,7 @@ function showImportError(e) {
 function loop(dt) {
   var anyMoves = false;
   //for (var i=0; i<speed; i++) {
+  if (nodes.length > 1000) { setSpeed(0);}
   if (speed == 1 && transformCache.length > 0) {
     var choice = Math.floor(Math.random() * transformCache.length);
     
@@ -909,9 +914,11 @@ function loop(dt) {
       }
     }
   }
+
   if (anyMoves)
     update();
-  requestAnimationFrame(loop);
+    exportMolToScreen();
+    requestAnimationFrame(loop);
 }
 
 loop();
