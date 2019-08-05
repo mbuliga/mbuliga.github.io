@@ -860,7 +860,10 @@ function showImportError(e) {
 function loop(dt) {
   var anyMoves = false;
   //for (var i=0; i<speed; i++) {
-  if (nodes.length > 1000) { setSpeed(0);}
+  var maxNumberOfNodesStr = document.getElementById("maxnodenumber").innerHTML;
+  var maxNumberOfNodes = maxNumberOfNodesStr - 2;
+ document.getElementById("nodenumber").innerHTML = (nodes.length / 4);
+  if (nodes.length > 4*maxNumberOfNodes) { setSpeed(0);}
   if (speed == 1 && transformCache.length > 0) {
     var choice = Math.floor(Math.random() * transformCache.length);
     
