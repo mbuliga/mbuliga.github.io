@@ -372,6 +372,62 @@ case "random_egg_A_L_FI_FOE":
   var mol = "A 1 outa out^A 1a out outa^L 2 3 1^A 4 7 2^A 6 5 4^FO 8 6 7^FO 3 9 10^A 9 10 8^L 2a 3a 1a^A 4a 7a 2a^A 6a 5a 4a^FO 8a 6a 7a^FO 3a 9a 10a^A 9a 10a 8a";
   break;
 
+  case "L-FO-FOE_conflict":
+  var mol = "L 1 1 2^FO 2 3 4^FOE 4 5 6";
+  break;
+
+  case "wrong1":
+  var mol = "L 1 3 2^FO 2 4 4";
+  break;
+
+  case "LA":
+  var mol = "L 1 2 3^A 3 4 5^FRIN 1^FROUT 2^FRIN 4^FROUT 5";
+  break;
+
+
+  case "bubble":
+  var mol = "Arrow 1 2^Arrow 2 3^Arrow 3 1";
+  break;
+
+  case "AFO":
+  var mol = "A 1 2 3^FO 3 4 5^FRIN 1^FRIN 2^FROUT 4^FROUT 5";
+  break;
+
+  case "LFO":
+  var mol = "L 1 2 3^FO 3 4 5^FRIN 1^FROUT 2^FROUT 4^FROUT 5";
+  break;
+
+  case "GAMMAGAMMA":
+  var mol = "GAMMA 1 2 3^GAMMA 1 4 5^FRIN 2^FRIN 3^FRIN 4^FRIN 5";
+  break;
+
+  case "DELTADELTA":
+  var mol = "DELTA 1 2 3^DELTA 1 4 5^FRIN 2^FRIN 3^FRIN 4^FRIN 5";
+  break;
+
+  case "GAMMADELTA":
+  var mol = "GAMMA 1 2 3^DELTA 1 4 5^FRIN 2^FRIN 3^FRIN 4^FRIN 5";
+  break;
+
+  case "DELTAGAMMA":
+  var mol = "DELTA 1 2 3^GAMMA 1 4 5^FRIN 2^FRIN 3^FRIN 4^FRIN 5";
+  break;
+
+  case "DELTAT":
+  var mol = "DELTA 1 2 3^T 1^FRIN 2^FRIN 3";
+  break;
+
+  case "GAMMAT":
+  var mol = "GAMMA 1 2 3^T 1^FRIN 2^FRIN 3";
+  break;
+
+  case "TT":
+  var mol = "T 1^T 1";
+  break;
+
+  case "Lafont-quine":
+  var mol = "GAMMA 1 2 3^DELTA 1 3 4^T 2^T 4";
+  break;
 }
 return mol;
 }

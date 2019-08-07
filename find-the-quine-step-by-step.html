@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- forked from https://github.com/ishanpm/chemlambda-editor, which was previously https://jsfiddle.net/ishanpm/0k98ceha/show 
+a js version of chemlambda v2 http://imar.ro/~mbuliga/chemlambda-v2.html , 
+https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md, 
+some small improvements, added a mol library and significant examples
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>find a quine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+.image {border-width:2; padding: 10px 10px; border-radius: 12px; border: 2px solid #f55 }
+
+.image:hover {border-width:2; padding: 10px 10px; border-radius: 12px; border: 2px solid #ff5 }
+a:active, a:link, a:visited		{color: #f55;}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1px 26px;
+}
+
+.flex .box10 {
+  width: 10%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+
+.flex .box20 {
+  width: 20%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+.flex .box40 {
+  width: 40%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+.flex .box33 {
+  width: 33%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+
+.flex .box90 {
+  width: 90%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+.flex .box70 {
+  width: 70%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+        span {
+            color: white; 
+        }
+        span2 {
+            color: #ff5;
+        }
+        span3 {
+            color: #f55;
+        }
+        .link {
+            stroke: white;
+            stroke-width: 2px;
+        }
+
+        .node {
+        }
+        .textClass {
+            stroke: #323232;
+            fill: white;
+            font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            stroke-width: .5;
+            font-size: 14px;
+        }
+        body {
+            background-color: black;
+        }
+        #svgdiv .svg {
+          border: 2px solid #888
+        }
+    </style>
+</head>
+<body id="container">
+<script src="d3.v5.9.4.min.js"></script>
+<script src="jquery.min.js"></script>
+<div style="padding: 14px 26px;">
+ <span2>Find a chemlambda quine among 9 billions possibilities OR play with Lafont' quine from Interaction Combinators</span2> &nbsp; <a href="https://mbuliga.github.io/find-the-quine.html"  target="_blank">(go to chemlambda quines only page)</a></div>
+
+<div style="padding: 8px 26px;">
+<span2> credits and comment:</span2> <span> based on this <a href="https://github.com/ishanpm/chemlambda-editor" target="_blank">js version</a> of the <a href="https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md" target="_blank">chemlambda v2</a>. I discovered that the js version does not use the arrows orientations so I added <a href="https://pdfs.semanticscholar.org/6cfe/09aa6e5da6ce98077b7a048cb1badd78cc76.pdf" target="_blank">interaction combinators</a> rewrites and <a href="https://chorasimilarity.wordpress.com/2019/01/19/a-quine-in-lafont-interaction-combinators/" target="_blank">a quine by Lafont</a>.</span> 
+</div>
+
+<div style="padding: 8px 26px;"><span2>
+<select class="image" id="listofmols" onchange="molSelect()">
+  <option value="random_10_quine_bubbles">new random 10 nodes graph
+  <option value="10_quine_bubbles">original 10_nodes quine
+  <option value="shuffle_10_D870619BC345AE2">10 nodes quine 1 
+  <option value="shuffle_10_0A8E7D9132C546B">10 nodes quine 2 = [A-L-FI-FO 245013]
+  <option value="shuffle_10_5681ECD297AB304">10 nodes quine 3 (reload if it dies)
+  <option value="shuffle_10_035B17C469E82AD">10 nodes quine 4 (reload if it dies)
+  <option value="shuffle_10_3D25C769B1E804A">10 nodes quine 5 (reload if it dies)
+  <option value="shuffle_10_D35C680B7AE2149">10 nodes quine 6 (reload if it dies)
+  <option value="shuffle_10_2AC4D156E30789B">10 nodes quine 7 (reload if it dies)
+  <option value="shuffle_10_DAB62013EC87459">10 nodes quine 8 (reload if it dies)
+  <option value="shuffle_10_018C23A7B6E49D5">10 nodes quine 9 (reload if it dies)
+  <option value="shuffle_10_8C72046E53B9DA1">10 nodes quine 10 (reload if it dies)
+  <option value="shuffle_10_6AC0379E12D5B48">10 nodes quine 11 (reload if it dies)
+  <option value="shuffle_10_8639A7BC024DE51">10 nodes quine 12 (reload if it dies)
+  <option value="shuffle_10_04C92C86BE5A317">10 nodes quine 13 (reload if it dies)
+  <option value="shuffle_10_0368BCDE2541A97">10 nodes quine 14 (reload if it dies)
+  <option value="shuffle_10_A3E2974C16B85D0">10 nodes quine 15 (reload if it dies)
+  <option value="random_egg_A_L_FI_FO">new random 4 nodes graph A-L-FI-FO
+  <option value="spark_243501">quine from [graph A-L-FI-FO 243501]
+  <option value="spark_234501">quine from [graph A-L-FI-FO 234501]
+  <option value="spark_214530">quine from [graph A-L-FI-FO 214530]
+  <option value="spark_301542">dirty quine [graph A-L-FI-FO 301542]
+  <option value="9sparkhybrid">9 [graph A-L-FI-FO 243501] hybrid
+  <option value="Lafont-quine">Lafont' quine (IC)
+  <option value="GAMMAGAMMA">GAMMA-GAMMA (IC)
+  <option value="DELTADELTA">DELTA-DELTA (IC)
+  <option value="GAMMADELTA">GAMMA-DELTA (IC)
+  <option value="DELTAGAMMA">DELTA-GAMMA (IC)
+  <option value="GAMMAT">GAMMA-T (IC)
+  <option value="DELTAT">DELTA-T (IC)
+  <option value="TT">T-T (IC)
+</select>  &nbsp; &nbsp; (stops at max. number of nodes </span2><span2 id="maxnodenumber">256</span2><span2>)</span2>
+</div>
+<div class="flex">
+<div class="box90"> <span id="svgdiv"> </span> <br>
+<div style="padding: 8px 26px;"><span2>CODE: </span2><span id="molyoulookat"></span></div> 
+
+
+
+<div style="padding: 8px 26px;">
+<div class="flex">
+<div class="box33"><span>MOL NOW: </span> <br> <br> <span id="molexport"></span></div>
+<div class="box33"><span>MOL AFTER: </span> <br> <br> <span id="molexportafter"></span></div>
+<div class="box33"><span2>before: <br></span2> <span id="puttransformcachealt"></span> <br> <span2>chosen: <br></span2><span id="chosentransform"></span>
+<br>
+<span2>after: <br></span2>
+<span id="puttransformcachealtafter"></span>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="box10">
+<button class="image" onclick="molSelect()"><span3>load</span3></button><br><br>
+<button class="image" onclick="reloadCode()"><span3>reload</span3></button><br><br>
+<button class="image" onclick="loop2()"><span3>step</span3></button><br><br>
+<button class="image" onclick="setSpeed(1); setStart(1); loop()"><span3>start</span3></button> <br><br>
+<button class="image" onclick="setSpeed(0); setStart(0)"><span3>stop</span3></button></div>
+<div class="box20"> 
+
+
+</div>
+
+
+</div>
+
+
+
+<br> <br>
+
+
+
+
+<script src="molLib.js"></script>
+<script src="find-the-quine-step-by-step.js"></script>
+
+</body>
+</html>
+
+
