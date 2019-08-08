@@ -428,9 +428,52 @@ case "random_egg_A_L_FI_FOE":
   case "Lafont-quine":
   var mol = "GAMMA 1 2 3^DELTA 1 3 4^T 2^T 4";
   break;
+
+  case "random_egg_G_G_D_D":
+    var shu = [];
+    for (var i=0; i<12; i++) {
+      shu.push(i);
+    }
+    var mi = 12, tm, ii;
+    // While there remain elements to shuffle
+    while (mi) {
+      // Pick a remaining element
+      ii = Math.floor(Math.random() * mi--);
+      // And swap it with the current element.
+      tm = shu[mi];
+      shu[mi] = shu[ii];
+      shu[ii] = tm;
+    }
+    var mol = "GAMMA 0 1 2^GAMMA 3 4 5^DELTA 6 7 8^DELTA 9 10 11" + "^Arrow " + shu[0] + " " + shu[1] + "^Arrow " + shu[2] + " " + shu[3] + "^Arrow " + shu[4] + " " + shu[5] + "^Arrow " + shu[6] + " " + shu[7] + "^Arrow " + shu[8] + " " + shu[9] + "^Arrow " + shu[10] + " " + shu[11];
+    break;
+
+  case "4_IC_6B784A053912":
+  var mol = "GAMMA 0 1 1^GAMMA 3 4 0^DELTA 6 7 7^DELTA 3 4 6";
+  break;
+
+  case "4_IC_84B7362190A5":
+  var mol = "GAMMA 0 1 1^GAMMA 3 4 5^DELTA 3 7 4^DELTA 0 5 7";
+  break;
+
+  case "4_IC_60852B93A714":
+  var mol = "GAMMA 0 1 2^GAMMA 3 1 5^DELTA 0 7 5^DELTA 3 7 2";
+  break;
+
+  case "4_IC_5AB718246309":
+  var mol = "GAMMA 0 1 2^GAMMA 3 2 5^DELTA 3 7 1^DELTA 0 5 7";
+  break;
+
+  case "4_IC_820963B71A54":
+  var mol = "GAMMA 0 1 2^GAMMA 3 4 4^DELTA 3 7 2^DELTA 0 1 7";
+  break;
+
+  case "4_IC_45182379AB06":
+  var mol = "GAMMA 0 1 2^GAMMA 2 4 4^DELTA 0 7 1^DELTA 7 10 10";
+  break;
 }
 return mol;
 }
+
 
 
 

@@ -169,7 +169,7 @@ function myGraph(selector) {
 
   var color = d3.scaleOrdinal()
   .domain(["left","right","out","L","A","FI","FOE","FO","T","FRIN","FROUT","Arrow","GAMMA","DELTA"])
-  .range(["#f00","#00f","#0f0","#f55","#5ff","#ff5","#55f","#5f5","#f5f","#338","#883","#aaa","#00f","#0f0"]);
+  .range(["#f00","#00f","#0f0","#f55","#5ff","#ff5","#55f","#5f5","#345","#338","#883","#fff","#ff9933","#0099ff"]);
 
   var svg = d3.select(selector)
     .append("svg:svg")
@@ -1039,3 +1039,4 @@ function loop2(dt) {
   loop();
 
 }
+
