@@ -266,6 +266,9 @@ case "random_egg_A_L_FI_FOE":
   var mol = "L 0 13 8^FI 1 2 7^A 3 4 0^FI 5 6 6^L 7 1 9^FOE 8 11 12^FOE 9 3 4^A 10 11 5^FOE 12 10 14^A 13 14 2";
   break;
 
+  case "shuffle_10_290C1735B6A4DE8":
+  var mol = "L 0 2 9^FI 1 2 0^A 3 4 12^FI 5 6 1^L 7 7 3^FOE 8 5 11^FOE 9 6 10^A 10 11 4^FOE 12 13 14^A 13 14 8";
+  break;
 
 
   case "sensitive1":
@@ -321,6 +324,11 @@ case "random_egg_A_L_FI_FOE":
 
   case "spark_245013":
   var mol = "A 0 1 2^L 2 4 5^FI 3 4 0^FO 5 1 3";
+  break;
+
+
+  case "sparkFOE_540213":
+  var mol = "A 0 1 5^L 2 4 0^FI 3 4 2^FOE 5 1 3";
   break;
 
   case "bubble_214503":
