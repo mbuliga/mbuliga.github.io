@@ -128,10 +128,12 @@ a:active, a:link, a:visited		{color: #f55;}
   <option value="shuffle_10_04C92C86BE5A317">10 nodes quine 13 (reload if it dies)
   <option value="shuffle_10_0368BCDE2541A97">10 nodes quine 14 (reload if it dies)
   <option value="shuffle_10_A3E2974C16B85D0">10 nodes quine 15 (reload if it dies)
+  <option value="shuffle_10_290C1735B6A4DE8">10 nodes not quine sometimes becomes [graph A-L-FI-FOE 540213]
   <option value="random_egg_A_L_FI_FO">new random 4 nodes graph A-L-FI-FO
   <option value="spark_243501">quine from [graph A-L-FI-FO 243501]
   <option value="spark_234501">quine from [graph A-L-FI-FO 234501]
   <option value="spark_214530">quine from [graph A-L-FI-FO 214530]
+  <option value="sparkFOE_540213">quine from [graph A-L-FI-FOE 540213]
   <option value="spark_301542">dirty quine [graph A-L-FI-FO 301542]
   <option value="9sparkhybrid">9 [graph A-L-FI-FO 243501] hybrid
   <option value="Lafont-quine">Lafont' quine (IC)
@@ -172,8 +174,8 @@ a:active, a:link, a:visited		{color: #f55;}
 
 </div>
 <div class="box10">
-<button class="image" onclick="molSelect()"><span3>load</span3></button><br><br>
-<button class="image" onclick="reloadCode()"><span3>reload</span3></button><br><br>
+<button class="image" onclick="setSpeed(0); setStart(0); molSelect()"><span3>load</span3></button><br><br>
+<button class="image" onclick="setSpeed(0); setStart(0); reloadCode()"><span3>reload</span3></button><br><br>
 <button class="image" onclick="setStart(0); loop2()"><span3>step</span3></button><br><br>
 <button class="image" onclick="setSpeed(1); setStart(1); loop()"><span3>start</span3></button> <br><br>
 <button class="image" onclick="setSpeed(0); setStart(0)"><span3>stop</span3></button></div>
