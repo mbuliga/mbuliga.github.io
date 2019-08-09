@@ -686,8 +686,8 @@ function removeNodeAndEdges(center) {
 }
 
 function addNodeAndEdges(type,x,y) {
-  x = x || 0;
-  y = y || 0;
+  x = x || 350;
+  y = y || 150;
 
   var i = newNodeIndex;
   
