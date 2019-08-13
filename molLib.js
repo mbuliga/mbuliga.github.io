@@ -270,6 +270,10 @@ case "random_egg_A_L_FI_FOE":
   var mol = "L 0 2 9^FI 1 2 0^A 3 4 12^FI 5 6 1^L 7 7 3^FOE 8 5 11^FOE 9 6 10^A 10 11 4^FOE 12 13 14^A 13 14 8";
   break;
 
+  case "shuffle_10_D984763ABEC5120":
+  var mol = "L 0 13 9^FI 1 2 8^A 3 4 4^FI 5 6 7^L 7 6 3^FOE 8 10 11^FOE 9 14 12^A 10 11 5^FOE 12 1 2^A 13 14 0";
+  break;
+
 
   case "sensitive1":
   var mol = "L 0 11 12^FI 1 2 2^A 3 4 8^FI 5 6 7^L 7 1 4^FOE 8 6 10^FOE 9 14 0^A 10 11 5^FOE 12 3 13^A 13 14 9";
@@ -477,6 +481,14 @@ case "random_egg_A_L_FI_FOE":
 
   case "4_IC_45182379AB06":
   var mol = "GAMMA 0 1 2^GAMMA 2 4 4^DELTA 0 7 1^DELTA 7 10 10";
+  break;
+
+  case "4_IC_63407B5A9812":
+  var mol = "GAMMA 0 1 1^GAMMA 3 0 5^DELTA 3 7 8^DELTA 8 5 7";
+  break;
+
+  case "4_IC_41580936B2A7":
+  var mol = "GAMMA 0 1 2^GAMMA 3 1 5^DELTA 3 7 5^DELTA 0 7 2";
   break;
 }
 return mol;
