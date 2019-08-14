@@ -274,6 +274,10 @@ case "random_egg_A_L_FI_FOE":
   var mol = "L 0 13 9^FI 1 2 8^A 3 4 4^FI 5 6 7^L 7 6 3^FOE 8 10 11^FOE 9 14 12^A 10 11 5^FOE 12 1 2^A 13 14 0";
   break;
 
+  case "shuffle_10_531CB7064289EDA":
+  var mol = "L 0 5 3^FI 1 2 1^A 3 4 12^FI 5 6 11^L 7 7 0^FOE 8 6 4^FOE 9 2 8^A 10 11 9^FOE 12 14 13^A 13 14 10";
+  break;
+
 
   case "sensitive1":
   var mol = "L 0 11 12^FI 1 2 2^A 3 4 8^FI 5 6 7^L 7 1 4^FOE 8 6 10^FOE 9 14 0^A 10 11 5^FOE 12 3 13^A 13 14 9";
