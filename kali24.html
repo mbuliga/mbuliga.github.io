@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- forked from https://github.com/mbuliga/mbuliga.github.io/blob/master/find-the-quine-step-by-step.js on 10.09.2019, 
+ which is a modification of the js version https://github.com/ishanpm/chemlambda-editor of chemlambda v2, see the issue https://github.com/chorasimilarity/chemlambda-gui/issues/9 
+last modified: 08.10.2019
+//
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>anharmonic lambda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+.image {border-width:2; padding: 10px 10px; border-radius: 12px; border: 2px solid #f55 }
+
+.image:hover {border-width:2; padding: 10px 10px; border-radius: 12px; border: 2px solid #ff5 }
+a:active, a:link, a:visited		{color: #f55;}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1px 26px;
+}
+
+.flex .box10 {
+  width: 10%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+
+.flex .box20 {
+  width: 20%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+.flex .box40 {
+  width: 40%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+.flex .box33 {
+  width: 33%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+
+.flex .box90 {
+  width: 90%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+.flex .box70 {
+  width: 70%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+        span {
+            color: black; 
+        }
+        span2 {
+            color: black;
+        }
+        span3 {
+            color: black;
+        }
+        .link {
+            stroke: black;
+            stroke-width: 2px;
+        }
+
+        .node { stroke: black; stroke-width: 1px;
+        }
+        .textClass {
+            stroke: black;
+            fill: white;
+            font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            stroke-width: .5;
+            font-size: 14px;
+        }
+        body {
+            background-color: #ffffff; color: #000000;
+        }
+        #svgdiv .svg {
+          border: 2px solid #888
+        }
+    </style>
+</head>
+<body id="container"  style="overflow: scroll;">
+<script src="d3.v5.9.4.min.js"></script>
+<script src="jquery.min.js"></script>
+
+
+<div style="padding: 8px 26px;">
+<span2>  This rewrite system is a version of anharmonic lambda, or kali (older: kaleidoscope). The goal is to find a version which contains both chemlambda v2 (perhaps slightly modified) and <a href="https://arxiv.org/abs/1807.02058" target="_blank">em-convex</a>. Think about lambda calculus on the Riemann sphere :)<br> <br>
+ Credits:</span2> <span> I modified this <a href="https://github.com/ishanpm/chemlambda-editor" target="_blank">js version by ishanpm</a> of my <a href="https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md" target="_blank">chemlambda v2</a>, see <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/9" target="_blank">issue 9</a>. The first 4 duplication examples are inspired from lambda terms proposed in <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/8" target="_blank">issue 8</a>.</span> 
+</div>
+
+<div style="padding: 8px 26px;">
+Last modified: 09.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" target="_blank">(my pages to play and learn)</a> 
+</div>
+
+<div style="padding: 8px 26px;"><span2>
+<select class="image" id="listofmols" onchange="molSelect()">
+  <option value="SKK">SKK
+  <option value="omegaSKI"> omega from S,K combinators
+  <option value="ishan_example_foe">duplication with FOE of \x.((\y.yy)(xx))
+  <option value="ishan_example">duplication with FO of \x.((\y.yy)(xx))
+  <option value="ishan_example_2_foe">duplication with FOE of \x.(\f.ff)(\y.xy)
+  <option value="ishan_example_2">duplication with FO of \x.(\f.ff)(\y.xy)
+  <option value="ishan_example_2_A">duplication of M, then applied to id, for M = \x.(\f.ff)(\y.xy)
+  <option value="ishan_example_2_pair">first (pair a b) where a and b come from FOE duplication of  \x.(\f.ff)(\y.xy)
+  <option value="first_pair">first (pair a b) with pair = \x.\y.\z. z x y and first = \p.(p (\x.\y.x)), a = 5, b = 0
+  <option value="y_comb">Y combinator applied to something
+  <option value="y_comb_id">Y combinator applied to id
+  <option value="omega">omega combinator
+  <option value="ackermann_2_2">ackermann_2_2 
+  <option value="ackermann_3_2">ackermann_3_2 
+  <option value="10_quine_bubbles">the 10-nodes quine (sometimes it duplicates)
+  <option value="shuffle_10_290C1735B6A4DE8">10 nodes sometimes becomes quine from [graph A-L-FI-FOE 540213]
+  <option value="dodecahedron">dodecahedron
+  <option value="times_only_short">5 X 5 = (\m.\n.\f.m(nf)) 5 5 
+  <option value="times_only_long">5 X 5 = (\m.\n.m (PLUS n) 0) 5 5, with PLUS = \m.\n.m SUCC n 
+</select>  &nbsp; &nbsp; (stops at max. number of nodes </span2><span2 id="maxnodenumber">2048</span2><span2>)</span2>
+</div>
+<div class="flex">
+<div class="box90"> <span id="svgdiv"> </span> <br>
+<div style="padding: 8px 26px;"><span2>CODE: </span2><span id="molyoulookat"></span></div> 
+
+
+
+<div style="padding: 8px 26px;">
+<div class="flex">
+<div class="box33"><span>MOL NOW: </span> <br> <br> <span id="molexport"></span></div>
+<div class="box33"><span>MOL AFTER: </span> <br> <br> <span id="molexportafter"></span></div>
+<div class="box33"><span2>before: <br></span2> <span id="puttransformcachealt"></span> <br> <span2>chosen: <br></span2><span id="chosentransform"></span>
+<br>
+<span2>after: <br></span2>
+<span id="puttransformcachealtafter"></span>
+</div>
+</div>
+</div>
+
+
+</div>
+<div class="box10">
+<button class="image" onclick="setSpeed(0); setStart(0); molSelect()"><span3>load</span3></button><br><br>
+<button class="image" onclick="setSpeed(0); setStart(0); reloadCode()"><span3>reload</span3></button><br><br>
+<button class="image" onclick="setStart(0); loop2()"><span3>step</span3></button><br><br>
+<button class="image" onclick="setSpeed(1); setStart(1); loop()"><span3>start</span3></button> <br><br>
+<button class="image" onclick="setSpeed(0); setStart(0)"><span3>stop</span3></button></div>
+<div class="box20"> 
+
+
+</div>
+
+
+</div>
+
+
+
+<br> <br>
+
+
+
+
+<script src="kaliLib.js"></script>
+<script src="kali24.js"></script>
+
+</body>
+</html>
+
+
+
+
+
