@@ -1,5 +1,5 @@
 /* 
-mol library, some mol files from https://github.com/chorasimilarity/chemlambda-gui/tree/gh-pages/dynamic/mol
+mol library, contains some mols adapted to kali.
 */
 
 
@@ -34,12 +34,20 @@ switch (molName) {
   var mol = "FOE 0 11 12^FO 5 6 7^L 8 5 0^A 7 6 9^A 10 9 8^L 1 2 10^A 3 4 1^FO 2 4 3^FROUT 11^FROUT 12";
   break;
 
+    case "ishan_example_fox":
+  var mol = "FOX 0 11 12^FO 5 6 7^L 8 5 0^A 7 6 9^A 10 9 8^L 1 2 10^A 3 4 1^FO 2 4 3^FROUT 11^FROUT 12";
+  break;
+
   case "ishan_example_2":
   var mol = "L 1 2 3^L 4 5 6^A 2 5 4^FO 3 free7 free8^L 9 10 11^A 12 13 9^FO 10 13 12^A 11 6 1^FROUT free7^FROUT free8";
   break;
 
   case "ishan_example_2_foe":
   var mol = "L 1 2 3^L 4 5 6^A 2 5 4^FOE 3 free7 free8^L 9 10 11^A 12 13 9^FO 10 13 12^A 11 6 1^FROUT free7^FROUT free8";
+  break;
+
+    case "ishan_example_2_fox":
+  var mol = "L 1 2 3^L 4 5 6^A 2 5 4^FOX 3 free7 free8^L 9 10 11^A 12 13 9^FO 10 13 12^A 11 6 1^FROUT free7^FROUT free8";
   break;
 
   case "ishan_example_2_A":

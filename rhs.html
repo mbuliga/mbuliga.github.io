@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>anharmonic rewrites</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+.image {border-width:2; padding: 10px 10px; border-radius: 12px; border: 2px solid #f55 }
+
+.image:hover {border-width:2; padding: 10px 10px; border-radius: 12px; border: 2px solid #ff5 }
+a:active, a:link, a:visited		{color: #f55;}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1px 26px;
+}
+
+.flex .box10 {
+  width: 10%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+
+.flex .box20 {
+  width: 20%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+.flex .box40 {
+  width: 40%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+.flex .box33 {
+  width: 33%;
+  margin: 10px;
+  text-align: left;
+
+}
+
+
+.flex .box90 {
+  width: 90%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+.flex .box70 {
+  width: 70%;
+  margin: 2px;
+  text-align: left;
+
+}
+
+        span {
+            color: black; 
+        }
+        span2 {
+            color: black;
+        }
+        span3 {
+            color: black;
+        }
+        .link {
+            stroke: black;
+            stroke-width: 2px;
+        }
+
+        .node { stroke: black; stroke-width: 1px;
+        }
+        .textClass {
+            stroke: black;
+            fill: white;
+            font-family: "Lucida Grande", "Droid Sans", Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            stroke-width: .5;
+            font-size: 14px;
+        }
+        body {
+            background-color: #ffffff; color: #000000;
+        }
+        #svgdiv .svg {
+          border: 2px solid #888
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<script src="rhs.js"></script>
+
+
+
+<p> 
+<select id="choiceleft" onchange="chooseleft()">
+  <option value="D"> D
+  <option value="L"> L
+  <option value="FOE"> FOE
+  <option value="A"> A
+  <option value="FI"> FI
+  <option value="FOX"> FOX
+</select> 
+&nbsp; --- &nbsp;
+<select id="choiceright" onchange="chooseright()">
+  <option value="D"> D
+  <option value="L"> L
+  <option value="FOE"> FOE
+  <option value="A"> A
+  <option value="FI"> FI
+  <option value="FOX"> FOX
+</select> 
+&nbsp; &nbsp; &nbsp;
+<button class="image" onclick="chooseType()">compute</button> <br><br>
+</p>
+
+<p id="leftpat"></p>
+
+<p id="demo"> </p>
+
+
+</body>
+</html>
+
+

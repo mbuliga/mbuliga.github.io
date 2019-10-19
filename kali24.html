@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!-- forked from https://github.com/mbuliga/mbuliga.github.io/blob/master/find-the-quine-step-by-step.js on 10.09.2019, 
  which is a modification of the js version https://github.com/ishanpm/chemlambda-editor of chemlambda v2, see the issue https://github.com/chorasimilarity/chemlambda-gui/issues/9 
-last modified: 08.10.2019
+last modified: 18.10.2019
 //
 -->
 <html>
@@ -105,12 +105,12 @@ a:active, a:link, a:visited		{color: #f55;}
 
 
 <div style="padding: 8px 26px;">
-<span2>  This rewrite system is a version of anharmonic lambda, or kali (older: kaleidoscope). The goal is to find a version which contains both chemlambda v2 (perhaps slightly modified) and <a href="https://arxiv.org/abs/1807.02058" target="_blank">em-convex</a>. Think about lambda calculus on the Riemann sphere :)<br> <br>
+<span2>  This rewrite system is a working version of anharmonic lambda, or kali (older: kaleidoscope). The goal is to find a version which contains both chemlambda v2 and <a href="https://arxiv.org/abs/1807.02058" target="_blank">em-convex</a>. All rewrites are chosen from emergent algebra considerations. See <a href="rhs.html" target="_blank">this tool to choose DIST rewrites</a>. It is amazing that it can reduce lambda terms. It has also the option in the js script to add a brutal form of eta reduction, related to the Reidemester 2 moves. Work in progress because as the name tells, a completely symmetrical version should have 24 nodes. This version is almost identical with chemlambda, for a much more interesting version see the <a href="http://imar.ro/~mbuliga/kali24.html" target="_blank">sister page here</a>. (Updated in tandem.) <br> <br>
  Credits:</span2> <span> I modified this <a href="https://github.com/ishanpm/chemlambda-editor" target="_blank">js version by ishanpm</a> of my <a href="https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md" target="_blank">chemlambda v2</a>, see <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/9" target="_blank">issue 9</a>. The first 4 duplication examples are inspired from lambda terms proposed in <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/8" target="_blank">issue 8</a>.</span> 
 </div>
 
 <div style="padding: 8px 26px;">
-Last modified: 09.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" target="_blank">(my pages to play and learn)</a> 
+Last modified: 18.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" target="_blank">(my pages to play and learn)</a> 
 </div>
 
 <div style="padding: 8px 26px;"><span2>
@@ -119,8 +119,10 @@ Last modified: 09.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" 
   <option value="omegaSKI"> omega from S,K combinators
   <option value="ishan_example_foe">duplication with FOE of \x.((\y.yy)(xx))
   <option value="ishan_example">duplication with FO of \x.((\y.yy)(xx))
+  <option value="ishan_example_fox">duplication with FOX of \x.((\y.yy)(xx))
   <option value="ishan_example_2_foe">duplication with FOE of \x.(\f.ff)(\y.xy)
   <option value="ishan_example_2">duplication with FO of \x.(\f.ff)(\y.xy)
+  <option value="ishan_example_2_fox">duplication with FOX of \x.(\f.ff)(\y.xy)
   <option value="ishan_example_2_A">duplication of M, then applied to id, for M = \x.(\f.ff)(\y.xy)
   <option value="ishan_example_2_pair">first (pair a b) where a and b come from FOE duplication of  \x.(\f.ff)(\y.xy)
   <option value="first_pair">first (pair a b) with pair = \x.\y.\z. z x y and first = \p.(p (\x.\y.x)), a = 5, b = 0
@@ -178,10 +180,11 @@ Last modified: 09.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" 
 
 
 <script src="kaliLib.js"></script>
-<script src="kali24.js"></script>
+<script src="kali-try.js"></script>
 
 </body>
 </html>
+
 
 
 
