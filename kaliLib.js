@@ -18,6 +18,19 @@ switch (molName) {
   var mol = "L 1 2 3^T 3^FRIN 1^FRIN 2";
   break;
 
+  case "FOE-FI":
+  var mol = "FOE 1 2 3^FI 3 4 5^FRIN 1^FROUT 2^FRIN 4^FROUT 5";
+  break;
+
+  case "FOX-D":
+  var mol = "FOX 1 2 3^D 3 4 5^FRIN 1^FROUT 2^FRIN 4^FROUT 5";
+  break;
+
+  case "L-A-DIST":
+  var mol = "L 1 2 3^A 3 4 5^FRIN 1^FROUT 2^FRIN 4^FROUT 5";
+  break;
+
+
   case "L-FO-FOE-conflict":
   var mol = "L 1 1 2^FO 2 3 4^FROUT 3^FOE 4 5 6^FROUT 5^FROUT 6";
   break;

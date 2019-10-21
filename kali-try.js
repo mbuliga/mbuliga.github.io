@@ -5,7 +5,7 @@
 // this program is forked and modified from https://github.com/mbuliga/mbuliga.github.io/blob/master/find-the-quine-step-by-step.js on 10.09.2019
 
 
-// last modified: 18.10.2019
+// last modified: 20.10.2019
 
 
 
@@ -69,7 +69,12 @@ var transformListOrig = [
 //  {left:"A",right:"L",action:"eta", named:"A-L-eta"},
 //  {left:"FOE",right:"FI",action:"eta", named:"FOE-FI-eta"},
 //  {left:"FOX",right:"D",action:"eta", named:"FOX-D-eta"},  //
- 
+//
+
+  {left:"FOE",right:"FI",action:"DIST4", named:"FOE-FI", t1:"FI",t2:"A",t3:"L",t4:"FOE",blocks:["FI-FOE","L-A",]},  // instead of FOE-FI-eta
+  {left:"FOX",right:"D",action:"DIST4", named:"FOX-D", t1:"D",t2:"FI",t3:"FOE",t4:"FOX",blocks:["D-FOX","FOE-FI",]}, // instead of FOX-D-eta
+//  {left:"A",right:"L",action:"DIST1", named:"A-L", t1:"L",t2:"L",t3:"A",t4:"A",blocks:["L-A",]},
+//  {left:"L",right:"A",action:"DIST4", named:"L-A", t1:"A",t2:"D",t3:"FOX",t4:"L",blocks:["A-L","FOX-D",]},
 //
   {left:"L",right:"FOE",action:"DIST7", named:"L-FOE", t1:"FOE",t2:"FI",t3:"L",t4:"L",blocks:["FOE-L"]},
   {left:"L",right:"FOX",action:"DIST7", named:"L-FOX", t1:"FOX",t2:"D",t3:"L",t4:"L",blocks:["FOX-L"]},
@@ -80,30 +85,29 @@ var transformListOrig = [
   {left:"A",right:"FO",action:"DIST1", named:"A-FO", t1:"FO",t2:"FO",t3:"A",t4:"A",blocks:["FO-A"]}, // like A-FOX, A-FOE
 //
 //  {left:"FOX",right:"FI",action:"DIST5", named:"FOX-FI", t1:"FI",t2:"FOE",t3:"D",t4:"FOX",blocks:["FI-FOX"]},
-  {left:"FI",right:"FOX",action:"DIST1", named:"FI-FOX", t1:"FOX",t2:"FOX",t3:"FI",t4:"FI",blocks:["FOX-FI"]},
+//  {left:"FI",right:"FOX",action:"DIST1", named:"FI-FOX", t1:"FOX",t2:"FOX",t3:"FI",t4:"FI",blocks:["FOX-FI"]},            // mod
   {left:"FI",right:"FO",action:"DIST1", named:"FI-FO", t1:"FO",t2:"FO",t3:"FI",t4:"FI",blocks:["FO-FI"]}, // like FI-FOX
 //
 //  {left:"L",right:"FI",action:"DIST5", named:"L-FI", t1:"FI",t2:"FOE",t3:"A",t4:"L",blocks:["FI-L"]},
 //  {left:"FI",right:"L",action:"DIST1", named:"FI-L", t1:"L",t2:"L",t3:"FI",t4:"FI",blocks:["L-FI"]},   // 
 //
-  {left:"D",right:"FOE",action:"DIST1", named:"D-FOE", t1:"FOE",t2:"FOE",t3:"D",t4:"D",blocks:["FOE-D"]},
-  {left:"D",right:"FO",action:"DIST1", named:"D-FO", t1:"FO",t2:"FO",t3:"D",t4:"D",blocks:["FO-D"]}, // like D-FOE 
-//  {left:"D",right:"FO",action:"DIST1", named:"D-FO", t1:"FOE",t2:"FOE",t3:"D",t4:"D",blocks:["FOE-D"]}, // like D-FOE 
+//  {left:"D",right:"FOE",action:"DIST1", named:"D-FOE", t1:"FOE",t2:"FOE",t3:"D",t4:"D",blocks:["FOE-D"]},            mod
+  {left:"D",right:"FO",action:"DIST1", named:"D-FO", t1:"FO",t2:"FO",t3:"D",t4:"D",blocks:["FO-D"]}, // like D-FOE   
 //
-//  {left:"A",right:"D",action:"DIST3", named:"A-D", t1:"D",t2:"D",t3:"L",t4:"A",blocks:["D-A"]},  // 
-//  {left:"L",right:"D",action:"DIST5", named:"L-D", t1:"D",t2:"FOX",t3:"A",t4:"L",blocks:["D-L"]}, // 
+//  {left:"A",right:"D",action:"DIST3", named:"A-D", t1:"D",t2:"D",t3:"L",t4:"A",blocks:["D-A"]},  //        
+//  {left:"L",right:"D",action:"DIST5", named:"L-D", t1:"D",t2:"FOX",t3:"A",t4:"L",blocks:["D-L"]}, //       
 //
-  {left:"FI",right:"D",action:"DIST3", named:"FI-D", t1:"D",t2:"D",t3:"FOE",t4:"FI",blocks:["D-FI"]},  //  
+//  {left:"FI",right:"D",action:"DIST3", named:"FI-D", t1:"D",t2:"D",t3:"FOE",t4:"FI",blocks:["D-FI"]},  //  
 //  {left:"D",right:"FI",action:"DIST3", named:"D-FI", t1:"FI",t2:"FI",t3:"FOX",t4:"D",blocks:["FI-D"]},   // 
 //
 //  {left:"A",right:"FI",action:"DIST3", named:"A-FI", t1:"FI",t2:"FI",t3:"L",t4:"A",blocks:["FI-A"]},   // 
 //  {left:"FI",right:"A",action:"DIST3", named:"FI-A", t1:"A",t2:"A",t3:"FOE",t4:"FI",blocks:["A-FI"]},    // 
 //
-  {left:"FOX",right:"FOE",action:"DIST7", named:"FOX-FOE", t1:"FOE",t2:"FI",t3:"FOX",t4:"FOX",blocks:["FOE-FOX"]},
+//  {left:"FOX",right:"FOE",action:"DIST7", named:"FOX-FOE", t1:"FOE",t2:"FI",t3:"FOX",t4:"FOX",blocks:["FOE-FOX"]},          //    mod 
+  {left:"FO",right:"FOE",action:"DIST7", named:"FO-FOE", t1:"FOE",t2:"FI",t3:"FO",t4:"FO",blocks:["FOE-FO"]}, // like FOX-FOE      
 //  {left:"FOE",right:"FOX",action:"DIST7", named:"FOE-FOX", t1:"FOX",t2:"D",t3:"FOE",t4:"FOE",blocks:["FOX-FOE",]},
 //  {left:"FO",right:"FOX",action:"DIST7", named:"FO-FOX", t1:"FOX",t2:"D",t3:"FO",t4:"FO"}, // like FOE-FOX
 //
-  {left:"FO",right:"FOE",action:"DIST7", named:"FO-FOE", t1:"FOE",t2:"FI",t3:"FO",t4:"FO",blocks:["FOE-FO"]}, // like FOX-FOE
 //
   {left:"FO",right:"T",action:"term1", named:"FO-T"},  // like FOX-T, FOE-T
   {left:"T",right:"FO",action:"termin2", named:"T-FO"}, // added termin2  , like T-FOX 
@@ -522,10 +526,12 @@ function findTransform(n1) {
         break;
 
         case "eta":
+          if (e2type == "out") {
           var bmid  = findLinkedOfType(n2,"middle");
           var ccmid = findLinkedHalfEdge(bmid);
           var cmid  = findLinkedOfType(n1,"middle");
           if (ccmid == cmid) return trans;
+          }
         break;
       }
     }

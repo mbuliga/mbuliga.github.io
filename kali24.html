@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!-- forked from https://github.com/mbuliga/mbuliga.github.io/blob/master/find-the-quine-step-by-step.js on 10.09.2019, 
  which is a modification of the js version https://github.com/ishanpm/chemlambda-editor of chemlambda v2, see the issue https://github.com/chorasimilarity/chemlambda-gui/issues/9 
-last modified: 18.10.2019
+last modified: 20.10.2019
 //
 -->
 <html>
@@ -105,8 +105,8 @@ a:active, a:link, a:visited		{color: #f55;}
 
 
 <div style="padding: 8px 26px;">
-<span2>  This rewrite system is a working version of anharmonic lambda, or kali (older: kaleidoscope). The goal is to find a version which contains both chemlambda v2 and <a href="https://arxiv.org/abs/1807.02058" target="_blank">em-convex</a>. All rewrites are chosen from emergent algebra considerations. See <a href="rhs.html" target="_blank">this tool to choose DIST rewrites</a>. It is amazing that it can reduce lambda terms. It has also the option in the js script to add a brutal form of eta reduction, related to the Reidemester 2 moves. Work in progress because as the name tells, a completely symmetrical version should have 24 nodes. This version is almost identical with chemlambda, for a much more interesting version see the <a href="http://imar.ro/~mbuliga/kali24.html" target="_blank">sister page here</a>. (Updated in tandem.) <br> <br>
- Credits:</span2> <span> I modified this <a href="https://github.com/ishanpm/chemlambda-editor" target="_blank">js version by ishanpm</a> of my <a href="https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md" target="_blank">chemlambda v2</a>, see <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/9" target="_blank">issue 9</a>. The first 4 duplication examples are inspired from lambda terms proposed in <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/8" target="_blank">issue 8</a>.</span> 
+<span2>  This rewrite system is a working version of anharmonic lambda, or kali (older: kaleidoscope). The goal is to find a version which contains both chemlambda v2 and <a href="https://arxiv.org/abs/1807.02058" target="_blank">em-convex</a>. All rewrites are chosen from emergent algebra considerations. See <a href="rhs.html" target="_blank">this tool to choose DIST rewrites</a>. It is amazing that it can reduce lambda terms. In this version  a choice of rewrites avoid the need of "brutal" form of eta reduction, related to the Reidemester 2 moves. Work in progress because as the name tells, a completely symmetrical version should have 24 nodes. This version is better suited to lambda calculus. For a much more wild and interesting version see the <a href="http://imar.ro/~mbuliga/kali24.html" target="_blank">sister page here</a>. (Updated in tandem.) <br> <br>
+ Credits:</span2> <span> I modified this <a href="https://github.com/ishanpm/chemlambda-editor" target="_blank">js version by ishanpm</a> of my <a href="https://github.com/chorasimilarity/chemlambda-gui/blob/gh-pages/dynamic/README.md" target="_blank">chemlambda v2</a>, see <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/9" target="_blank">issue 9</a>. The duplication examples are inspired from lambda terms proposed in <a href="https://github.com/chorasimilarity/chemlambda-gui/issues/8" target="_blank">issue 8</a>.</span> 
 </div>
 
 <div style="padding: 8px 26px;">
@@ -115,6 +115,7 @@ Last modified: 18.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" 
 
 <div style="padding: 8px 26px;"><span2>
 <select class="image" id="listofmols" onchange="molSelect()">
+  <option value="bigpred"> predecessor
   <option value="SKK">SKK
   <option value="omegaSKI"> omega from S,K combinators
   <option value="ishan_example_foe">duplication with FOE of \x.((\y.yy)(xx))
@@ -134,6 +135,7 @@ Last modified: 18.10.2019. Part of <a href="http://imar.ro/~mbuliga/pages.html" 
   <option value="10_quine_bubbles">the 10-nodes quine (sometimes it duplicates)
   <option value="shuffle_10_290C1735B6A4DE8">10 nodes sometimes becomes quine from [graph A-L-FI-FOE 540213]
   <option value="dodecahedron">dodecahedron
+  <option value="times_only"> 5 X 5 custom
   <option value="times_only_short">5 X 5 = (\m.\n.\f.m(nf)) 5 5 
   <option value="times_only_long">5 X 5 = (\m.\n.m (PLUS n) 0) 5 5, with PLUS = \m.\n.m SUCC n 
 </select>  &nbsp; &nbsp; (stops at max. number of nodes </span2><span2 id="maxnodenumber">2048</span2><span2>)</span2>
