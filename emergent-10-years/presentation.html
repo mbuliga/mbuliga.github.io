@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- slides for the talk "A kaleidoscope of graph rewriting systems", Dec 4th 2019
+author: Marius Buliga
+last modified: 30.11.2019
+//
+-->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+
+<title>A kaleidoscope</title>
+
+</head>
+<body  onkeydown="plusSlides(1)">
+
+
+<div class="slideshow-container">
+
+<!-- page 1 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> A kaleidoscope of graph rewrite systems in topology, metric geometry and computer science
+    </div> 
+    <div class="middletext">or how to be mistaken with a programmer:
+    </div>
+    <div class="storytext">
+      <ul>
+        <li>&#8226; prove that a problem in geometry has a graph rewrite system description</li>
+        <li>&#8226; hit a limit in the ability to reason with handwritten graphs</li>
+        <li>&#8226; study graph rewrite systems in order to understand computation</li>
+        <li>&#8226; propose a computation model which interest a lot of real world programmers</li>
+        <li>&#8226; write programs to show your model works despite what those programmers think</li>
+        <li>&#8226; find some unexplored directions in the study of computation and its applications</li>
+        <li>&#8226; eventually solve your initial problem</li>
+      </ul>
+    </div>   
+  </div>
+
+
+
+<!-- page 2 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> From sub-riemannian geometry to emergent algebras
+    </div> 
+    <div class="middletextleft"> A riemannian manifold (X,g) is a length metric space (X,d) by Hopf-Rinow thm.
+    </div> 
+    <div class="bigtext">  <span style="color: red;">Problem 1: recover (X,g) from (X,d).</span>
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li>&#8226; (1935, A. Wald) problem 1 for 2-dim manifolds.</li>
+        <li>&#8226; (1948, A.D. Alexandrov) a metric notion of (sectional) curvature + smoothness solves 2-dim manifolds.</li>
+        <li>&#8226; (1982, A.D. Alexandrov) conjecture that the same is true for n-dim manifolds.</li>
+        <li>&#8226; (1998, I.G. Nikolaev) proves (Alexandrov conjecture) for n-dim manifolds.</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- page 3 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> From sub-riemannian geometry to emergent algebras
+    </div> 
+    <div class="middletextleft"> but (1996, M. Gromov) asks for a solution of 
+    </div> 
+    <div class="bigtext"> <span style="color: red;">Problem 2: recover sub-riemannian (X,D,g) from (X,d).</span>
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li>&#8226; (X,D,g) sub-riemannian if D completely non-integrable distribution and g a metric on D.</li>
+        <li>&#8226; by Hopf-Rinow (X,D,g) is a length metric space (X,d), with d the CC distance.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- page 4 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> From sub-riemannian geometry to emergent algebras
+    </div> 
+    <div class="middletextleft"> Sub-riemannian spaces are weird! (except when riemannian)
+    </div> 
+    <div class="middletextleft"> 
+      <ul>
+        <li>&#8226; metric (Hausdorff) dimension > topological dimension</li>
+        <li>&#8226; not Alexandrov spaces</li>
+        <li>&#8226; tangent spaces are nilpotent (Carnot) groups, not vector spaces</li>
+        <li>&#8226; Carnot groups have a peculiar differential calculus (Pansu derivative)</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- page 5 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> From sub-riemannian geometry to emergent algebras
+    </div> 
+    <div class="middletextleft"> Sub-riemannian spaces (techniques) are useful!
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li>&#8226; (1981, M. Gromov)  finitely generated groups of polynomial growth same as those groups which have nilpotent subgroups of finite index</li>
+        <li>&#8226; (1989, P. Pansu) proves Rademacher thm for Carnot groups, which implies a short proof for Margulis-Mostow rigidity</li>
+        <li>&#8226; (2006, J.R. Lee, A. Naor) counter-example to Goemans-Linial conjecture by using the Heisenberg group as a SR space</li>
+        <li>&#8226; (2010, E. Hrushovski) (2011, E. Breuillard, B. Green, T. Tao) Approximate groups are essentially Carnot groups </li>
+
+      </ul>
+    </div>
+
+  </div>
+
+<!-- page 6 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> (2011, B.) solution of problem 2 which uses emergent algebras and graph rewrites.
+    </div>
+    <div class="middletextleft"> An emergent algebra (X, &Gamma;, &#8728;, &#8226;) is: 
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li>- a topological uniform space X, endowed with  </li>
+        <li>- a &Gamma;-indexed family of idempotent right quasigroup operations</li>
+        <li>- for which certain derived operations converge as the index "converges to 0"</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+<!-- page 7 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> &Gamma;-indexed family of irq operations: &forall; A &isin; &Gamma;   &#8728; =  &#8728;(A), &#8226; = &#8226;(A) 
+      <ul> 
+        <li> <span style="color: blue;">(Reidemeister 1)</span> x  &#8728; x = x =  x &#8226; x   &nbsp; &forall; x &isin; X</li>
+        <li> <img src="img/r1.jpg" style="width:350px"></li> 
+        <li> <span style="color: blue;">(Reidemeister 2)</span>  e &#8226; (e &#8728; x)  = x =  e &#8728; (e &#8226; x)    &nbsp; &forall; e, x &isin; X</li>
+        <li> <img src="img/r2.jpg" style="width:350px"></li>     
+      </ul>
+    </div>
+  </div>
+
+
+
+<!-- page 8 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> &Gamma;-indexed family of irq operations: &forall; A &isin; &Gamma;   &#8728; =  &#8728;(A), &#8226; = &#8226;(A) 
+      <ul> 
+        <li> <span style="color: blue;">(act)</span> (&Gamma;, &sdot;, 1) is commutative group, acts:</li>
+        <li>  <img src="img/dil_term_1.jpg" style="width:350px"> &nbsp; &nbsp; <img src="img/dil_term_2.jpg" style="width:250px"></li>  
+        <li><img src="img/dil_term_3.jpg" style="width:350px"></li>
+      </ul>
+    </div>
+  </div>
+
+<!-- page 9 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft">
+      <ul> 
+        <li> <span style="color: blue;">(em)</span> (&Gamma;, &sdot;, 1) is continuous, with an absolute 0.<br> As a &isin; &Gamma; &rarr; 0</li>
+        <li> x &#8728;(a) y &rarr; x &#8728;(0) y = x , unif wrt x, y in compact sets</li>
+        <li>  &Delta;(a)(e,x,y) &rarr; &Delta;(0)(e,x,y)  , unif wrt x, y in compact sets</li>
+      </ul>
+    </div>
+    <div class="storytext">
+      <img src="img/adif.jpg" style="width:320px">  &nbsp; <img src="img/asum.jpg" style="width:320px"> &nbsp; <img src="img/ainv.jpg" style="width:350px">
+    </div>
+  </div>
+
+
+<!-- page 10 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Thm: Fix e &isin; X and denote x * y = &Sigma;(0)(e,x,y). Then (X,*,e) is a conical group: continuous, 
+      <ul> 
+         <li> <span style="color: blue;">(contractive)</span> as a &isin; &Gamma; &rarr; 0, a &sdot; x &rarr; e, uniformly wrt x in compact set</li>
+         <li>  (&Gamma;, &sdot;, 1)  scalar multiplication: a &sdot; <span style="color: blue;">(x * y) = (a &sdot; x) * (a &sdot; y)</span>
+      </ul>
+    </div> 
+   <div class="middletext"> 
+     <img src="img/sumassoc.jpg" style="width:480px">
+    </div>
+  </div>
+
+<!-- page 11 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Thm: Fix e &isin; X and denote x * y = &Sigma;(0)(e,x,y). Then (X,*,e) is a conical group: continuous, 
+      <ul> 
+         <li> <span style="color: blue;">(contractive)</span> as a &isin; &Gamma; &rarr; 0, a &sdot; x &rarr; e, uniformly wrt x in compact set</li>
+         <li>  (&Gamma;, &sdot;, 1)  scalar multiplication: a &sdot; <span style="color: blue;">(x * y) = (a &sdot; x) * (a &sdot; y)</span>
+      </ul>
+    </div> 
+   <div class="middletext"> 
+     <img src="img/gneut.jpg" style="width:500px">
+    </div>
+  </div>
+
+<!-- page 12 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Thm: Fix e &isin; X and denote x * y = &Sigma;(0)(e,x,y). Then (X,*,e) is a conical group: continuous, 
+      <ul> 
+         <li> <span style="color: blue;">(contractive)</span> as a &isin; &Gamma; &rarr; 0, a &sdot; x &rarr; e, uniformly wrt x in compact set</li>
+         <li>  (&Gamma;, &sdot;, 1)  scalar multiplication: a &sdot; <span style="color: blue;">(x * y) = (a &sdot; x) * (a &sdot; y)</span>
+      </ul>
+    </div> 
+   <div class="middletext"> 
+     <img src="img/p3-ab-em.jpg" style="width:500px">
+    </div>
+  </div>
+
+<!-- page 13 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Thm: Fix e &isin; X and denote x * y = &Sigma;(0)(e,x,y). Then (X,*,e) is a conical group: continuous, 
+      <ul> 
+         <li> <span style="color: blue;">(contractive)</span> as a &isin; &Gamma; &rarr; 0, a &sdot; x &rarr; e, uniformly wrt x in compact set</li>
+         <li>  (&Gamma;, &sdot;, 1)  scalar multiplication: a &sdot; <span style="color: blue;">(x * y) = (a &sdot; x) * (a &sdot; y)</span>
+      </ul>
+    </div> 
+    <div class="middletext"> 
+      <img src="img/p4-em.jpg" style="width:500px">
+    </div>
+  </div>
+
+<!-- page 14 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Thm: Fix e &isin; X and denote x * y = &Sigma;(0)(e,x,y). Then (X,*,e) is a conical group: continuous, 
+      <ul> 
+         <li> <span style="color: blue;">(contractive)</span> as a &isin; &Gamma; &rarr; 0, a &sdot; x &rarr; e, uniformly wrt x in compact set</li>
+         <li>  (&Gamma;, &sdot;, 1)  scalar multiplication: a &sdot; <span style="color: blue;">(x * y) = (a &sdot; x) * (a &sdot; y)</span>
+      </ul>
+    </div> 
+    <div class="middletext"> 
+     <img src="img/p4-id-em.jpg" style="width:500px">
+    </div>
+  </div>
+
+<!-- page 15 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Where does this calculus come from?
+    </div> 
+    <div class="middletextleft"> Examples:
+      <ul> 
+         <li>&#8226; (normed) finite dim <span style="color: blue;">vector space</span> X, * = +, &Gamma; = (0, &infin;) </li>
+         <li>&#8226;  <span style="color: blue;">Heisenberg groups</span>: 
+           <ul>
+             <li>-  take (H, &lt;,&gt;) complex Hilbert space, X = H &times; C </li>
+             <li>  (x,u) * (y,v) = (x + y, u + v + Im &lt;x,y&gt;)</li>
+             <li>-  distribution D from left translate of H in X, is completely nonintegrable</li>
+             <li>-  metric on D from Re &lt;,&gt;</li>
+             <li>-  &Gamma; = C &setminus; {0}</li>
+             <li> a &sdot; (x,u) = (a x , a&sup2; u )</li> 
+           </ul>   
+         </li>
+         <li>&#8226; or just any Carnot group</li>
+      </ul>
+    </div> 
+  </div>
+
+
+<!-- page 16 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Where does this calculus come from?
+    </div> 
+    <div class="middletextleft"> The <span style="color: blue;">operation * is commutative</span> iff any of the following:
+      <ul> 
+        <li> - we can do <span style="color: blue;">the shuffle trick</span>: </li>
+        <li> <img src="img/shuffle_4.jpg" style="width:500px"></li> 
+        <li> - <span style="color: blue;">rays are semigroups, uniformly</span></li>
+        <li>  &forall; a, b &isin; &Gamma;, &exist; a+b &isin; &Gamma;, (a &sdot; x) * (b &sdot; x) = (a+b) &sdot; x</li>
+        <li> - <span style="color: blue;">barycentric condition</span>: &forall; a &isin; &Gamma;, &exist; 1-a &isin; &Gamma;</li>
+        <li><img src="img/1-a.jpg" style="width:500px"></li> 
+      </ul>
+    </div> 
+  </div>
+
+
+<!-- page 16 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Hypothesis: space is a graph rewrite automaton
+    </div>
+    <div class="middletextleft"> i.e. an asynchronous graph-rewrite automaton (S,R,A): 
+      <ul> 
+        <li> - S is the class of graphs as before </li>
+        <li> - R is the class of rewrites of emergent algebras</li>
+        <li> - A is the simplest algorithm of rewrite: random</li>
+      </ul>
+    </div> 
+    <div class="middletextleft"> <span style="color: blue;">There are no points, there is no passive space, everything is shared computation on this substrate.</span> 
+    </div>
+    <div class="middletextleft"> <span style="color: blue;">Problem: what can this automaton do? Can it compute?</span> 
+    </div>
+    <div class="middletextleft"> <span style="color: red;">Btw, what is computation?</span> 
+    </div>
+  </div>
+
+
+<!-- page 17 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Do knots compute?
+    </div>
+    <div class="middletextleft"> Oriented knot diagrams are a class of graphs, with the Reidemeister rewrites. 
+    </div>
+    <div class="middletext">
+      <img src="img/reidemeister_1.jpg" style="width:600px">
+    </div>
+  </div>
+
+
+<!-- page 18 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Do knots compute?
+    </div>
+    <div class="middletextleft"> Oriented knot diagrams are a class of graphs, with the Reidemeister rewrites. 
+    </div>
+    <div class="middletext">
+      <img src="img/reidemeister_2.jpg" style="width:600px">
+    </div>
+  </div>
+
+
+<!-- page 19 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Do knots compute?
+    </div>
+    <div class="middletextleft"> Oriented knot diagrams are a class of graphs, with the Reidemeister rewrites. 
+    </div>
+    <div class="middletext">
+      <img src="img/reidemeister_3.jpg" style="width:600px">
+    </div>
+  </div>
+
+
+<!-- page 20 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Do knots compute?
+    </div>
+    <div class="middletextleft"> A minimal, sufficient collection of Reidemeister rewrites: 
+    </div>
+    <div class="middletext"> <span style="color: blue;">(R1a)</span>
+      <img src="img/oriented_r1a.jpg" style="width:400px">
+    </div>
+    <div class="middletext"> <span style="color: blue;">(R1b)</span>
+      <img src="img/oriented_r1b2.jpg" style="width:400px">
+    </div>
+    <div class="middletext"> <span style="color: blue;">(R2a)</span>
+      <img src="img/oriented_r1b2.jpg" style="width:400px">
+    </div>
+    <div class="middletext"> <span style="color: blue;">(R3a)</span>
+      <img src="img/oriented_r3a1.jpg" style="width:400px">
+    </div>
+  </div>
+
+<!-- page 21 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Do knots compute?
+    </div>
+    <div class="middletext"> 
+      <img src="img/moves_basic1.jpg" style="width:500px">
+    </div>
+  </div>
+
+
+
+<!-- page 22 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Computation: (1936) Church and Turing
+    </div>
+    <div class="middletextleft">(1936, A. Church) Pure &lambda; calculus   <span style="color: red;">is a term rewrite system</span>
+    </div>
+    <div class="middletextleft"> Terms: 
+      <ul>
+        <li> variable: x, y, z, ... </li>
+        <li> term:   
+          <ul>
+            <li>- variable &nbsp; </li>
+            <li>- A B where A, B terms &nbsp;  &nbsp; <span style="color: blue;">(application)</span></li>
+            <li>- &lambda;x.A where x var,  A term &nbsp; &nbsp; <span style="color: blue;">(abstraction)</span> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="middletextleft"> Term rewrite rule:
+        <ul>      
+        <li> &beta;-reduction:   (&lambda;x.D)B   &#8594; D[x=B] </li>
+        </ul>
+    </div>   
+    <div class="middletextleft"> <span style="color: red;">What algorithm?</span>
+    </div>   
+  </div>
+
+
+<!-- page 23 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> &nbsp;
+    </div> 
+    <div class="middletextleft">(1936, A. Church) Pure &lambda; calculus   <span style="color: red;">is a term rewrite system</span>
+    </div>
+    <div class="middletextleft"> Term rewrite rule:
+        <ul>      
+          <li> &beta;-reduction:   (&lambda;x.D)B   &#8594; D[x=B] </li>
+        </ul>
+    </div>   
+    <div class="middletextleft"> (1971, C.P. Wadsworth, 1990, J. Lamping)  <span style="color: red;">graph rewrite system</span>
+    </div>   
+    <div class="middletext"> 
+      <img src="img/lamping.jpeg" style="width:440px">
+    </div>
+  </div>
+
+
+<!-- page 24 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Logic is the language of a category
+    </div> 
+    <div class="middletextleft">
+        <ul>      
+          <li>- an object A is a type </li>
+          <li>- a subobject is a proposition (predicate) </li>
+          <li>- an arrow A &rarr; B is a term of type B containing a free variable of type A</li>
+          <li>- operations come from universal constructions</li>
+        </ul>
+    </div>   
+    <div class="middletextleft">
+        <ul>      
+          <li>- typed &lambda; calculus  - cartesian closed category (internal hom, products), like <span style="color: blue;">Set</span></li>
+          <li>- linear logic - closed symmetric monoidal category, (internal hom, tensor product) like <span style="color: blue;">Vect</span> </li>
+          <li>- quantum logic - dagger category  (internal hom,  tensor product, adjoint) like <span style="color: blue;">Hilb</span></li>
+          <li>- <span style="color: red;">none of the above</span> - (no internal hom, product?, no adjoint) <span style="color: blue;">Conical</span></li>
+        </ul>
+    </div>   
+  </div>
+
+
+<!-- page 25 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Graphic lambda calculus
+    </div> 
+    <div class="middletextleft"> Untyped lambda calculus + emergent algebras
+        <ul>      
+          <li> - S: oriented fatgraphs with 3-valent L,A,FI,FO, 1-valent T </li>
+          <li> - R: graphical &beta; rewrite <br><br><img src="img/beta_move_1.jpg" style="width:440px"></li>
+          <li> - R: Reidemeister rewrites <br><br>
+                 <img src="img/r1amove.jpg" style="width:350px"><img src="img/r1bmove.jpg" style="width:350px"><br>
+                 <img src="img/r2move1.jpg" style="width:440px"><br>
+          </li>
+          <li> - CO-COMM, CO-ASSOC for the FO nodes</li>
+        </ul>
+    </div>   
+
+  </div>
+
+
+<!-- page 25 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chemlambda v1
+    </div> 
+    <div class="middletextleft"> 
+        <ul>      
+          <li> - S: oriented fatgraphs with 3-valent L,A,FI,FO, 1-valent T </li>
+          <li> - R: graphical &beta; rewrite and FAN-IN <br><br>
+                 <img src="img/convention_2.jpg" style="width:600px"></li>
+          <li> - R: DIST rewrites <br><br>
+                 <img src="img/convention_61.jpg" style="width:440px"></li>
+          <li> - R: CO-COMM, CO-ASSOC rewrites <br><br>
+                 <img src="img/convention_3.jpg" style="width:440px"></li>
+        </ul>
+    </div>   
+
+  </div>
+
+
+<!-- page 25 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chemlambda v1 and GLC
+    </div> 
+    <div class="middletextleft"> Chemlambda v1 is a version of oriented Interaction Nets (1990, Y. Lafont), with conflicting rewrites (so nondeterministic) and a fixed algorithm of reduction (random), i.e. an artificial chemistry.
+    </div>   
+    <div class="middletextleft">  Chemlambda v1 was initially "The chemical concrete machine", as (1992, G. Berry, G. Boudol) The chemical abstract machine.
+    </div> 
+    <div class="middletextleft">  Chemlambda v1 uses &lambda; calculus as chemistry, related to Algorithmic Chemistry (2004, W. Fontana, L.W. Buss) 
+    </div> 
+    <div class="middletextleft"> GLC and Chemlambda v1 are Turing universal as regards the rewrites.
+    </div>   
+    <div class="middletextleft"> Huge interest for decentralized computing! 
+    </div> 
+
+  </div>
+
+
+<!-- page 26 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chemlambda v1 and GLC
+    </div> 
+    <div class="middletextleft"> Louis Kauffmann is the first programmer in chemlambda.
+    </div>   
+    <div class="middletextleft">  M.B., L.H. Kauffman, <a href="pdf/ALIFETalk-copy.pdf"   target="_blank">Chemlambda, universality and self-multiplication (slides)</a>
+    </div> 
+    <div class="middletextleft">  <img src="img/louis-first.png" style="width:600px">
+    </div> 
+
+  </div>
+
+
+<!-- page 27 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chemlambda v1 and GLC
+    </div> 
+    <div class="middletextleft"> Louis Kauffmann is the first programmer in chemlambda.
+    </div>   
+    <div class="middletextleft">  M.B., L.H. Kauffman, <a href="pdf/ALIFETalk-copy.pdf"   target="_blank">Chemlambda, universality and self-multiplication (slides)</a>
+    </div> 
+    <div class="middletextleft">  <img src="img/louis-second.png" style="width:600px">
+    </div> 
+
+  </div>
+
+
+<!-- page 28 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chemlambda v2
+    </div> 
+    <div class="middletextleft"> I wrote chemlambda v2 in awk + d3.js<br><br>
+                 <img src="img/tape_long_4653_2.gif" style="width:600px">
+    </div>   
+    <div class="middletextleft">  Discovered quine graphs
+    </div> 
+    <div class="middletextleft"> Viable proposal for chemical computation (molecular computers)
+    </div> 
+  </div>
+
+
+<!-- page 29 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chemlambda v2
+    </div> 
+    <div class="middletext"> Validation (Open Science)
+    </div>   
+    <div class="middletextleft">- version in python (by 4lhc)
+    </div> 
+    <div class="middletextleft">- version in Haskell (by synergistics)
+    </div> 
+   <div class="middletextleft">- version in js (by ishanpm)
+    </div> 
+    <div class="middletextleft">- the library of chemlambda molecules and the chemlambda collection of simulations
+    </div>    
+  </div>
+
+
+
+<!-- page 30 -->
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="middletextleft">
+      <iframe src="lambda2mol-presents.html"  style="width: 98%; height:800px;" frameborder="0"></iframe>
+    </div> 
+  </div>
+
+
+
+<!-- page 25 -->
+<!--
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="middletextleft">
+      <iframe src="pdf/ALIFETalk-copy.pdf"  style="width: 98%; height:500px;" frameborder="0"></iframe>
+    </div> 
+  </div>
+-->
+
+
+<!-- page 31 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="middletextleft">
+      <iframe src="ouroboros-presents.html"  style="width: 98%; height:800px;" frameborder="0"></iframe>
+    </div> 
+  </div>
+
+
+<!-- page 32 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Back to emergent 
+    </div> 
+    <div class="middletext"> Chemlambda v2 can do the shuffle trick, so if it admits a description in emergent algebras, it has to be only for commutative ones
+    </div>   
+    <div class="middletextleft">- kaleidoscope (kali) is an async automaton with 11 nodes.<br><br>
+                 <img src="img/anharmonic.png" style="width:400px"> 
+    </div> 
+   <div class="middletextleft">- 6 nodes related to the anharmonic group.
+    </div> 
+    <div class="middletextleft">- FO related to &infin;, (T,FRIN, FROUT) related to 0 and 1
+    </div> 
+    <div class="middletextleft">- and Kauffman' Arrow
+    </div>    
+  </div>
+
+
+<!-- page 33 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="middletextleft">
+      <iframe src="kali24-presents.html"  style="width: 98%; height:800px;" frameborder="0"></iframe>
+    </div> 
+  </div>
+
+
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i, numberText;
+  var slides = document.getElementsByClassName("mySlides");
+  var numberDiv = document.getElementsByClassName("numbertext");
+//  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+
+      numberText = "<a onclick=\"plusSlides(-1)\"><img src=\"img/arr-l.png\" style=\"height:20px;\"></a>&nbsp;" + slideIndex +  "&nbsp;<a onclick=\"plusSlides(1)\"><img src=\"img/arr-r.png\" style=\"height:20px\"></a>";
+      numberDiv[i].innerHTML = numberText;
+
+  }
+//  for (i = 0; i < dots.length; i++) {
+//      dots[i].className = dots[i].className.replace(" active", "");
+//  }
+  slides[slideIndex-1].style.display = "block";  
+
+
+
+//  dots[slideIndex-1].className += " active";
+}
+
+/*
+var demo = 0;
+
+function whatIshow() {
+var changeScr, sameScr;
+  if (demo = 0) {
+    changeScr =  document.getElementById("demos");
+    sameScr = document.getElementById("slides");
+    demo = 1;
+  } else {
+    changeScr =  document.getElementById("slides");
+    sameScr = document.getElementById("demos");
+    demo = 0;
+}
+sameScr.style.display = "none";
+changeScr.style.display = "block";
+}
+*/
+</script>
+
+</body>
+</html> 
+
