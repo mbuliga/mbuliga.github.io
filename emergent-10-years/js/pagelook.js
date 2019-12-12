@@ -20,6 +20,7 @@ reloadCode();
 var molCom = molComments(lambdatext);
 document.getElementById("comments").innerHTML = molCom; 
 }
+setComb(1);setSpeed(1); setStart(1); loop();
 }
 
 
@@ -52,7 +53,7 @@ var ButtonOriginal = [
 ];
 
 var ButtonLambda = [
-  {"Id":"button0", "Class":"image2", "Visibility":"visible", "Onclick": function () {setSpeed(0); setStart(0); lambdaToMol(); reloadCode();}, "Text":"&lambda;>mol"}, 
+  {"Id":"button0", "Class":"image2", "Visibility":"visible", "Onclick": function () {setSpeed(0); setStart(0); lambdaToMol(); reloadCode(); setComb(1);setSpeed(1); setStart(1); loop();}, "Text":"&lambda;>mol"}, 
   {"Id":"button1", "Class":"image2", "Visibility":"visible", "Onclick": function () {setSpeed(1); setStart(1); loop();}, "Text":"start"},
   {"Id":"button2", "Class":"image2", "Visibility":"visible", "Onclick": function () {setSpeed(0); setStart(0);}, "Text":"stop"},
   {"Id":"button3", "Class":"image2", "Visibility":"visible", "Onclick": function () {setStart(0); loop2();}, "Text":"step"},
@@ -169,6 +170,12 @@ function setStart(varStart) {
 function setArena(varArena) {
   arenaVar = varArena;
 }
+
+function setComb(newComb) {
+  combOnly = newComb;
+}
+
+
 
 // IO functions
 function importMol(str) {
