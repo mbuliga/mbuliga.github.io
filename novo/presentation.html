@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- slides for the talk Knots2020: Emergent rewrites in knot theory and logic, June 10th 2020
+site of the conference: http://labtd.nsu.ru/knots2020/program.html
+author: Marius Buliga
+last modified: 09.06.2020
+//
+-->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" type="text/css" href="css/slides.css">
+
+<title>Emergent rewrites</title>
+
+</head>
+<body  onkeydown="plusSlides(1)">
+
+
+<div class="slideshow-container">
+
+<!-- page 1 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent rewrites in knot theory and logic
+    </div> 
+    <div class="middletext"><a href="https://mbuliga.github.io/">Marius Buliga</a> (IMAR)
+    </div>
+    <div class="storytext">
+      I explain in what sense new graph rewrite systems emerge from given ones, with two examples: <br><br>
+      <ul>
+        <li>&#8226; the emergence of the R3 (Reidemeister 3) rewrite from R1, R2 and some uniform continuity assumptions, and relations to curvature, </li>
+        <li>&#8226; hit a limit in the ability to reason with handwritten graphs</li>
+        <li>&#8226; the emergence of the beta rewrite in lambda calculus from the shuffle rewrite and relations to the commutativity of the addition of vectors in the tangent space of a manifold</li>
+      </ul>
+    </div>   
+  </div>
+
+
+
+<!-- page 2 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Drawing conventions
+    </div> 
+    <div class="middletextleft">
+      <img src="img/draw-conv-2.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+
+<!-- page 3 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Used in: <a href="https://arxiv.org/abs/0810.5042">A characterization of sub-riemannian spaces as length dilatation structures constructed via coherent projections</a> a solution of the problem of intrinsic characterization of sub-riemannian manifolds posed by  <a href="https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/carnot_caratheodory.pdf">M. Gromov, 1996</a>. 
+    </div>
+    <div class="middletextleft"> introduced as algebras in <a href="https://arxiv.org/abs/0907.1520">arXiv:0907.1520</a>, as a &lambda; calculus in <a href="https://arxiv.org/abs/1807.02058">arXiv:1807.02058</a>.
+    </div>
+  </div>
+
+
+
+<!-- page 4 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-alg.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+
+<!-- page 5 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-alg-2.jpg" style="width:650px">
+    </div>
+  </div>
+
+<!-- page 6 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-alg-3.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 7 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-alg-4.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 8 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent algebras
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-alg-5.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 9 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Drawing conventions 2
+    </div> 
+    <div class="middletextleft">
+      <img src="img/draw-conv-3.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 10 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Tangles
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-1.jpg" style="width:650px">
+    </div>
+  </div>
+
+<!-- page 11 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chora
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-2.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 12 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Chora
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-4.jpg" style="width:650px">
+    </div>
+  </div>
+
+<!-- page 13 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Conical groups
+    </div> 
+    <div class="middletextleft">  groups with:<br><br><br>
+   <span style="color: blue;"> an action by automorphisms</span><br><br><br>
+ a &sdot; (x * y) = (a &sdot; x) * (a &sdot; y)<br><br><br>
+  <span style="color: blue;"> which are uniformly contractive:</span> <br><br><br> &epsilon;  &rarr; 0, &epsilon; &sdot; x &rarr; e, uniformly wrt x in compact set 
+    </div> 
+
+  </div>
+
+<!-- page 14 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Examples
+    </div> 
+    <div class="middletextleft"> 
+      <ul> 
+         <li>&#8226; (normed) finite dim <span style="color: blue;">vector space</span> X, * = +, &Gamma; = (0, &infin;) </li>
+         <li>&#8226;  <span style="color: blue;">Heisenberg groups</span>: 
+           <ul>
+             <li>-  take (H, &lt;,&gt;) complex Hilbert space, X = H &times; R </li>
+             <li>  (x,u) * (y,v) = (x + y, u + v + (1/2) Im &lt;x,y&gt;)</li>
+             <li>-  distribution D from left translate of H in X, is completely nonintegrable</li>
+             <li>-  metric on D from Re &lt;,&gt;</li>
+             <li>-  &Gamma; = C &setminus; {0}</li>
+             <li> a &sdot; (x,u) = (a x , &mid;a&mid;&sup2; u )</li> 
+           </ul>   
+         </li>
+         <li>&#8226; or just any Carnot group</li>
+      </ul>
+    </div> 
+  </div>
+
+
+<!-- page 15 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Tangles
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-5.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 16 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Rescale!
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-6.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- page 17 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Commutativity
+    </div> 
+    <div class="middletextleft"> The <span style="color: blue;">operation * is commutative</span> iff any of the following:
+      <ul> 
+        <li> - we can do <span style="color: blue;">the shuffle trick</span>: </li>
+        <li> <img src="img/shuffle_4.jpg" style="width:500px"></li> 
+        <li> - <span style="color: blue;">rays are semigroups, uniformly</span></li>
+        <li>  &forall; a, b &isin; &Gamma;, &exist; a+b &isin; &Gamma;, (a &sdot; x) * (b &sdot; x) = (a+b) &sdot; x</li>
+        <li> - <span style="color: blue;">barycentric condition</span>: &forall; a &isin; &Gamma;, &exist; 1-a &isin; &Gamma;</li>
+      </ul>
+    </div> 
+  </div>
+
+
+<!-- page 18 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Commutativity
+    </div> 
+    <div class="middletextleft"> Let's denote the 3 ports of a dilation node as:<br><br>
+      port 1: "from", port 2: "see", port 3: "as"
+      <br><br>
+      <img src="img/D.jpg" style="width:650px"> <br><br>
+
+     The <span style="color: blue;">operation * is commutative</span> iff all the 6 permutations of ports are also dilations, with coefficients from the anharmonic group: 
+     <a href="https://mbuliga.github.io/quinegraphs/puresee.html">Pure See!</a>
+    </div> 
+  </div>
+
+
+
+<!-- page 19 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Lambda calculus
+    </div>
+    <div class="middletextleft">(<a href="http://phil415.pbworks.com/f/Church.pdf">1936, A. Church</a>) Untyped &lambda; calculus   <span style="color: red;">is a term rewrite system</span>
+    </div>
+    <div class="middletextleft"> Terms: 
+      <ul>
+        <li> variable: x, y, z, ... </li>
+        <li> term:   
+          <ul>
+            <li>- variable &nbsp; </li>
+            <li>- A B where A, B terms &nbsp;  &nbsp; <span style="color: blue;">(application)</span></li>
+            <li>- &lambda;x.A where x var,  A term &nbsp; &nbsp; <span style="color: blue;">(abstraction)</span> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="middletextleft"> Term rewrite rule:
+        <ul>      
+        <li> &beta;-reduction:   (&lambda;x.D)B   &#8594; D[x=B] </li>
+        </ul>
+    </div>   
+  </div>
+
+
+<!-- page 20 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> &nbsp;
+    </div> 
+    <div class="middletextleft">(1936, A. Church) Pure &lambda; calculus   <span style="color: red;">is a term rewrite system</span>
+    </div>
+    <div class="middletextleft"> Term rewrite rule:
+        <ul>      
+          <li> &beta;-reduction:   (&lambda;x.D)B   &#8594; D[x=B] </li>
+        </ul>
+    </div>   
+    <div class="middletextleft"> (1971, C.P. Wadsworth, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.90.2386&rep=rep1&type=pdf">1990, J. Lamping</a>)  <span style="color: red;">graph rewrite system</span>
+    </div>   
+    <div class="middletext"> 
+      <img src="img/lamping.jpeg" style="width:440px">
+    </div>
+  </div>
+
+
+
+
+<!-- page 21 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent lambda
+    </div> 
+    <div class="middletextleft"> Aplication can be seen as:
+      <br><br>
+      <img src="img/A.jpg" style="width:650px"> <br><br>
+
+     (all the 6 permutations of ports are also dilations, with coefficients from the anharmonic group: 
+     <a href="https://mbuliga.github.io/quinegraphs/puresee.html">Pure See!</a>)
+    </div> 
+  </div>
+
+<!-- page 22 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> Emergent lambda
+    </div> 
+    <div class="middletextleft"> Abstraction can be seen as:
+      <br><br>
+      <img src="img/L.jpg" style="width:650px"> <br><br>
+
+     (all the 6 permutations of ports are also dilations, with coefficients from the anharmonic group: 
+     <a href="https://mbuliga.github.io/quinegraphs/puresee.html">Pure See!</a>)
+    </div> 
+  </div>
+
+<!-- page 23 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> &beta; rewrite from shuffle
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-LA-D.jpg" style="width:650px">
+    </div>
+  </div>
+
+
+<!-- page 24 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> &beta; rewrite from shuffle
+    </div> 
+    <div class="middletextleft">
+      <img src="img/emergent-LA.jpg" style="width:650px">
+    </div>
+  </div>
+
+<!-- page 22 -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <div class="bigtext"> 
+    </div> 
+    <div class="middletextleft"> THANK YOU!
+      <br><br>
+
+     More:
+     <ul>
+       <li><a href="https://mbuliga.github.io/quinegraphs/puresee.html">Pure See</a></li>
+       <li><a href="https://mbuliga.github.io/quinegraphs/history-of-chemlambda.html">Graph rewrites, from emergent algebras to chemlambda</a></li>
+       <li><a href="hhttps://chemlambda.github.io/index.html">Chemlambda</a></li>
+     </ul>
+ 
+    </div> 
+  </div>
+
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i, numberText;
+  var slides = document.getElementsByClassName("mySlides");
+  var numberDiv = document.getElementsByClassName("numbertext");
+//  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+
+      numberText = "<a onclick=\"plusSlides(-1)\"><img src=\"img/arr-l.png\" style=\"height:20px;\"></a>&nbsp;" + slideIndex +  "&nbsp;<a onclick=\"plusSlides(1)\"><img src=\"img/arr-r.png\" style=\"height:20px\"></a>";
+      numberDiv[i].innerHTML = numberText;
+
+  }
+//  for (i = 0; i < dots.length; i++) {
+//      dots[i].className = dots[i].className.replace(" active", "");
+//  }
+  slides[slideIndex-1].style.display = "block";  
+
+
+
+//  dots[slideIndex-1].className += " active";
+}
+
+/*
+var demo = 0;
+
+function whatIshow() {
+var changeScr, sameScr;
+  if (demo = 0) {
+    changeScr =  document.getElementById("demos");
+    sameScr = document.getElementById("slides");
+    demo = 1;
+  } else {
+    changeScr =  document.getElementById("slides");
+    sameScr = document.getElementById("demos");
+    demo = 0;
+}
+sameScr.style.display = "none";
+changeScr.style.display = "block";
+}
+*/
+</script>
+
+</body>
+</html> 
+
