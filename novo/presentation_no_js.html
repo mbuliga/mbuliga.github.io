@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- no js version of the slides for the talk Knots2020: Emergent rewrites in knot theory and logic, June 10th 2020
+site of the conference: http://labtd.nsu.ru/knots2020/program.html
+author: Marius Buliga
+last modified: 11.06.2020
+//
+-->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="css/icequine-on-white-slides.css">
+
+
+<title>Emergent rewrites</title>
+
+</head>
+<body>
+
+
+
+<!-- page 1 -->
+
+    <div class="bigtext"> Emergent rewrites in knot theory and logic
+    </div> 
+    <div class="middletext"><a href="https://youtu.be/8sMPwBiyFbE" target="_blank">[video]</a> 
+    </div>
+    <div class="middletext"><a href="https://mbuliga.github.io/" target="_blank">Marius Buliga</a> (IMAR)
+    </div>
+    <div class="storytext">
+      I explain in what sense new graph rewrite systems emerge from given ones, with two examples: <br><br>
+      <ul>
+        <li> the emergence of the R3 (Reidemeister 3) rewrite from R1, R2 and some uniform continuity assumptions, and relations to curvature, </li>
+        <li> the emergence of the beta rewrite in lambda calculus from the shuffle rewrite and relations to the commutativity of the addition of vectors in the tangent space of a manifold</li>
+      </ul>
+    </div>   
+  
+
+<!-- page 2 -->
+
+    <div class="biggertext"> From sub-riemannian geometry to emergent algebras
+    </div> 
+    <div class="middletextleft"> A riemannian manifold (X,g) is a length metric space (X,d) by Hopf-Rinow thm.
+    </div> 
+    <div class="middletext">  <span style="color: red;">Problem 1: recover (X,g) from (X,d).</span>
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li> (1935, A. Wald) problem 1 for 2-dim manifolds.</li>
+        <li> (1948, A.D. Alexandrov) a metric notion of (sectional) curvature + smoothness solves 2-dim manifolds.</li>
+        <li> (1982, A.D. Alexandrov) conjecture that the same is true for n-dim manifolds.</li>
+        <li> (1998, I.G. Nikolaev) proves (Alexandrov conjecture) for n-dim manifolds.</li>
+      </ul>
+    </div>
+  </div>
+
+
+<!-- page 3 -->
+
+
+    <div class="middletextleft"> but (<a href="https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/carnot_caratheodory.pdf" target="_blank">1996, M. Gromov</a>) asks for a solution of 
+    </div> 
+    <div class="middletext"> <span style="color: red;">Problem 2: recover sub-riemannian (X,D,g) from (X,d).</span>
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li> (X,D,g) sub-riemannian if D completely non-integrable distribution and g a metric on D.</li>
+        <li> by Hopf-Rinow (X,D,g) is a length metric space (X,d), with d the CC distance.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- page 4 -->
+
+
+    <div class="middletextleft"> Sub-riemannian spaces are weird! (except when riemannian)
+    </div> 
+    <div class="middletextleft"> 
+      <ul>
+        <li> metric (Hausdorff) dimension > topological dimension</li>
+        <li> not Alexandrov spaces</li>
+        <li> tangent spaces are nilpotent (Carnot) groups, not vector spaces</li>
+        <li> Carnot groups have a peculiar differential calculus (Pansu derivative)</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- page 5 -->
+
+
+    <div class="middletextleft"> Sub-riemannian spaces (techniques) are useful!
+    </div>
+    <div class="middletextleft"> 
+      <ul>
+        <li> (<a href="https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/631.pdf" target="_blank">1981, M. Gromov</a>)  finitely generated groups of polynomial growth same as those groups which have nilpotent subgroups of finite index</li>
+        <li> (<a href="https://www.math.u-psud.fr/%7Epansu/pansu_Annals89.pdf" target="_blank">1989, P. Pansu</a>) proves Rademacher thm for Carnot groups, which implies a short proof for Margulis-Mostow rigidity</li>
+        <li> (2006, J.R. Lee, A. Naor) counter-example to Goemans-Linial conjecture by using the Heisenberg group as a SR space</li>
+        <li> (<a href="https://www.ams.org/journals/jams/2012-25-01/S0894-0347-2011-00708-X/S0894-0347-2011-00708-X.pdf" target="_blank">2010, E. Hrushovski</a>) (<a href="https://arxiv.org/abs/1110.5008" target="_blank">2011, E. Breuillard, B. Green, T. Tao</a>) Approximate groups are essentially Carnot groups </li>
+
+      </ul>
+    </div>
+
+  </div>
+
+
+<!-- page 6 -->
+
+    <div class="middletext"> Drawing conventions
+    </div> 
+    <div class="middletextleft">
+      <img src="img/draw-conv-2.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+
+<!-- page 7 -->
+
+    <div class="biggertext"> Emergent algebras
+    </div> 
+    <div class="middletextleft"> Used in: <a href="https://arxiv.org/abs/0810.5042" target="_blank">A characterization of sub-riemannian spaces as length dilatation structures constructed via coherent projections</a> a solution of the problem of intrinsic characterization of sub-riemannian manifolds posed by  <a href="https://www.ihes.fr/~gromov/wp-content/uploads/2018/08/carnot_caratheodory.pdf" target="_blank">M. Gromov, 1996</a>. 
+    </div>
+    <div class="middletextleft"> introduced as algebras in <a href="https://arxiv.org/abs/0907.1520" target="_blank">arXiv:0907.1520</a>, as a &lambda; calculus in <a href="https://arxiv.org/abs/1807.02058" target="_blank">arXiv:1807.02058</a>.
+    </div>
+  </div>
+
+
+
+<!-- page 8 -->
+
+
+    <div class="middletextleft">
+      <img src="img/emergent-alg.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+
+<!-- page 9 -->
+
+
+    <div class="middletextleft">
+      <img src="img/emergent-alg-2.jpg" style="width:90%">
+    </div>
+  </div>
+
+<!-- page 10 -->
+
+
+    <div class="middletextleft">
+      <img src="img/emergent-alg-3.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 11 -->
+
+
+    <div class="middletextleft">
+      <img src="img/emergent-alg-4.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 12 -->
+
+
+    <div class="middletextleft">
+      <img src="img/emergent-alg-5.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 13 -->
+
+    <div class="middletext"> Drawing conventions 2
+    </div> 
+    <div class="middletextleft">
+      <img src="img/draw-conv-3.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 14 -->
+
+    <div class="biggertext"> Tangles
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-1.jpg" style="width:90%">
+    </div>
+  </div>
+
+<!-- page 15 -->
+
+    <div class="middletext"> Chora
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-2.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 16 -->
+
+
+    <div class="middletextleft">
+      <img src="img/knots-4.jpg" style="width:90%">
+    </div>
+  </div>
+
+<!-- page 17 -->
+
+    <div class="biggertext"> Conical groups
+    </div> 
+    <div class="middletextleft">  groups with:<br><br><br>
+   <span style="color: blue;"> an action by automorphisms</span><br><br><br>
+ a &sdot; (x * y) = (a &sdot; x) * (a &sdot; y)<br><br><br>
+  <span style="color: blue;"> which are uniformly contractive:</span> <br><br><br> &epsilon;  &rarr; 0, &epsilon; &sdot; x &rarr; e, uniformly wrt x in compact set 
+    </div> 
+
+  </div>
+
+<!-- page 18 -->
+
+    <div class="middletext"> Examples
+    </div> 
+    <div class="middletextleft"> 
+      <ul> 
+         <li> (normed) finite dim <span style="color: blue;">vector space</span> X, * = +, &Gamma; = (0, &infin;) </li>
+         <li>  <span style="color: blue;">Heisenberg groups</span>: 
+           <ul>
+             <li>-  take (H, &lt;,&gt;) complex Hilbert space, X = H &times; R </li>
+             <li>  (x,u) * (y,v) = (x + y, u + v + (1/2) Im &lt;x,y&gt;)</li>
+             <li>-  distribution D from left translate of H in X, is completely nonintegrable</li>
+             <li>-  metric on D from Re &lt;,&gt;</li>
+             <li>-  &Gamma; = C &setminus; {0}</li>
+             <li> a &sdot; (x,u) = (a x , &mid;a&mid;&sup2; u )</li> 
+           </ul>   
+         </li>
+         <li> or just any Carnot group</li>
+      </ul>
+    </div> 
+
+
+<!-- page 19 -->
+
+    <div class="middletext"> Tangles
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-5.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 20 -->
+
+    <div class="middletext"> Rescale!
+    </div> 
+    <div class="middletextleft">
+      <img src="img/knots-6.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- page 21 -->
+
+    <div class="biggertext"> Commutative emergent algebras
+    </div> 
+    <div class="middletextleft"> The <span style="color: blue;">operation * is commutative</span> iff any of the following:
+      <ul> 
+        <li> - we can do <span style="color: blue;">the shuffle trick</span>: </li>
+        <li> <img src="img/shuffle_4.jpg" style="width:500px"></li> 
+        <li> - <span style="color: blue;">rays are semigroups, uniformly</span></li>
+        <li>  &forall; a, b &isin; &Gamma;, &exist; a+b &isin; &Gamma;, (a &sdot; x) * (b &sdot; x) = (a+b) &sdot; x</li>
+        <li> - <span style="color: blue;">barycentric condition</span>: &forall; a &isin; &Gamma;, &exist; 1-a &isin; &Gamma;</li>
+      </ul>
+    </div> 
+
+
+<!-- page 22 -->
+
+
+    <div class="middletextleft"> Let's denote the 3 ports of a dilation node as:<br><br>
+      port 1: "from", port 2: "see", port 3: "as"
+      <br><br>
+      <img src="img/D.jpg" style="width:90%"> <br><br>
+
+     The <span style="color: blue;">operation * is commutative</span> iff all the 6 permutations of ports are also dilations, with coefficients from the anharmonic group: 
+     <a href="https://mbuliga.github.io/quinegraphs/puresee.html" target="_blank">Pure See!</a>
+    </div> 
+
+
+
+<!-- page 23 -->
+
+    <div class="middletext"> Lambda calculus
+    </div>
+    <div class="middletextleft">(<a href="http://phil415.pbworks.com/f/Church.pdf" target="_blank">1936, A. Church</a>) Untyped &lambda; calculus   <span style="color: red;">is a term rewrite system</span>
+    </div>
+    <div class="middletextleft"> Terms: 
+      <ul>
+        <li> variable: x, y, z, ... </li>
+        <li> term:   
+          <ul>
+            <li>- variable &nbsp; </li>
+            <li>- A B where A, B terms &nbsp;  &nbsp; <span style="color: blue;">(application)</span></li>
+            <li>- &lambda;x.A where x var,  A term &nbsp; &nbsp; <span style="color: blue;">(abstraction)</span> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="middletextleft"> Term rewrite rule:
+        <ul>      
+        <li> &beta;-reduction:   (&lambda;x.D)B   &#8594; D[x=B] </li>
+        </ul>
+    </div>   
+  
+
+
+<!-- page 24 -->
+
+    <div class="middletext"> &nbsp;
+    </div> 
+    <div class="middletextleft">(1936, A. Church) Pure &lambda; calculus   <span style="color: red;">is a term rewrite system</span>
+    </div>
+    <div class="middletextleft"> Term rewrite rule:
+        <ul>      
+          <li> &beta;-reduction:   (&lambda;x.D)B   &#8594; D[x=B] </li>
+        </ul>
+    </div>   
+    <div class="middletextleft"> (1971, C.P. Wadsworth, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.90.2386&rep=rep1&type=pdf" target="_blank">1990, J. Lamping</a>)  <span style="color: red;">graph rewrite system</span>
+    </div>   
+    <div class="middletext"> 
+      <img src="img/lamping.jpeg" style="width:440px">
+    </div>
+  </div>
+
+
+
+
+<!-- page 25 -->
+
+    <div class="middletext"> Emergent lambda
+    </div> 
+    <div class="middletextleft"> Aplication can be seen as:
+      <br><br>
+      <img src="img/A.jpg" style="width:90%"> <br><br>
+
+     (all the 6 permutations of ports are also dilations, with coefficients from the anharmonic group: 
+     <a href="https://mbuliga.github.io/quinegraphs/puresee.html" target="_blank">Pure See!</a>)
+    </div> 
+
+<!-- page 26 -->
+
+
+    <div class="middletextleft"> Abstraction can be seen as:
+      <br><br>
+      <img src="img/L.jpg" style="width:90%"> <br><br>
+
+     (all the 6 permutations of ports are also dilations, with coefficients from the anharmonic group: 
+     <a href="https://mbuliga.github.io/quinegraphs/puresee.html" target="_blank">Pure See!</a>)
+    </div> 
+
+<!-- page 27 -->
+
+    <div class="middletext"> &beta; rewrite from shuffle
+    </div> 
+    <div class="middletextleft"> only with dilation nodes:<br><br>
+      <img src="img/emergent-LA-D.jpg" style="width:90%">
+    </div>
+  </div>
+
+
+<!-- page 28 -->
+
+    
+    <div class="middletextleft"> the same with <a href="https://mbuliga.github.io/quinegraphs/history-of-chemlambda.html#ChemlambdaV2">chemlambda v2</a> nodes:<br><br>
+      <img src="img/emergent-LA.jpg" style="width:90%">
+    </div>
+  </div>
+
+<!-- page 29 -->
+
+    <div class="middletext"> 
+    </div> 
+    <div class="middletextleft"> THANK YOU!
+      <br><br>
+
+     More:
+     <ul>
+       <li><a href="https://mbuliga.github.io/quinegraphs/puresee.html">Pure See</a></li>
+       <li><a href="https://mbuliga.github.io/quinegraphs/history-of-chemlambda.html">Graph rewrites, from emergent algebras to chemlambda</a></li>
+       <li><a href="hhttps://chemlambda.github.io/index.html">Chemlambda</a></li>
+     </ul>
+ 
+    </div> 
+
+</div>
+
+
+</body>
+</html> 
+
