@@ -1,0 +1,286 @@
+\documentclass{article}
+
+
+
+%\usepackage{amssymb,latexsym,amsmath}
+\usepackage{amssymb,latexsym}
+%\usepackage{makeidx} 
+%\makeindex
+
+%\usepackage[dvips,matrix,arrow,ps,color,line,curve,frame]{xy}
+
+%\usepackage{graphicx}
+
+\usepackage[pdftex]{graphicx}
+
+%\usepackage{parsetree}
+\usepackage{hyperref}
+
+
+
+\hoffset-0.64cm
+\voffset-2.14cm
+
+
+\textheight23.8cm
+
+\setlength{\textwidth}{14.cm}
+
+
+
+\begin{document}
+
+
+\pagestyle{plain}
+
+
+
+
+
+
+
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem{lema}[theorem]{Lemma}
+
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheorem{definition}[theorem]{Definition}
+
+\newtheorem{remark}[theorem]{Remark}
+
+\newtheorem{exempl}{Example}[section]
+
+\newenvironment{example}{\begin{exempl}  \em}{\hfill $\square$
+
+\end{exempl}}  \vspace{.5cm}
+
+
+
+
+
+
+
+
+
+\renewcommand{\contentsname}{ }
+
+
+\title{A problem concerning emergent algebras}
+
+\author{Marius Buliga \\ \href{https://mbuliga.github.io}{mbuliga.github.io}}
+
+\date{19.11.2020}
+
+\maketitle
+
+
+
+\paragraph{1.} At the end of this note there are references for emergent algebras. Also, here is the link to a presentation which contains (links to) references to emergent algebras: \\
+
+\href{https://mbuliga.github.io/novo/presentation.html}{https://mbuliga.github.io/novo/presentation.html} \\
+
+
+
+\paragraph{2.} In all references I used consistently wrong the right quasigroup name, it should be left quasigroup everywhere. \\
+
+
+
+\paragraph{3.} The origin of the problem comes from what I call an "emergent algebra". These algebras come from sub-riemannian geometry \cite{buligasub}, where they have the name "dilation structure" or "dilatation structure", introduced in \cite{buligadil1}. 
+
+Consider the continuous group $\Gamma = (0,+\infty)$ with multiplication, with $0$ as an invariant filter, so we can write limits as $a \in \Gamma$ converges to $0$.  
+
+\paragraph{Definition 1.} An emergent algebra over a set $X$ is a family of idempotent left quasigroup operations over X, 
+indexed by the group $\Gamma$, which satisfy the following algebraic and topological axioms (R1), (R2), (act) and (em). \\
+
+
+For $a \in \Gamma$ let's denote the left quasigroup operations indexed by $\circ_a$ and $\bullet_a$. Therefore 
+$(X,\circ_a ,\bullet_a )$ is an idempotent left quasigroup: \\
+
+\paragraph{(R1)} $ x \circ_a x = x$ 
+ 
+\paragraph{(R2)} $ x \circ_a (x \bullet_a y) = x \bullet_a (x \circ_a y) = y$ \\
+   
+
+
+
+
+\paragraph{(act)} algebraic axioms which relate the operations: \\
+
+      $ x \circ_a ( x \circ_b y) = x \circ_{ab} y $ 
+      
+      $ x \circ_1 y = y $
+      
+      $ x \circ_{1/a} y = x \bullet_a y $ \\
+
+
+\noindent On $X$ we define the following operations which we will use later:\\ 
+
+- the approximate difference \\  
+
+$\Delta^{x}_{a} (y , z)  =  (x \circ_a y) \bullet_a (x \circ_a z) $ \\ 
+
+- the approximate sum \\  
+
+$\Sigma^{x}_{a} (y, z) = x \bullet_{a} ( ( x \circ_{a} y) \circ_{a} z)$  \\ 
+
+- the approximate inverse \\
+
+$inv^{x}_{a} y = (x \circ_{a} y) \bullet_{a} x$ \\
+
+\noindent Finally we have the topological axioms. 
+
+
+\paragraph{(em)} $X$ is an uniform space; as $a$ converges to $0$ \\
+
+     $ (x,y) \mapsto x \circ_a y$ converges uniformly to  $(x,y) \mapsto x$  
+
+     $(x,y,z) \mapsto \Delta^{x}_{a} (y , z)$ converges uniformly to a function $(x,y,z) \mapsto \Delta^{x} (y , z)$
+
+      $(x,y,z) \mapsto \Sigma^{x}_{a} (y , z)$ converges uniformly to a function $(x,y,z) \mapsto \Sigma^{x} (y , z)$ \\
+
+\paragraph{Topological axioms, graph rewrites and "emergence".} The reason for topological axioms is to allow passage to the limit in any order. Remark that axioms (R1), (R2), (act) can be reformulated into graph rewrites on trivalent graphs with typed nodes and numbered ports. This is the basis of the chemlambda project, as described in \cite{buligahis}.  The axiom (em), translated into graph rewrites, says that some patterns (corresponding to the graphs of the approximate difference, sum and inverse) can be replaced with new nodes (for the limit operations) {\bf in any order}. From here "emerge" new algebraic identities, or equivalently new graph rewrites, involving the new operations. The same effect can be obtained, but without reference to uniform structures and limits, in the term rewriting formalism "em" \cite{buligaem}, which is an enhancement of lambda calculus. \\
+
+
+As I am not familiar with the usual names from the field of quasigroups, here are some of my other notations. 
+
+
+\paragraph{Definition 2.} An emergent algebra is linear if it is {\bf left distributive}:\\ 
+
+\paragraph{ (R3) or (LIN)} $x \circ_{a} (y \circ_{b} z) = (x \circ_{a} y) \circ_{b} (x \circ_{a} z)$ \\
+
+\noindent An emergent algebra is co-linear if it is {\bf right distributive}:\\ 
+
+\paragraph{(COLIN)} $(x \circ_{a} y) \circ_{b} z = (x \circ_{b} z) \circ_{a} (y \circ_{b} z)$ \\
+
+\noindent An emergent algebra has the shuffle trick if it is {\bf medial}: \\
+
+\paragraph{(SHUFFLE)} $(x \circ_{a} y) \circ_{b} (u \circ_{a} v) = (x \circ_{b} u) \circ_{a} (y \circ_{b} v)$ \\
+
+
+An important example of a linear emergent algebra comes from conical groups. We have the following structure theorem. \\
+
+\paragraph{Theorem 1.} For an emergent algebra $X$, fix an element $e \in X$ and define the operations: \\
+
+(addition) $(x,y) \mapsto  x \cdot y = \Sigma^{e} (x , y)$  \\
+
+(inverse) $x \mapsto x^{-1} = inv^{e} x = \Delta^{e} (x,e)$ \\
+
+(scalar multiplication) $(a,x) \mapsto  a x = e \circ_{a} x$ \\
+
+Then $\displaystyle (X,\cdot)$ is a group with neutral element $e$ and inverse $\displaystyle -^{-1}$, which is conical, i.e. has a scalar multiplication operation with the properties \\ 
+
+$ a (b x) = (ab) x$ \\
+
+$ a (x \cdot y) = ax \cdot ay$ \\ 
+
+$ a (x^{-1}) = ( ax)^{-1}$ \\
+
+$ a e = e $\\
+
+$ x \mapsto ax$ converges uniformly to $x \mapsto e$, as $a$ converges to $0$. \\
+
+
+Conversely, for any conical group $X$ and for any $a \in \Gamma$ define: \\ 
+
+$ x \circ_{a} y =  x \cdot a ( x^{-1} \cdot y)$ \\ 
+
+With this operation $X$ becomes a linear emergent algebra. \\ 
+
+\paragraph{Curvature as deviation from linearity.} For an emergent algebra, the following term represents the deviation from linearity: \\
+
+$Lin_{a,b}(x,y,z) =   y \bullet_{b} (x \bullet_{a} ((x \circ_{a} y) \circ_{b} (x \circ_{a} z)))$ \\
+
+Indeed, (LIN) is equivalent with  $\displaystyle Lin_{a,b}(x,y,z) = z$. But in the realm of sub-riemanian geometry, more precisely for a dilation structure, this term is related to curvature, as explained in \cite{buligasub}, section 2.5 "Curvdimension and curvature". For an arbitrary element $x \in X$ and for $c \in \Gamma$ define \\
+
+$ R^{a}_{b,c}(x,u,v,w) = x \bullet_{a} Lin_{b,c} ((x \circ_{a} u, x \circ_{a} v, x \circ_{a} w) $ \\
+
+We know then, by Theorem 1, that $\displaystyle R^{a}_{b,c}(x,u,v,w)$ converges to $w$, as $a$ converges to $0$. In particular, for a riemannian manifold $X$, there is an associated emergent algebra given by \\
+
+$ x \circ_{a} exp_{x}(y) = exp_{x}(ay)$ \\
+
+\noindent where $exp$ is the geodesic exponential. For this emergent algebra, we recognize the construction called Schild's ladder in the term  \\ 
+
+$\displaystyle r^{a}_{x}(v,w) = log_{x} \left( R^{a}_{\frac{1}{2}, \frac{1}{2}}(x,x, exp_{x}(av), exp_{x}(aw)) \right)$ \\ 
+
+The distance, measured in the tangent space at $x$, between $w$ and $\displaystyle r^{a}_{x}(v,w)$ is controlled by the absolute value of $\displaystyle a^{2} \langle R_{x}(v,w)v,w\rangle$, where $\displaystyle R_{x}$ is the Riemann curvature tensor at $x$. 
+
+\paragraph{Commutative conical groups.} Conical groups are therefore equivalent with linear emergent algebras. When are they commutative? The following theorem is a sort of Bruck-Murdoch-Toyoda theorem \cite{toyoda}, \cite{murdoch}, \cite{bruck}. [The theorem is only announced here.]
+
+\paragraph{Theorem 3.} Let $X$ be a conical group. The following are equivalent: \\
+
+- $X$ is commutative \\
+
+- The associated emergent algebra is medial, i.e. it satisfies (SHUFFLE) \\ 
+
+- The associated emergent alegbra is right distributive, i.e. satisfies (COLIN). \\  
+
+
+
+
+\paragraph{Commutator as deviation from co-linearity.} With the notations from Theorem 1, we can measure the deviation from co-linearity with the term \\
+
+$COLin_{a,b}(x,y,z) =  (x \circ_{a} y) \bullet_{b} ((x \circ_{b} z) \circ_{a} (y \circ_{b} z))$ \\
+
+For conical groups, the computation of this term shows that it is related with the commutator.  One can prove that for conical groups (COLIN) is equivalent with (SHUFFLE). Moreover, if we consider a topological group $(X,\cdot)$ endowed with dilations, i.e. an emergent algebra which is left invariant with respect to the group operation: \\
+
+$x \cdot (y \circ_{a} z) = (x \cdot y) \circ_{a} (x \cdot z)$ \\
+
+\noindent then we can prove that (COLIN) implies (LIN). Therefore we have to search elsewhere for examples where (COLIN) exists without (LIN).\\
+
+
+It is therefore natural to ask: 
+
+\paragraph{Problem.} Are there emergent algebras which satisfy (COLIN) but not (LIN)? \\ 
+
+
+Thanks to D. Stanovsky, who points to his survey article \cite{stanovsky}, section 3, where some examples of non-medial but right-distributive quasigroups are given. 
+
+\begin{thebibliography}{99}
+
+\bibitem{toyoda} K. Toyoda, On axioms of linear functions, {\it Proc. Imp. Acad. Tokyo} {\bf 17} (7), (1941), 221-226
+
+\bibitem{murdoch} D.C. Murdoch, Structure of abelian quasigroups, {\it Trans. Amer. Math. Soc.} {\bf 49} (3), (1941), 392-409
+
+\bibitem{bruck} R.H. Bruck, Some results in the theory of quasigroups, {\it Trans. Amer. Math. Soc.} {\bf 55} (1), (1944), 19-52
+
+\bibitem{stanovsky} D. Stanovsky, A guide to self-distributive quasigroups, or latin quandles, {\it Quasigroups and Related Systems} {\bf 23} (1), (2015), 91-128, \href{https://arxiv.org/abs/1505.06609}{arXiv:1505.06609} \\ 
+
+\noindent {\bf \Large References for emergent algebras:} \\
+
+
+\bibitem{buligahis} M. Buliga, Graph rewrites, from graphic lambda calculus, to chemlambda, to directed interaction combinators, \href{https://arxiv.org/abs/2007.10288}{arXiv:2007.10288.1520}
+
+\bibitem{buligaem} M. Buliga, The em-convex rewrite system, \href{https://arxiv.org/abs/1807.02058}{arXiv:1807.02058}
+
+\bibitem{buligaglc} M. Buliga, Graphic lambda calculus. {\it Complex Systems} {\bf 22}, 4 (2013), 311-360. \\ 
+\href{https://arxiv.org/abs/1305.5786}{arXiv:1305.5786}
+
+\bibitem{buligasub} M. Buliga, Sub-riemannian geometry from intrinsic viewpoint, Course notes, Ecole de recherche CIMPA : Geometrie sous-riemannienne, Jan (2012), Beyrouth, Lebanon,  \href{https://arxiv.org/abs/1206.3093}{arXiv:1206.3093}
+
+\bibitem{buligairq} M. Buliga, Emergent algebras, \href{https://arxiv.org/abs/0907.1520}{arXiv:0907.1520}
+
+\bibitem{buligadil1} M. Buliga, Dilatation structures I. Fundamentals, {\it 
+J. Gen. Lie Theory Appl.},  {\bf 1} (2007),  2, 65-95. \\ 
+\href{https://arxiv.org/abs/math/0608536}{arXiv:math/0608536}
+
+
+\bibitem{buligainf} M, Buliga, Infinitesimal affine geometry of metric spaces endowed with a dilatation structure, {\it Houston Journal of Mathematics}, {\bf 36}, 1 (2010), 91-136. \\ 
+\href{https://arxiv.org/abs/0804.0135}{arXiv:math/0608536}
+
+
+\bibitem{buligabraided} M. Buliga, Braided spaces with dilations and sub-riemannian symmetric spaces, in: Geometry. Exploratory Workshop on Differential Geometry and its Applications, eds. D. Andrica, S. Moroianu, Cluj-Napoca 2011, 21-35. \\   
+\href{https://arxiv.org/abs/1005.5031}{arXiv:0804.0135}
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+
